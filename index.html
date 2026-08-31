@@ -1,638 +1,789 @@
  <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>PEYBAK 777 | IELTS & SAT</title>
+<title>PEYBAK 777 | IELTS & SAT</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f7fb;
-      color: #111827;
-    }
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #111827;
+}
 
-    /* NAVBAR */
-    nav {
-      height: 72px;
-      background: #0f172a;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 8%;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+nav {
+    background: #111827;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
 
-    .logo {
-      font-size: 25px;
-      font-weight: 800;
-      letter-spacing: 1px;
-    }
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
 
-    .logo span {
-      color: #3b82f6;
-    }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 16px;
+}
 
-    nav ul {
-      display: flex;
-      gap: 30px;
-      list-style: none;
-    }
+nav a:hover {
+    color: #3b82f6;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-    }
+.hero {
+    background: white;
+    text-align: center;
+    padding: 90px 20px;
+}
 
-    nav a:hover {
-      color: #60a5fa;
-    }
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
 
-    /* HERO */
-    .hero {
-      min-height: 550px;
-      background: linear-gradient(135deg, #eef4ff, #ffffff);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 60px 20px;
-    }
+.hero h1 span {
+    color: #2563eb;
+}
 
-    .hero-content {
-      max-width: 900px;
-    }
+.hero p {
+    font-size: 21px;
+    color: #64748b;
+    margin-bottom: 35px;
+}
 
-    .badge {
-      display: inline-block;
-      background: #dbeafe;
-      color: #2563eb;
-      padding: 9px 18px;
-      border-radius: 30px;
-      font-weight: bold;
-      margin-bottom: 22px;
+.main-buttons button {
+    border: none;
+    padding: 18px 40px;
+    margin: 10px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.ielts-btn {
+    background: #2563eb;
+    color: white;
+}
+
+.sat-btn {
+    background: #111827;
+    color: white;
+}
+
+.main-buttons button:hover {
+    transform: translateY(-3px);
+}
+
+section {
+    padding: 70px 8%;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 40px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 35px 25px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card .icon {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.card button {
+    margin-top: 20px;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.practice {
+    display: none;
+    background: white;
+    padding: 45px;
+    border-radius: 20px;
+    max-width: 1000px;
+    margin: 30px auto;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+}
+
+.practice.active {
+    display: block;
+}
+
+.practice h2 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.question {
+    background: #f1f5f9;
+    padding: 25px;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+.option {
+    display: block;
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid #e2e8f0;
+}
+
+.option:hover {
+    background: #eff6ff;
+}
+
+.answer-btn {
+    padding: 13px 25px;
+    background: #16a34a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.result {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.vocab-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.vocab-table th,
+.vocab-table td {
+    padding: 15px;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: left;
+}
+
+.vocab-table th {
+    background: #111827;
+    color: white;
+}
+
+.about {
+    background: #111827;
+    color: white;
+    text-align: center;
+}
+
+.about p {
+    max-width: 700px;
+    margin: auto;
+    color: #cbd5e1;
+    line-height: 1.8;
+}
+
+footer {
+    background: #0b1120;
+    color: #94a3b8;
+    text-align: center;
+    padding: 25px;
+}
+
+@media(max-width: 900px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .hero h1 {
-      font-size: clamp(45px, 7vw, 80px);
-      line-height: 1;
-      margin-bottom: 25px;
+        font-size: 40px;
     }
+}
 
-    .hero h1 span {
-      color: #2563eb;
-    }
-
-    .hero p {
-      font-size: 20px;
-      color: #64748b;
-      margin-bottom: 35px;
-    }
-
-    .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 15px 30px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
-      font-size: 16px;
-    }
-
-    .primary {
-      background: #2563eb;
-      color: white;
-    }
-
-    .primary:hover {
-      background: #1d4ed8;
-    }
-
-    .secondary {
-      background: #0f172a;
-      color: white;
-    }
-
-    .secondary:hover {
-      background: #1e293b;
-    }
-
-    /* SECTION */
-    section {
-      padding: 80px 8%;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 38px;
-      margin-bottom: 12px;
-    }
-
-    .section-subtitle {
-      text-align: center;
-      color: #64748b;
-      margin-bottom: 45px;
-      font-size: 17px;
-    }
-
-    /* CARDS */
+@media(max-width: 600px) {
     .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 25px;
-      max-width: 1200px;
-      margin: auto;
+        grid-template-columns: 1fr;
     }
 
-    .card {
-      background: white;
-      padding: 30px;
-      border-radius: 18px;
-      box-shadow: 0 8px 25px rgba(15, 23, 42, 0.07);
-      transition: 0.25s;
-      text-align: center;
+    nav {
+        padding: 18px;
     }
 
-    .card:hover {
-      transform: translateY(-7px);
-      box-shadow: 0 15px 35px rgba(15, 23, 42, 0.12);
+    nav a {
+        margin-left: 10px;
     }
 
-    .icon {
-      font-size: 45px;
-      margin-bottom: 18px;
+    .practice {
+        padding: 25px;
     }
-
-    .card h3 {
-      font-size: 22px;
-      margin-bottom: 12px;
-    }
-
-    .card p {
-      color: #64748b;
-      line-height: 1.6;
-      margin-bottom: 20px;
-    }
-
-    .card button {
-      background: #eff6ff;
-      color: #2563eb;
-      border: none;
-      padding: 11px 20px;
-      border-radius: 8px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    /* GOAL */
-    .goal {
-      background: #0f172a;
-      color: white;
-      border-radius: 25px;
-      max-width: 1200px;
-      margin: auto;
-      padding: 55px;
-      text-align: center;
-    }
-
-    .goal h2 {
-      font-size: 38px;
-      margin-bottom: 15px;
-    }
-
-    .goal p {
-      color: #cbd5e1;
-      margin-bottom: 30px;
-      font-size: 18px;
-    }
-
-    .goal-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 20px;
-    }
-
-    .goal-box {
-      background: #1e293b;
-      padding: 25px;
-      border-radius: 15px;
-    }
-
-    .goal-box strong {
-      display: block;
-      font-size: 35px;
-      color: #60a5fa;
-      margin-bottom: 8px;
-    }
-
-    /* DAILY */
-    .daily {
-      background: white;
-    }
-
-    .progress-container {
-      max-width: 800px;
-      margin: 30px auto;
-      background: #e5e7eb;
-      height: 18px;
-      border-radius: 20px;
-      overflow: hidden;
-    }
-
-    .progress {
-      width: 65%;
-      height: 100%;
-      background: #2563eb;
-      border-radius: 20px;
-    }
-
-    .stats {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      flex-wrap: wrap;
-      margin-top: 30px;
-    }
-
-    .stat {
-      background: #f8fafc;
-      padding: 20px 30px;
-      border-radius: 12px;
-      text-align: center;
-    }
-
-    .stat strong {
-      display: block;
-      font-size: 30px;
-      color: #2563eb;
-    }
-
-    /* ABOUT */
-    .about {
-      max-width: 850px;
-      margin: auto;
-      text-align: center;
-    }
-
-    .about p {
-      color: #64748b;
-      line-height: 1.8;
-      font-size: 18px;
-    }
-
-    /* FOOTER */
-    footer {
-      background: #0f172a;
-      color: white;
-      text-align: center;
-      padding: 35px 20px;
-    }
-
-    footer span {
-      color: #60a5fa;
-    }
-
-    /* MOBILE */
-    @media (max-width: 700px) {
-      nav {
-        padding: 0 5%;
-      }
-
-      nav ul {
-        gap: 12px;
-        font-size: 14px;
-      }
-
-      .hero {
-        min-height: 500px;
-      }
-
-      section {
-        padding: 60px 5%;
-      }
-
-      .goal {
-        padding: 35px 20px;
-      }
-    }
-  </style>
+}
+</style>
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
-    <div class="logo">
-      PEYBAK <span>777</span> 🚀
+<!-- NAVBAR -->
+
+<nav>
+    <div class="logo">PEYBAK 777 🚀</div>
+
+    <div>
+        <a href="#home">Home</a>
+        <a href="#courses">Courses</a>
+        <a href="#about">About</a>
     </div>
-
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#courses">Courses</a></li>
-      <li><a href="#goal">Yale Goal</a></li>
-      <li><a href="#about">About</a></li>
-    </ul>
-  </nav>
+</nav>
 
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="hero-content">
+<!-- HERO -->
 
-      <div class="badge">
-        🎓 Free IELTS & SAT Preparation
-      </div>
+<div class="hero" id="home">
 
-      <h1>
+    <h1>
         Welcome to <span>PEYBAK 777</span>
-      </h1>
+    </h1>
 
-      <p>
-        Your free platform for IELTS, SAT and university preparation.
-        Study smarter. Dream bigger.
-      </p>
-
-      <div class="buttons">
-        <a href="#courses" class="btn primary">
-          🚀 Start Learning
-        </a>
-
-        <a href="#goal" class="btn secondary">
-          🎯 My Yale Goal
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- COURSES -->
-  <section id="courses">
-
-    <h2 class="section-title">
-      What Can You Practice?
-    </h2>
-
-    <p class="section-subtitle">
-      Everything you need to improve your IELTS and SAT scores.
+    <p>
+        Free IELTS & SAT preparation platform for ambitious students.
     </p>
 
-    <div class="cards">
+    <div class="main-buttons">
 
-      <div class="card">
+        <button class="ielts-btn" onclick="showSection('ielts')">
+            IELTS
+        </button>
+
+        <button class="sat-btn" onclick="showSection('sat')">
+            SAT
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- COURSES -->
+
+<section id="courses">
+
+<h2>What Can You Practice?</h2>
+
+<div class="cards">
+
+    <div class="card">
         <div class="icon">📚</div>
         <h3>Vocabulary</h3>
         <p>
-          Learn powerful IELTS and SAT vocabulary with useful examples.
+            Learn important English words for IELTS and SAT.
         </p>
-        <button onclick="startPractice('Vocabulary')">
-          Practice
+        <button onclick="showSection('vocabulary')">
+            Practice
         </button>
-      </div>
+    </div>
 
 
-      <div class="card">
+    <div class="card">
         <div class="icon">📖</div>
         <h3>IELTS Reading</h3>
         <p>
-          Practice True/False/Not Given, headings, multiple choice and more.
+            Improve your reading skills with practice questions.
         </p>
-        <button onclick="startPractice('IELTS Reading')">
-          Practice
+        <button onclick="showSection('reading')">
+            Start Reading
         </button>
-      </div>
+    </div>
 
 
-      <div class="card">
-        <div class="icon">🎧</div>
-        <h3>IELTS Listening</h3>
-        <p>
-          Improve listening skills with IELTS-style questions.
-        </p>
-        <button onclick="startPractice('IELTS Listening')">
-          Practice
-        </button>
-      </div>
-
-
-      <div class="card">
-        <div class="icon">🗣️</div>
-        <h3>IELTS Speaking</h3>
-        <p>
-          Practice Part 1, Part 2 and Part 3 speaking questions.
-        </p>
-        <button onclick="startPractice('IELTS Speaking')">
-          Practice
-        </button>
-      </div>
-
-
-      <div class="card">
-        <div class="icon">✍️</div>
-        <h3>IELTS Writing</h3>
-        <p>
-          Practice Task 1 and Task 2 with high-band structures.
-        </p>
-        <button onclick="startPractice('IELTS Writing')">
-          Practice
-        </button>
-      </div>
-
-
-      <div class="card">
+    <div class="card">
         <div class="icon">🧮</div>
         <h3>SAT Math</h3>
         <p>
-          Practice algebra, advanced math, problem solving and data analysis.
+            Practice mathematics questions for the SAT.
         </p>
-        <button onclick="startPractice('SAT Math')">
-          Practice
+        <button onclick="showSection('math')">
+            Start Math
         </button>
-      </div>
+    </div>
 
 
-      <div class="card">
-        <div class="icon">🇺🇸</div>
-        <h3>SAT Reading & Writing</h3>
+    <div class="card">
+        <div class="icon">🗣️</div>
+        <h3>IELTS Speaking</h3>
         <p>
-          Improve grammar, vocabulary, comprehension and evidence questions.
+            Practice Part 1, Part 2 and Part 3 questions.
         </p>
-        <button onclick="startPractice('SAT Reading')">
-          Practice
+        <button onclick="showSection('speaking')">
+            Start Speaking
         </button>
-      </div>
-
-
-      <div class="card">
-        <div class="icon">🔥</div>
-        <h3>Daily Challenge</h3>
-        <p>
-          Complete a new challenge every day and build your streak.
-        </p>
-        <button onclick="dailyChallenge()">
-          Start Challenge
-        </button>
-      </div>
-
     </div>
 
-  </section>
+</div>
+
+</section>
 
 
-  <!-- YALE GOAL -->
-  <section id="goal">
+<!-- IELTS -->
 
-    <div class="goal">
+<div id="ielts" class="practice">
 
-      <h2>🎯 PEYBAK 777 → YALE</h2>
+<h2>🇬🇧 IELTS Practice</h2>
 
-      <p>
-        One goal. One plan. Every day.
-      </p>
+<p>
+Choose a section to practice:
+</p>
 
-      <div class="goal-grid">
+<br>
 
-        <div class="goal-box">
-          <strong>7.0</strong>
-          IELTS Target
-        </div>
+<button class="answer-btn" onclick="showSection('reading')">
+📖 Reading
+</button>
 
-        <div class="goal-box">
-          <strong>1500+</strong>
-          SAT Target
-        </div>
+<button class="answer-btn" onclick="showSection('speaking')">
+🗣️ Speaking
+</button>
 
-        <div class="goal-box">
-          <strong>100%</strong>
-          Scholarship Goal
-        </div>
+<button class="answer-btn" onclick="showSection('vocabulary')">
+📚 Vocabulary
+</button>
 
-        <div class="goal-box">
-          <strong>2027</strong>
-          University Goal
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
+</div>
 
 
-  <!-- DAILY PROGRESS -->
-  <section class="daily">
+<!-- SAT -->
 
-    <h2 class="section-title">
-      📊 Daily Progress
-    </h2>
+<div id="sat" class="practice">
 
-    <p class="section-subtitle">
-      Small progress every day creates big results.
-    </p>
+<h2>🇺🇸 SAT Practice</h2>
 
-    <div class="progress-container">
-      <div class="progress"></div>
-    </div>
+<p>
+Choose a section:
+</p>
 
-    <div class="stats">
+<br>
 
-      <div class="stat">
-        <strong>7</strong>
-        Day Streak 🔥
-      </div>
+<button class="answer-btn" onclick="showSection('math')">
+🧮 SAT Math
+</button>
 
-      <div class="stat">
-        <strong>42</strong>
-        Questions
-      </div>
+<button class="answer-btn" onclick="showSection('vocabulary')">
+📚 Vocabulary
+</button>
 
-      <div class="stat">
-        <strong>12</strong>
-        New Words
-      </div>
-
-      <div class="stat">
-        <strong>65%</strong>
-        Today's Goal
-      </div>
-
-    </div>
-
-  </section>
+</div>
 
 
-  <!-- ABOUT -->
-  <section id="about">
+<!-- VOCABULARY -->
 
-    <div class="about">
+<div id="vocabulary" class="practice">
 
-      <h2 class="section-title">
-        About PEYBAK 777
-      </h2>
+<h2>📚 Important Vocabulary</h2>
 
-      <p>
-        PEYBAK 777 is a free learning project created for ambitious students
-        who want to prepare for IELTS, SAT and top universities.
-        Our mission is simple: make quality preparation accessible to everyone.
-      </p>
+<table class="vocab-table">
 
-    </div>
+<tr>
+<th>Word</th>
+<th>Meaning</th>
+<th>Synonym</th>
+</tr>
 
-  </section>
+<tr>
+<td>Significant</td>
+<td>Muhim, katta ahamiyatga ega</td>
+<td>Important</td>
+</tr>
+
+<tr>
+<td>Consequently</td>
+<td>Natijada</td>
+<td>Therefore</td>
+</tr>
+
+<tr>
+<td>Furthermore</td>
+<td>Bundan tashqari</td>
+<td>Moreover</td>
+</tr>
+
+<tr>
+<td>Benefit</td>
+<td>Foyda</td>
+<td>Advantage</td>
+</tr>
+
+<tr>
+<td>Increase</td>
+<td>Oshmoq</td>
+<td>Rise</td>
+</tr>
+
+<tr>
+<td>Decrease</td>
+<td>Kamaymoq</td>
+<td>Decline</td>
+</tr>
+
+<tr>
+<td>Challenge</td>
+<td>Qiyinchilik</td>
+<td>Difficulty</td>
+</tr>
+
+<tr>
+<td>Essential</td>
+<td>Juda zarur</td>
+<td>Necessary</td>
+</tr>
+
+<tr>
+<td>Approach</td>
+<td>Yondashuv</td>
+<td>Method</td>
+</tr>
+
+<tr>
+<td>Impact</td>
+<td>Ta'sir</td>
+<td>Effect</td>
+</tr>
+
+</table>
+
+</div>
 
 
-  <!-- FOOTER -->
-  <footer>
+<!-- READING -->
 
-    <p>
-      🚀 <span>PEYBAK 777</span> — Study. Improve. Achieve.
-    </p>
+<div id="reading" class="practice">
 
-    <p style="margin-top:10px; color:#94a3b8;">
-      Free IELTS & SAT Preparation Platform
-    </p>
+<h2>📖 IELTS Reading</h2>
 
-  </footer>
+<p>
+Read the short passage and answer the question.
+</p>
+
+<div class="question">
+
+<p>
+<strong>Passage:</strong><br><br>
+
+Many students believe that studying for a short period every day
+is more effective than studying for many hours once a week.
+Regular practice helps learners remember information and develop
+strong study habits.
+</p>
+
+<br>
+
+<strong>
+Question: What is one benefit of regular practice?
+</strong>
+
+<label class="option">
+<input type="radio" name="reading" value="wrong">
+ It makes students sleep less.
+</label>
+
+<label class="option">
+<input type="radio" name="reading" value="correct">
+ It helps students remember information.
+</label>
+
+<label class="option">
+<input type="radio" name="reading" value="wrong">
+ It removes all exams.
+</label>
+
+<label class="option">
+<input type="radio" name="reading" value="wrong">
+ It makes lessons unnecessary.
+</label>
+
+<button class="answer-btn" onclick="checkReading()">
+Check Answer
+</button>
+
+<div id="readingResult" class="result"></div>
+
+</div>
+
+</div>
 
 
-  <!-- JAVASCRIPT -->
-  <script>
+<!-- SPEAKING -->
 
-    function startPractice(subject) {
-      alert(
-        "🚀 " + subject +
-        " practice is coming soon!\n\n" +
-        "PEYBAK 777 is being developed step by step."
-      );
+<div id="speaking" class="practice">
+
+<h2>🗣️ IELTS Speaking</h2>
+
+<div class="question">
+
+<h3>Part 1</h3>
+
+<br>
+
+<p>
+1. What do you usually do in your free time?
+</p>
+
+<br>
+
+<p>
+2. Do you enjoy studying English?
+</p>
+
+<br>
+
+<p>
+3. What kind of books do you like?
+</p>
+
+</div>
+
+
+<div class="question">
+
+<h3>Part 2</h3>
+
+<br>
+
+<p>
+<strong>
+Describe a teacher who has influenced you.
+</strong>
+</p>
+
+<br>
+
+<p>
+You should say:
+</p>
+
+<ul>
+<li>who the teacher is</li>
+<li>what subject they teach</li>
+<li>how they helped you</li>
+<li>and explain why you remember them</li>
+</ul>
+
+</div>
+
+
+<div class="question">
+
+<h3>Part 3</h3>
+
+<br>
+
+<p>
+Why do you think teachers are important in society?
+</p>
+
+</div>
+
+</div>
+
+
+<!-- SAT MATH -->
+
+<div id="math" class="practice">
+
+<h2>🧮 SAT Math</h2>
+
+<div class="question">
+
+<strong>
+If 3x + 5 = 20, what is the value of x?
+</strong>
+
+<label class="option">
+<input type="radio" name="math" value="wrong">
+ A) 3
+</label>
+
+<label class="option">
+<input type="radio" name="math" value="correct">
+ B) 5
+</label>
+
+<label class="option">
+<input type="radio" name="math" value="wrong">
+ C) 7
+</label>
+
+<label class="option">
+<input type="radio" name="math" value="wrong">
+ D) 10
+</label>
+
+<button class="answer-btn" onclick="checkMath()">
+Check Answer
+</button>
+
+<div id="mathResult" class="result"></div>
+
+</div>
+
+</div>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<h2>About PEYBAK 777</h2>
+
+<p>
+PEYBAK 777 is a free learning platform designed to help
+students prepare for IELTS and SAT. Our goal is to make
+high-quality practice accessible to ambitious students.
+</p>
+
+</section>
+
+
+<footer>
+
+© 2026 PEYBAK 777 🚀 | Free IELTS & SAT Practice
+
+</footer>
+
+
+<script>
+
+function hideAll() {
+
+    let sections = document.querySelectorAll(".practice");
+
+    sections.forEach(function(section) {
+        section.classList.remove("active");
+    });
+
+}
+
+
+function showSection(id) {
+
+    hideAll();
+
+    let section = document.getElementById(id);
+
+    if(section) {
+        section.classList.add("active");
+
+        section.scrollIntoView({
+            behavior: "smooth"
+        });
     }
 
-    function dailyChallenge() {
-      alert(
-        "🔥 DAILY CHALLENGE\n\n" +
-        "Your challenge today:\n" +
-        "Learn 10 new English words and use each one in a sentence!"
-      );
+}
+
+
+function checkReading() {
+
+    let answer = document.querySelector(
+        'input[name="reading"]:checked'
+    );
+
+    let result = document.getElementById("readingResult");
+
+    if(!answer) {
+
+        result.innerHTML = "Please choose an answer.";
+
+        return;
     }
 
-  </script>
+    if(answer.value === "correct") {
+
+        result.innerHTML = "✅ Correct! Great job.";
+
+    } else {
+
+        result.innerHTML = "❌ Incorrect. Try again.";
+
+    }
+
+}
+
+
+function checkMath() {
+
+    let answer = document.querySelector(
+        'input[name="math"]:checked'
+    );
+
+    let result = document.getElementById("mathResult");
+
+    if(!answer) {
+
+        result.innerHTML = "Please choose an answer.";
+
+        return;
+    }
+
+    if(answer.value === "correct") {
+
+        result.innerHTML = "✅ Correct! Well done.";
+
+    } else {
+
+        result.innerHTML = "❌ Incorrect. Try again.";
+
+    }
+
+}
+
+</script>
 
 </body>
 </html>
