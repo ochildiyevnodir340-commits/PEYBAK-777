@@ -1,382 +1,360 @@
-PEYBAK-777
-│
-├── index.html
-├── style.css
-├── app.js
-└── questions.js <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>PEYBAK 777 | IELTS Reading Exam</title>
+<title>PEYBAK 777 | IELTS + SAT</title>
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#f3f6fb;
-    color:#111827;
+font-family:Arial,Helvetica,sans-serif;
+background:#f5f7fb;
+color:#111827;
 }
 
 header{
-    background:#101827;
-    color:white;
-    height:70px;
-    padding:0 5%;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    position:sticky;
-    top:0;
-    z-index:100;
+height:70px;
+background:#0f172a;
+color:white;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 5%;
+position:sticky;
+top:0;
+z-index:999;
 }
 
 .logo{
-    font-size:25px;
-    font-weight:800;
+font-size:25px;
+font-weight:900;
 }
 
-.header-right{
-    display:flex;
-    gap:25px;
-    align-items:center;
+nav button{
+background:none;
+border:0;
+color:white;
+font-size:15px;
+margin-left:18px;
+cursor:pointer;
 }
 
-.timer{
-    background:#fee2e2;
-    color:#b91c1c;
-    padding:10px 18px;
-    border-radius:10px;
-    font-weight:bold;
-    font-size:18px;
+nav button:hover{
+color:#60a5fa;
 }
 
-.home-btn{
-    background:white;
-    color:#111827;
-    border:0;
-    padding:10px 18px;
-    border-radius:8px;
-    cursor:pointer;
+.page{
+display:none;
+}
+
+.active{
+display:block;
 }
 
 .hero{
-    text-align:center;
-    background:white;
-    padding:75px 20px;
+background:white;
+padding:75px 20px;
+text-align:center;
 }
 
 .hero h1{
-    font-size:52px;
-    margin-bottom:15px;
+font-size:55px;
+margin-bottom:12px;
 }
 
-.hero span{
-    color:#2563eb;
+.hero h1 span{
+color:#2563eb;
 }
 
 .hero p{
-    color:#64748b;
-    font-size:19px;
-    max-width:700px;
-    margin:auto auto 30px;
+font-size:19px;
+color:#64748b;
+max-width:750px;
+margin:8px auto;
 }
 
-.start-btn{
-    background:#2563eb;
-    color:white;
-    border:0;
-    padding:17px 35px;
-    border-radius:10px;
-    font-size:18px;
-    font-weight:bold;
-    cursor:pointer;
+.btn{
+border:0;
+border-radius:10px;
+padding:14px 25px;
+font-weight:bold;
+font-size:16px;
+cursor:pointer;
+margin:6px;
 }
 
-.info{
-    max-width:1000px;
-    margin:40px auto;
-    padding:20px;
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
+.blue{
+background:#2563eb;
+color:white;
 }
 
-.info-card{
-    background:white;
-    padding:22px;
-    border-radius:14px;
-    text-align:center;
-    box-shadow:0 3px 15px #0000000b;
+.dark{
+background:#0f172a;
+color:white;
 }
 
-.info-card b{
-    display:block;
-    font-size:25px;
-    color:#2563eb;
+.green{
+background:#16a34a;
+color:white;
 }
 
-#exam{
-    display:none;
+.orange{
+background:#f59e0b;
+color:white;
 }
 
-.exam-layout{
-    display:grid;
-    grid-template-columns:1fr 300px;
-    max-width:1450px;
-    margin:auto;
-    gap:20px;
-    padding:25px;
+.red{
+background:#dc2626;
+color:white;
 }
 
-.reading-area{
-    background:white;
-    border-radius:15px;
-    padding:30px;
+.container{
+max-width:1200px;
+margin:auto;
+padding:40px 20px;
 }
 
-.passages{
-    border-bottom:2px solid #e5e7eb;
-    margin-bottom:25px;
-    padding-bottom:20px;
+.title{
+font-size:36px;
+margin-bottom:10px;
 }
 
-.passages h2{
-    font-size:27px;
-    margin-bottom:15px;
+.subtitle{
+color:#64748b;
+margin-bottom:30px;
 }
 
-.passages p{
-    font-size:17px;
-    line-height:1.85;
-    margin-bottom:17px;
-    text-align:justify;
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:22px;
 }
 
-.question-area{
-    background:#fff;
+.card{
+background:white;
+padding:28px;
+border-radius:18px;
+box-shadow:0 5px 20px #0000000b;
 }
 
-.question-number{
-    display:inline-block;
-    background:#dbeafe;
-    color:#1d4ed8;
-    padding:6px 12px;
-    border-radius:20px;
-    font-weight:bold;
-    margin-bottom:12px;
+.card:hover{
+transform:translateY(-3px);
 }
 
-.question-text{
-    font-size:20px;
-    font-weight:600;
-    margin-bottom:20px;
+.card .icon{
+font-size:42px;
+}
+
+.card h3{
+font-size:23px;
+margin:12px 0;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:15px;
+margin-bottom:25px;
+}
+
+.stat{
+background:white;
+padding:22px;
+border-radius:15px;
+text-align:center;
+}
+
+.stat b{
+font-size:32px;
+display:block;
+color:#2563eb;
+}
+
+.exam-head{
+background:#0f172a;
+color:white;
+padding:40px 20px;
+text-align:center;
+}
+
+.exam-head h1{
+font-size:40px;
+}
+
+.module-card{
+background:white;
+padding:25px;
+border-radius:16px;
+margin-bottom:20px;
+box-shadow:0 3px 15px #0000000b;
+}
+
+.question{
+background:white;
+padding:28px;
+border-radius:16px;
+box-shadow:0 3px 15px #0000000b;
+margin:20px 0;
 }
 
 .option{
-    width:100%;
-    text-align:left;
-    padding:15px;
-    background:#f8fafc;
-    border:2px solid #e5e7eb;
-    border-radius:10px;
-    margin:7px 0;
-    cursor:pointer;
-    font-size:16px;
+width:100%;
+text-align:left;
+padding:15px;
+margin:7px 0;
+border:2px solid #e5e7eb;
+background:#f8fafc;
+border-radius:10px;
+cursor:pointer;
+font-size:16px;
 }
 
 .option:hover{
-    border-color:#2563eb;
+border-color:#2563eb;
 }
 
 .option.selected{
-    background:#dbeafe;
-    border-color:#2563eb;
+border-color:#2563eb;
+background:#dbeafe;
 }
 
-input[type="text"]{
-    width:100%;
-    padding:14px;
-    border:2px solid #d1d5db;
-    border-radius:9px;
-    font-size:16px;
+.correct{
+border-color:#16a34a!important;
+background:#dcfce7!important;
 }
 
-.navigation{
-    display:flex;
-    justify-content:space-between;
-    margin-top:25px;
-    gap:10px;
+.wrong{
+border-color:#dc2626!important;
+background:#fee2e2!important;
 }
 
-.nav-btn{
-    padding:13px 22px;
-    border:0;
-    border-radius:9px;
-    cursor:pointer;
-    font-weight:bold;
+.timer{
+font-size:28px;
+font-weight:bold;
+color:#dc2626;
+margin:15px 0;
 }
 
-.prev{
-    background:#e5e7eb;
+.progress{
+height:12px;
+background:#e5e7eb;
+border-radius:20px;
+overflow:hidden;
+margin:15px 0 25px;
 }
 
-.next{
-    background:#2563eb;
-    color:white;
+.progress-bar{
+height:100%;
+width:0%;
+background:#2563eb;
+transition:.3s;
 }
 
-.flag{
-    background:#fef3c7;
+.navgrid{
+display:grid;
+grid-template-columns:repeat(10,1fr);
+gap:7px;
+margin-top:20px;
 }
 
-.sidebar{
-    background:white;
-    border-radius:15px;
-    padding:20px;
-    height:max-content;
-    position:sticky;
-    top:90px;
+.navq{
+height:38px;
+border:0;
+border-radius:7px;
+background:#e5e7eb;
+cursor:pointer;
 }
 
-.sidebar h3{
-    margin-bottom:15px;
+.navq.done{
+background:#2563eb;
+color:white;
 }
 
-.question-grid{
-    display:grid;
-    grid-template-columns:repeat(5,1fr);
-    gap:8px;
+.navq.current{
+outline:3px solid #93c5fd;
 }
 
-.q-number{
-    width:42px;
-    height:42px;
-    border:1px solid #d1d5db;
-    background:#f8fafc;
-    border-radius:7px;
-    cursor:pointer;
+textarea,input,select{
+width:100%;
+padding:14px;
+border:2px solid #e5e7eb;
+border-radius:10px;
+font-size:16px;
+margin:8px 0;
 }
 
-.q-number.answered{
-    background:#2563eb;
-    color:white;
+textarea{
+min-height:250px;
+resize:vertical;
 }
 
-.q-number.current{
-    outline:3px solid #93c5fd;
+.word-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:15px;
 }
 
-.q-number.flagged{
-    background:#f59e0b;
-    color:white;
+.word{
+background:white;
+padding:20px;
+border-radius:13px;
+border-left:5px solid #2563eb;
 }
 
-.legend{
-    margin-top:20px;
-    font-size:13px;
-    color:#64748b;
+.word h3{
+font-size:22px;
 }
 
-.submit{
-    width:100%;
-    margin-top:25px;
-    padding:15px;
-    background:#16a34a;
-    color:white;
-    border:0;
-    border-radius:9px;
-    font-size:16px;
-    font-weight:bold;
-    cursor:pointer;
+.badge{
+display:inline-block;
+padding:4px 9px;
+border-radius:20px;
+background:#dbeafe;
+color:#1d4ed8;
+font-size:12px;
+font-weight:bold;
+margin:5px 0;
 }
 
 .result{
-    display:none;
-    max-width:900px;
-    margin:50px auto;
-    background:white;
-    padding:45px;
-    border-radius:20px;
-    text-align:center;
+text-align:center;
+background:white;
+padding:45px;
+border-radius:20px;
 }
 
-.result h1{
-    font-size:42px;
-    margin-bottom:20px;
-}
-
-.score{
-    font-size:65px;
-    font-weight:bold;
-    color:#2563eb;
-}
-
-.result-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:15px;
-    margin:30px 0;
-}
-
-.result-card{
-    padding:20px;
-    background:#f8fafc;
-    border-radius:12px;
+.big-score{
+font-size:70px;
+font-weight:900;
+color:#2563eb;
+margin:20px;
 }
 
 .review{
-    text-align:left;
-    margin-top:30px;
+text-align:left;
+margin-top:30px;
 }
 
 .review-item{
-    padding:15px;
-    border-bottom:1px solid #e5e7eb;
+padding:15px;
+border-bottom:1px solid #e5e7eb;
 }
 
-.correct-text{
-    color:#15803d;
+footer{
+background:#0f172a;
+color:white;
+text-align:center;
+padding:40px;
+margin-top:40px;
 }
 
-.wrong-text{
-    color:#dc2626;
-}
-
-@media(max-width:900px){
-
-    .exam-layout{
-        grid-template-columns:1fr;
-    }
-
-    .sidebar{
-        position:static;
-        order:-1;
-    }
-
-    .info{
-        grid-template-columns:repeat(2,1fr);
-    }
-}
-
-@media(max-width:600px){
-
-    .hero h1{
-        font-size:37px;
-    }
-
-    .info{
-        grid-template-columns:1fr;
-    }
-
-    .exam-layout{
-        padding:10px;
-    }
-
-    .reading-area{
-        padding:18px;
-    }
+@media(max-width:700px){
+.hero h1{font-size:38px}
+nav button{margin-left:5px;font-size:12px}
+.exam-head h1{font-size:30px}
+.navgrid{grid-template-columns:repeat(5,1fr)}
 }
 </style>
 </head>
@@ -387,66 +365,331 @@ input[type="text"]{
 
 <div class="logo">PEYBAK 777 🚀</div>
 
-<div class="header-right">
-
-<div class="timer" id="timer">
-60:00
-</div>
-
-<button class="home-btn" onclick="goHome()">
-Home
-</button>
-
-</div>
+<nav>
+<button onclick="show('home')">HOME</button>
+<button onclick="show('ielts')">IELTS</button>
+<button onclick="show('sat')">SAT</button>
+<button onclick="show('vocab')">VOCAB</button>
+<button onclick="show('dashboard')">DASHBOARD</button>
+</nav>
 
 </header>
 
 
-<!-- HOME -->
+<!-- ================= HOME ================= -->
 
-<section id="home">
+<section id="home" class="page active">
 
 <div class="hero">
 
-<h1>
-PEYBAK <span>777</span>
-</h1>
+<h1>PEYBAK <span>777</span></h1>
 
 <p>
-IELTS Academic Reading Exam Simulator
+IELTS + SAT Mastery Platform
 </p>
 
 <p>
-3 passages • 40 questions • 60 minutes
+Your target: IELTS 7.0 + SAT 1500+
 </p>
 
-<button class="start-btn" onclick="startExam()">
-START FULL READING TEST
+<button class="btn blue" onclick="show('ielts')">
+IELTS
+</button>
+
+<button class="btn dark" onclick="show('sat')">
+SAT
+</button>
+
+<button class="btn orange" onclick="show('vocab')">
+3000+ VOCABULARY
 </button>
 
 </div>
 
 
-<div class="info">
+<div class="container">
 
-<div class="info-card">
-<b>3</b>
-Passages
+<h2 class="title">🔥 Training System</h2>
+<p class="subtitle">
+Start easy. Become advanced. Reach exam level.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">📖</div>
+<h3>IELTS</h3>
+<p>Reading, Listening, Writing and Speaking.</p>
+<button class="btn blue" onclick="show('ielts')">
+Open IELTS
+</button>
 </div>
 
-<div class="info-card">
-<b>40</b>
-Questions
+<div class="card">
+<div class="icon">🎯</div>
+<h3>SAT</h3>
+<p>Reading & Writing + Math with adaptive practice.</p>
+<button class="btn dark" onclick="show('sat')">
+Open SAT
+</button>
 </div>
 
-<div class="info-card">
-<b>60</b>
-Minutes
+<div class="card">
+<div class="icon">📚</div>
+<h3>3000+ Vocabulary</h3>
+<p>Academic vocabulary, synonyms, examples and review.</p>
+<button class="btn orange" onclick="show('vocab')">
+Learn Words
+</button>
 </div>
 
-<div class="info-card">
-<b>9.0</b>
-Band Target
+<div class="card">
+<div class="icon">📊</div>
+<h3>Dashboard</h3>
+<p>Track your IELTS, SAT and vocabulary progress.</p>
+<button class="btn green" onclick="show('dashboard')">
+My Progress
+</button>
+</div>
+
+</div>
+</div>
+
+</section>
+
+
+<!-- ================= IELTS ================= -->
+
+<section id="ielts" class="page">
+
+<div class="exam-head">
+<h1>IELTS ACADEMIC</h1>
+<p>Full Training Center</p>
+</div>
+
+<div class="container">
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">📖</div>
+<h3>Reading</h3>
+<p>3 passages • 40 questions • 60 minutes</p>
+<button class="btn blue" onclick="startIELTSReading()">
+START READING
+</button>
+</div>
+
+<div class="card">
+<div class="icon">🎧</div>
+<h3>Listening</h3>
+<p>4 parts • 40 questions</p>
+<button class="btn blue" onclick="startListening()">
+START LISTENING
+</button>
+</div>
+
+<div class="card">
+<div class="icon">✍️</div>
+<h3>Writing</h3>
+<p>Task 1 + Task 2 • 60 minutes</p>
+<button class="btn blue" onclick="startWriting()">
+START WRITING
+</button>
+</div>
+
+<div class="card">
+<div class="icon">🗣️</div>
+<h3>Speaking</h3>
+<p>Part 1 + Part 2 + Part 3</p>
+<button class="btn blue" onclick="startSpeaking()">
+START SPEAKING
+</button>
+</div>
+
+</div>
+
+<div id="ieltsWork" style="margin-top:30px"></div>
+
+</div>
+
+</section>
+
+
+<!-- ================= SAT ================= -->
+
+<section id="sat" class="page">
+
+<div class="exam-head">
+<h1>DIGITAL SAT</h1>
+<p>Target Score: 1500+</p>
+</div>
+
+<div class="container">
+
+<div class="stats">
+
+<div class="stat">
+<b id="satScore">400</b>
+Estimated Score
+</div>
+
+<div class="stat">
+<b id="satCorrect">0</b>
+Correct
+</div>
+
+<div class="stat">
+<b id="satLevel">Medium</b>
+Difficulty
+</div>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">📚</div>
+<h3>Reading & Writing</h3>
+<p>54 questions • 64 minutes • 2 modules</p>
+<button class="btn dark" onclick="startSATRW()">
+START R&W
+</button>
+</div>
+
+<div class="card">
+<div class="icon">🧮</div>
+<h3>Math</h3>
+<p>44 questions • 70 minutes • 2 modules</p>
+<button class="btn dark" onclick="startSATMath()">
+START MATH
+</button>
+</div>
+
+<div class="card">
+<div class="icon">🔥</div>
+<h3>Adaptive Practice</h3>
+<p>Your performance determines the difficulty of the next module.</p>
+<button class="btn orange" onclick="startSATAdaptive()">
+ADAPTIVE MODE
+</button>
+</div>
+
+</div>
+
+<div id="satWork" style="margin-top:30px"></div>
+
+</div>
+
+</section>
+
+
+<!-- ================= VOCAB ================= -->
+
+<section id="vocab" class="page">
+
+<div class="exam-head">
+<h1>📚 PEYBAK VOCABULARY</h1>
+<p>IELTS + SAT Academic Vocabulary</p>
+</div>
+
+<div class="container">
+
+<div class="stats">
+
+<div class="stat">
+<b id="learned">0</b>
+Learned
+</div>
+
+<div class="stat">
+<b>3000+</b>
+Target
+</div>
+
+<div class="stat">
+<b id="vocabLevel">B1</b>
+Current Level
+</div>
+
+</div>
+
+<input
+id="wordSearch"
+placeholder="Search word..."
+oninput="searchWords()"
+>
+
+<select id="wordFilter" onchange="searchWords()">
+<option value="all">All Levels</option>
+<option value="B1">B1</option>
+<option value="B2">B2</option>
+<option value="C1">C1</option>
+<option value="C2">C2</option>
+</select>
+
+<div class="word-grid" id="wordGrid"></div>
+
+</div>
+
+</section>
+
+
+<!-- ================= DASHBOARD ================= -->
+
+<section id="dashboard" class="page">
+
+<div class="exam-head">
+<h1>📊 YOUR DASHBOARD</h1>
+<p>PEYBAK 777 Progress</p>
+</div>
+
+<div class="container">
+
+<div class="stats">
+
+<div class="stat">
+<b id="dashIELTS">0</b>
+IELTS Correct
+</div>
+
+<div class="stat">
+<b id="dashSAT">0</b>
+SAT Correct
+</div>
+
+<div class="stat">
+<b id="dashWords">0</b>
+Words Learned
+</div>
+
+<div class="stat">
+<b id="dashStreak">1</b>
+Daily Streak
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>🎯 Target</h2>
+
+<p style="margin-top:15px">
+IELTS: <strong>7.0+</strong>
+</p>
+
+<div class="progress">
+<div id="ieltsProgress" class="progress-bar"></div>
+</div>
+
+<p>
+SAT: <strong>1500+</strong>
+</p>
+
+<div class="progress">
+<div id="satProgress" class="progress-bar"></div>
+</div>
+
 </div>
 
 </div>
@@ -454,1177 +697,1070 @@ Band Target
 </section>
 
 
-<!-- EXAM -->
+<footer>
 
-<section id="exam">
+<h2>PEYBAK 777 🚀</h2>
+<p>Train harder. Think deeper. Reach your target.</p>
 
-<div class="exam-layout">
-
-<main class="reading-area">
-
-<div class="passages">
-
-<h2 id="passageTitle">
-Reading Passage
-</h2>
-
-<div id="passageText"></div>
-
-</div>
-
-
-<div class="question-area">
-
-<div class="question-number" id="questionNumber">
-Question 1
-</div>
-
-<div class="question-text" id="questionText">
-Question
-</div>
-
-<div id="answerArea"></div>
-
-
-<div class="navigation">
-
-<button class="nav-btn prev" onclick="previousQuestion()">
-← Previous
-</button>
-
-<button class="nav-btn flag" onclick="toggleFlag()">
-🚩 Flag
-</button>
-
-<button class="nav-btn next" onclick="nextQuestion()">
-Next →
-</button>
-
-</div>
-
-</div>
-
-</main>
-
-
-<aside class="sidebar">
-
-<h3>Questions</h3>
-
-<div class="question-grid" id="questionGrid"></div>
-
-<div class="legend">
-
-<p>🔵 Answered</p>
-<p>🟡 Flagged</p>
-<p>⚪ Not answered</p>
-
-</div>
-
-<button class="submit" onclick="submitExam()">
-SUBMIT TEST
-</button>
-
-</aside>
-
-</div>
-
-</section>
-
-
-<!-- RESULT -->
-
-<section class="result" id="result">
-
-<h1>🎉 Test Complete</h1>
-
-<p>Your estimated IELTS Reading result</p>
-
-<div class="score" id="bandScore">
-0.0
-</div>
-
-<div class="result-grid">
-
-<div class="result-card">
-<strong id="correctResult">0</strong>
-<p>Correct</p>
-</div>
-
-<div class="result-card">
-<strong id="wrongResult">0</strong>
-<p>Wrong</p>
-</div>
-
-<div class="result-card">
-<strong id="percentResult">0%</strong>
-<p>Accuracy</p>
-</div>
-
-</div>
-
-<div class="review">
-
-<h2>Question Review</h2>
-
-<div id="reviewList"></div>
-
-</div>
-
-<br>
-
-<button class="start-btn" onclick="startExam()">
-TRY AGAIN
-</button>
-
-<button class="home-btn" onclick="goHome()">
-HOME
-</button>
-
-</section>
+</footer>
 
 
 <script>
 
 /* =====================================================
-   PEYBAK 777 IELTS READING DATABASE
-
-   ORIGINAL PRACTICE CONTENT
-   3 passages
-   40 questions
-===================================================== */
-
-
-const examData = [
-
-/* =========================
-PASSAGE 1
-========================= */
-
-{
-title:"PASSAGE 1 — The Changing Role of Urban Gardens",
-
-text:`
-
-<p>
-For much of the twentieth century, gardens in large cities were regarded primarily as decorative spaces. Public parks provided places for recreation, while private gardens were often treated as extensions of individual homes. In recent decades, however, researchers and city planners have begun to examine urban gardening from a very different perspective.
-</p>
-
-<p>
-One reason for this change is the rapid growth of cities. As populations become concentrated in urban areas, access to fresh food can become more difficult for some communities. Transporting vegetables and fruit over long distances also requires energy and creates emissions. Urban gardens cannot replace large-scale agriculture, but they can provide a supplementary source of fresh produce close to where people live.
-</p>
-
-<p>
-The benefits are not limited to food. Plants can provide shade and can contribute to the reduction of heat in densely built neighbourhoods. Researchers have also investigated whether vegetation can influence people's psychological well-being. Spending time in green environments may help people recover from mental fatigue and may encourage residents to spend more time outdoors.
-</p>
-
-<p>
-Community gardens have another distinctive feature: they bring people together. Residents who might otherwise have little contact with one another can cooperate in planting, maintaining and harvesting crops. Such activities may create informal social networks. In some cities, community gardens have consequently become places where residents exchange information and develop local projects.
-</p>
-
-<p>
-Nevertheless, urban gardening is not without difficulties. Land in cities is expensive, and gardens may compete with housing, transport infrastructure and commercial development. Soil can also contain pollutants left by previous industrial activity. For this reason, successful projects normally require careful planning and, in some cases, testing of the soil before food is grown.
-</p>
-
-<p>
-Despite these limitations, many planners now regard urban gardens as one element of a broader strategy for creating healthier and more resilient cities. Their value may lie less in the quantity of food they produce than in the combination of environmental, social and educational benefits they can provide.
-</p>
-`,
-
-questions:[
-
-{
-type:"mcq",
-q:"What was the traditional view of urban gardens?",
-options:[
-"They were mainly sources of commercial food.",
-"They were mainly decorative or recreational spaces.",
-"They were essential for reducing pollution.",
-"They were primarily educational institutions."
-],
-answer:1
-},
-
-{
-type:"tfng",
-q:"Urban gardens can completely replace large-scale agriculture.",
-options:["TRUE","FALSE","NOT GIVEN"],
-answer:1
-},
-
-{
-type:"mcq",
-q:"Why can producing food in cities reduce some transport-related problems?",
-options:[
-"Food can be produced closer to consumers.",
-"Cities have more farmland than rural areas.",
-"Urban vegetables never require transportation.",
-"All city residents grow their own food."
-],
-answer:0
-},
-
-{
-type:"tfng",
-q:"Researchers have found that every urban garden improves psychological health.",
-options:["TRUE","FALSE","NOT GIVEN"],
-answer:1
-},
-
-{
-type:"mcq",
-q:"What social benefit is associated with community gardens?",
-options:[
-"They eliminate the need for local governments.",
-"They encourage interaction between residents.",
-"They guarantee employment.",
-"They prevent commercial development."
-],
-answer:1
-},
-
-{
-type:"tfng",
-q:"Community gardens can sometimes become places where residents develop local projects.",
-options:["TRUE","FALSE","NOT GIVEN"],
-answer:0
-},
-
-{
-type:"mcq",
-q:"What is one problem related to urban land?",
-options:[
-"It is always unsuitable for plants.",
-"It is often expensive.",
-"It cannot contain vegetation.",
-"It is generally owned by farmers."
-],
-answer:1
-},
-
-{
-type:"tfng",
-q:"Urban garden projects may require soil testing.",
-options:["TRUE","FALSE","NOT GIVEN"],
-answer:0
-},
-
-{
-type:"mcq",
-q:"According to the final paragraph, the value of urban gardens may depend on:",
-options:[
-"their ability to produce more food than farms.",
-"their combination of several different benefits.",
-"their complete independence from government.",
-"their use of expensive technology."
-],
-answer:1
-},
-
-{
-type:"tfng",
-q:"The passage states that urban gardening is equally successful in every city.",
-options:["TRUE","FALSE","NOT GIVEN"],
-answer:2
-}
-
-]
-},
-
-
-/* =========================
-PASSAGE 2
-========================= */
-
-{
-title:"PASSAGE 2 — How Memory Changes With Practice",
-
-text:`
-
-<p>
-Human memory is often described as though it were a storage system in which information is placed and later retrieved unchanged. Modern research presents a more complicated picture. Remembering involves several processes, and the way information is learned can influence how successfully it is recalled later.
-</p>
-
-<p>
-One important distinction is between recognition and recall. Recognition occurs when a person identifies information that they have encountered before. Recall, by contrast, requires the person to produce the information without being shown the answer. A student who recognises a vocabulary word in a multiple-choice test may therefore perform differently from one who must produce its meaning independently.
-</p>
-
-<p>
-Repeated exposure to information can strengthen learning, but repetition alone is not necessarily the most efficient strategy. Researchers have investigated retrieval practice, in which learners deliberately attempt to remember information before checking whether they are correct. The effort involved in retrieval can make later recall more reliable.
-</p>
-
-<p>
-Another influential technique is spacing. Instead of studying the same material for several hours in one session, learners can distribute shorter sessions over a longer period. The intervals create opportunities to forget some information and then reconstruct it. Although this can make learning feel more difficult, the resulting memory may be more durable.
-</p>
-
-<p>
-Interleaving is a related approach. Rather than practising one type of problem repeatedly before moving to another, learners alternate between different types. This may force them to identify which method is appropriate instead of automatically applying the method used in the previous question.
-</p>
-
-<p>
-These findings have implications beyond school. Musicians, athletes and professionals all need to retrieve skills and information under changing conditions. Practice that introduces variation can therefore be useful because real situations rarely reproduce exactly the same circumstances as training exercises.
-</p>
-
-<p>
-However, effective learning does not mean that difficulty should be increased without limit. If material is far beyond a learner's current ability, repeated failure may provide little useful practice. A productive system therefore needs to balance challenge with sufficient knowledge and feedback.
-</p>
-`,
-
-questions:[
-
-{
-type:"mcq",
-q:"How does the passage describe the traditional view of memory?",
-options:[
-"As a system in which information is stored unchanged.",
-"As a completely unreliable process.",
-"As a social activity.",
-"As a form of physical exercise."
-],
-answer:0
-},
-
-{
-type:"tfng",
-q:"Recognition and recall are exactly the same process.",
-options:["TRUE","FALSE","NOT GIVEN"],
-answer:1
-},
-
-{
-type:"mcq",
-q:"What does retrieval practice involve?",
-options:[
-"Reading information repeatedly without testing yourself.",
-"Trying to remember information before checking the answer.",
-"Avoiding difficult questions.",
-"Studying only once."
-],
-answer:1
-},
-
-{
-type:"tfng",
-q:"Retrieval practice can make later recall more reliable.",
-options:["TRUE","FALSE","NOT GIVEN"],
-answer:0
-},
-
-{
-type:"mcq",
-q:"What is the main feature of spaced learning?",
-options:[
-"Studying everything in one long session.",
-"Distributing study sessions over time.",
-"Never reviewing information.",
-"Only studying difficult subjects."
-],
-answer:1
-},
-
-{
-type:"tfng",
-q:"Spacing can sometimes make learning feel more difficult.",
-options:["TRUE","FALSE","NOT GIVEN"],
-answer:0
-},
-
-{
-type:"mcq",
-q:"What is the purpose of interleaving?",
-options:[
-"To ensure that only one method is practised.",
-"To make learners identify which method is appropriate.",
-"To eliminate all repetition.",
-"To reduce the amount of information studied."
-],
-answer:1
-},
-
-{
-type:"tfng",
-q:"The passage discusses musicians and athletes as examples of people who may benefit from varied practice.",
-options:["TRUE","FALSE","NOT GIVEN"],
-answer:0
-},
-
-{
-type:"mcq",
-q:"What warning does the final paragraph give?",
-options:[
-"Learning should always be extremely easy.",
-"Difficulty should not be increased without considering the learner's ability.",
-"Feedback is unnecessary.",
-"Failure always improves learning."
-],
-answer:1
-},
-
-{
-type:"tfng",
-q:"The author argues that the most difficult possible practice is always the most effective.",
-options:["TRUE","FALSE","NOT GIVEN"],
-answer:1
-},
-
-{
-type:"mcq",
-q:"Which statement best summarises the passage?",
-options:[
-"Memory is completely fixed after childhood.",
-"Certain learning strategies can strengthen durable recall.",
-"Only professional athletes need retrieval practice.",
-"Repeated reading is always the best method."
-],
-answer:1
-},
-
-{
-type:"tfng",
-q:"The passage claims that recognition tests are always harder than recall tests.",
-options:["TRUE","FALSE","NOT GIVEN"],
-answer:2
-},
-
-{
-type:"mcq",
-q:"Why can variation in practice be useful?",
-options:[
-"Real situations rarely repeat exactly the same circumstances.",
-"It guarantees perfect performance.",
-"It removes the need for knowledge.",
-"It prevents learners from making mistakes."
-],
-answer:0
-},
-
-{
-type:"tfng",
-q:"Spacing involves studying material only once.",
-options:["TRUE","FALSE","NOT GIVEN"],
-answer:1
-},
-
-{
-type:"mcq",
-q:"What does the author suggest an effective learning system should balance?",
-options:[
-"Speed and entertainment.",
-"Challenge and sufficient ability and feedback.",
-"Competition and punishment.",
-"Memorisation and silence."
-],
-answer:1
-}
-
-]
-},
-
-
-/* =========================
-PASSAGE 3
-========================= */
-
-{
-title:"PASSAGE 3 — The Future of Renewable Energy",
-
-text:`
-
-<p>
-The transition from fossil fuels to renewable energy is frequently presented as a technological challenge. Yet technology is only one part of the problem. Electricity systems must also respond to changes in demand, infrastructure, investment and public policy.
-</p>
-
-<p>
-Solar and wind power have expanded rapidly because the cost of producing electricity from these sources has fallen in many regions. Their main difficulty is variability. Solar generation changes with daylight and weather, while wind generation depends on atmospheric conditions. A system that relies heavily on variable sources therefore needs methods of balancing supply and demand.
-</p>
-
-<p>
-Energy storage is one possible solution. Batteries can store electricity when production is high and release it when production falls. Other forms of storage, including pumped hydroelectric systems, can operate on different time scales. Storage, however, is not the only option. Electricity networks can also become more flexible by connecting different regions and allowing power to move to locations where it is most needed.
-</p>
-
-<p>
-Demand itself can sometimes be adjusted. Smart electricity systems may allow certain appliances or industrial processes to operate at times when electricity is plentiful. Consumers may receive financial incentives to change the timing of their electricity use. Such demand-side measures can reduce pressure on the network without necessarily reducing the total amount of electricity consumed.
-</p>
-
-<p>
-Another issue is the construction of transmission infrastructure. Renewable resources are not always located near major population centres. Stronger transmission networks can therefore be necessary to connect areas with abundant renewable generation to areas with high demand. Building these networks can take years and may face regulatory or public opposition.
-</p>
-
-<p>
-Policy plays a central role because energy infrastructure requires long-term investment. Investors may hesitate when rules change frequently or when future electricity prices are uncertain. Governments can influence investment through market rules, planning systems and financial mechanisms, although poorly designed policies can create unintended consequences.
-</p>
-
-<p>
-The future energy system is therefore unlikely to depend on a single technological solution. Instead, successful transitions are likely to combine renewable generation, storage, flexible networks, demand management and stable institutions. The precise combination will differ between countries because resources, infrastructure and patterns of electricity consumption vary considerably.
-</p>
-`,
-
-questions:[
-
-{
-type:"mcq",
-q:"What does the first paragraph suggest about the transition to renewable energy?",
-options:[
-"It is purely a technological issue.",
-"It involves several factors besides technology.",
-"It requires less investment than fossil fuels.",
-"It has already been completed."
-],
-answer:1
-},
-
-{
-type:"tfng",
-q:"Solar power produces exactly the same amount of electricity every hour.",
-options:["TRUE","FALSE","NOT GIVEN"],
-answer:1
-},
-
-{
-type:"mcq",
-q:"What is a major difficulty associated with wind and solar power?",
-options:[
-"They cannot produce electricity.",
-"Their output can vary.",
-"They require no infrastructure.",
-"They are available only in cities."
-],
-answer:1
-},
-
-{
-type:"tfng",
-q:"Batteries are the only possible method of balancing electricity supply and demand.",
-options:["TRUE","FALSE","NOT GIVEN"],
-answer:1
-},
-
-{
-type:"mcq",
-q:"What can stronger electricity networks allow?",
-options:[
-"Power to move between different regions.",
-"Consumers to stop using electricity.",
-"Cities to eliminate renewable energy.",
-"Governments to avoid investment."
-],
-answer:0
-},
-
-{
-type:"tfng",
-q:"Demand-side measures can change when electricity is consumed.",
-options:["TRUE","FALSE","NOT GIVEN"],
-answer:0
-},
-
-{
-type:"mcq",
-q:"Why may transmission infrastructure be necessary?",
-options:[
-"Renewable resources may be far from population centres.",
-"Electricity cannot travel through networks.",
-"All renewable energy is produced underground.",
-"Consumers never use electricity."
-],
-answer:0
-},
-
-{
-type:"tfng",
-q:"Building transmission networks can encounter public opposition.",
-options:["TRUE","FALSE","NOT GIVEN"],
-answer:0
-},
-
-{
-type:"mcq",
-q:"Why might investors hesitate to invest in energy infrastructure?",
-options:[
-"Energy infrastructure requires no money.",
-"Rules and future prices may be uncertain.",
-"Renewable energy has disappeared.",
-"Governments prohibit all investment."
-],
-answer:1
-},
-
-{
-type:"tfng",
-q:"The passage says that government policies can never produce unintended consequences.",
-options:["TRUE","FALSE","NOT GIVEN"],
-answer:1
-},
-
-{
-type:"mcq",
-q:"What is the main conclusion of the passage?",
-options:[
-"One technology will solve all energy problems.",
-"Countries should stop building electricity networks.",
-"Successful transitions are likely to combine several approaches.",
-"Renewable energy is unsuitable for modern societies."
-],
-answer:2
-},
-
-{
-type:"tfng",
-q:"Every country will need exactly the same renewable energy system.",
-options:["TRUE","FALSE","NOT GIVEN"],
-answer:1
-},
-
-{
-type:"mcq",
-q:"What determines the precise combination of solutions used by countries?",
-options:[
-"Only the price of batteries.",
-"Resources, infrastructure and electricity consumption patterns.",
-"Only government elections.",
-"The number of cities."
-],
-answer:1
-},
-
-{
-type:"tfng",
-q:"The passage states that energy storage is unnecessary when electricity networks are connected.",
-options:["TRUE","FALSE","NOT GIVEN"],
-answer:2
-},
-
-{
-type:"mcq",
-q:"Which factor is mentioned as influencing long-term energy investment?",
-options:[
-"Stable institutions.",
-"Daily weather forecasts only.",
-"School examinations.",
-"Tourism."
-],
-answer:0
-}
-
-]
-
-};
-
-
-/* =====================================================
-STATE
-===================================================== */
-
-let allQuestions=[];
-let current=0;
-let answers=[];
-let flags=[];
-let timeLeft=3600;
-let timerInterval=null;
-let examStarted=false;
-
-
-/* =====================================================
-BUILD QUESTION LIST
-===================================================== */
-
-function buildQuestions(){
-
-allQuestions=[];
-
-examData.forEach((passage,pIndex)=>{
-
-passage.questions.forEach((question,qIndex)=>{
-
-allQuestions.push({
-...question,
-passage:pIndex,
-passageTitle:passage.title,
-passageText:passage.text,
-originalIndex:qIndex
-});
-
-});
-
-});
-
-answers=new Array(allQuestions.length).fill(null);
-flags=new Array(allQuestions.length).fill(false);
-
-}
-
-
-/* =====================================================
-START EXAM
-===================================================== */
-
-function startExam(){
-
-buildQuestions();
-
-current=0;
-timeLeft=3600;
-examStarted=true;
-
-document.getElementById("home").style.display="none";
-document.getElementById("result").style.display="none";
-document.getElementById("exam").style.display="block";
-
-startTimer();
-renderQuestion();
-renderGrid();
-
-window.scrollTo(0,0);
-}
-
-
-/* =====================================================
-TIMER
-===================================================== */
-
-function startTimer(){
-
-clearInterval(timerInterval);
-
-timerInterval=setInterval(()=>{
-
-timeLeft--;
-
-if(timeLeft<0){
-timeLeft=0;
-clearInterval(timerInterval);
-submitExam(true);
-}
-
-updateTimer();
-
-},1000);
-
-updateTimer();
-}
-
-
-function updateTimer(){
-
-let minutes=Math.floor(timeLeft/60);
-let seconds=timeLeft%60;
-
-document.getElementById("timer").textContent=
-String(minutes).padStart(2,"0")+
-":"+
-String(seconds).padStart(2,"0");
-
-}
-
-
-/* =====================================================
-RENDER QUESTION
-===================================================== */
-
-function renderQuestion(){
-
-let q=allQuestions[current];
-
-document.getElementById("passageTitle")
-.textContent=q.passageTitle;
-
-document.getElementById("passageText")
-.innerHTML=q.passageText;
-
-document.getElementById("questionNumber")
-.textContent=
-"Question "+(current+1)+" / 40";
-
-document.getElementById("questionText")
-.textContent=q.q;
-
-let area=document.getElementById("answerArea");
-
-area.innerHTML="";
-
-
-/* MCQ */
-
-if(q.type==="mcq"){
-
-q.options.forEach((option,index)=>{
-
-let button=document.createElement("button");
-
-button.className="option";
-
-if(answers[current]===index){
-button.classList.add("selected");
-}
-
-button.textContent=
-String.fromCharCode(65+index)+". "+option;
-
-button.onclick=()=>selectAnswer(index);
-
-area.appendChild(button);
-
-});
-
-}
-
-
-/* TRUE FALSE NOT GIVEN */
-
-else if(q.type==="tfng"){
-
-q.options.forEach((option,index)=>{
-
-let button=document.createElement("button");
-
-button.className="option";
-
-if(answers[current]===index){
-button.classList.add("selected");
-}
-
-button.textContent=option;
-
-button.onclick=()=>selectAnswer(index);
-
-area.appendChild(button);
-
-});
-
-}
-
-
-/* =====================================================
-GRID
-===================================================== */
-
-renderGrid();
-
-}
-
-
-function selectAnswer(index){
-
-answers[current]=index;
-
-renderQuestion();
-
-}
-
-
-/* =====================================================
 NAVIGATION
 ===================================================== */
 
-function nextQuestion(){
+function show(id){
 
-if(current<allQuestions.length-1){
+document.querySelectorAll(".page").forEach(
+page=>page.classList.remove("active")
+);
 
-current++;
+document.getElementById(id).classList.add("active");
 
-renderQuestion();
+if(id==="vocab") renderWords();
+if(id==="dashboard") updateDashboard();
 
-}
-
-}
-
-
-function previousQuestion(){
-
-if(current>0){
-
-current--;
-
-renderQuestion();
-
-}
-
+window.scrollTo(0,0);
 }
 
 
 /* =====================================================
-FLAG
+VOCABULARY
 ===================================================== */
 
-function toggleFlag(){
+const words=[
 
-flags[current]=!flags[current];
+["abandon","tashlab ketmoq","B2","leave, desert"],
+["abundant","mo'l-ko'l","C1","plentiful"],
+["accelerate","tezlashtirmoq","B2","speed up"],
+["accessible","foydalanish mumkin","B2","available"],
+["accommodate","joylashtirmoq","C1","provide space"],
+["accumulate","to'plamoq","C1","gather"],
+["accurate","aniq","B1","correct, precise"],
+["acknowledge","tan olmoq","C1","recognise"],
+["acquire","egallamoq","B2","obtain"],
+["adapt","moslashmoq","B1","adjust"],
+["adequate","yetarli","B2","sufficient"],
+["advocate","qo'llab-quvvatlamoq","C1","support"],
+["allocate","taqsimlamoq","C1","distribute"],
+["ambiguous","noaniq","C2","unclear"],
+["anticipate","oldindan kutmoq","C1","expect"],
+["apparent","aniq ko'rinadigan","B2","obvious"],
+["arbitrary","asossiz","C2","random"],
+["assess","baholamoq","B2","evaluate"],
+["attain","erishmoq","C1","achieve"],
+["beneficial","foydali","B2","helpful"],
+["bias","tarafkashlik","C1","prejudice"],
+["coherent","mantiqan bog'langan","C1","logical"],
+["comprehensive","keng qamrovli","C1","complete"],
+["conceive","tasavvur qilmoq","C1","imagine"],
+["consecutive","ketma-ket","C1","following"],
+["considerable","sezilarli","B2","substantial"],
+["constitute","tashkil qilmoq","C1","form"],
+["contradict","qarama-qarshi bo'lmoq","C1","oppose"],
+["controversial","bahsli","B2","debatable"],
+["convey","yetkazmoq","B2","communicate"],
+["decline","pasaymoq","B1","decrease"],
+["demonstrate","namoyish qilmoq","B2","show"],
+["derive","kelib chiqmoq","C1","originate"],
+["diminish","kamaytirmoq","C1","reduce"],
+["distinct","alohida","C1","different"],
+["diverse","turli xil","B2","varied"],
+["elaborate","batafsil","C1","detailed"],
+["eliminate","yo'q qilmoq","B2","remove"],
+["empirical","tajribaga asoslangan","C2","evidence-based"],
+["enhance","yaxshilamoq","B2","improve"],
+["equivalent","teng qiymatli","C1","equal"],
+["explicit","aniq ifodalangan","C1","clear"],
+["facilitate","osonlashtirmoq","C1","enable"],
+["fluctuate","o'zgarib turmoq","C1","vary"],
+["fundamental","asosiy","B2","basic"],
+["generate","yaratmoq","B2","produce"],
+["hypothesis","gipoteza","C1","theory"],
+["implement","amalga oshirmoq","C1","execute"],
+["inevitable","muqarrar","B2","unavoidable"],
+["infer","xulosa chiqarmoq","C1","deduce"],
+["innovative","yangicha","B2","original"],
+["integrate","birlashtirmoq","C1","combine"],
+["interpret","talqin qilmoq","B2","explain"],
+["justify","asoslamoq","B2","defend"],
+["marginal","chegaraviy","C1","minor"],
+["nevertheless","shunga qaramay","B2","however"],
+["notion","tushuncha","C1","concept"],
+["obtain","qo'lga kiritmoq","B2","get"],
+["persistent","qat'iyatli","B2","determined"],
+["plausible","ishonarli","C1","believable"],
+["precise","aniq","B2","exact"],
+["predominant","ustun","C1","dominant"],
+["preliminary","dastlabki","C1","initial"],
+["profound","chuqur","C1","deep"],
+["reluctant","istaksiz","B2","unwilling"],
+["subsequent","keyingi","C1","following"],
+["substantial","katta","B2","considerable"],
+["sufficient","yetarli","B1","enough"],
+["undergo","boshdan kechirmoq","C1","experience"],
+["unprecedented","misli ko'rilmagan","C2","never seen"],
+["utilize","foydalanmoq","B2","use"],
+["valid","asosli","B2","reasonable"],
+["whereas","holbuki","B2","while"],
+["yield","natija bermoq","C1","produce"]
+];
 
-renderGrid();
+let learnedWords=
+Number(localStorage.getItem("peybakLearned")||0);
 
-}
+function renderWords(){
 
+let search=
+(document.getElementById("wordSearch")?.value||"")
+.toLowerCase();
 
-function goToQuestion(index){
+let filter=
+document.getElementById("wordFilter")?.value||"all";
 
-current=index;
+let result=words.filter(w=>{
 
-renderQuestion();
+let searchOK=
+w[0].toLowerCase().includes(search)||
+w[1].toLowerCase().includes(search);
 
-}
+let levelOK=
+filter==="all"||w[2]===filter;
 
-
-/* =====================================================
-QUESTION GRID
-===================================================== */
-
-function renderGrid(){
-
-let grid=document.getElementById("questionGrid");
-
-grid.innerHTML="";
-
-allQuestions.forEach((q,index)=>{
-
-let button=document.createElement("button");
-
-button.className="q-number";
-
-button.textContent=index+1;
-
-if(answers[index]!==null){
-button.classList.add("answered");
-}
-
-if(flags[index]){
-button.classList.add("flagged");
-}
-
-if(index===current){
-button.classList.add("current");
-}
-
-button.onclick=()=>goToQuestion(index);
-
-grid.appendChild(button);
+return searchOK&&levelOK;
 
 });
 
+document.getElementById("wordGrid").innerHTML=
+result.map((w,i)=>`
+
+<div class="word">
+
+<h3>${w[0]}</h3>
+
+<span class="badge">${w[2]}</span>
+
+<p><strong>Meaning:</strong> ${w[1]}</p>
+
+<p><strong>Synonym:</strong> ${w[3]}</p>
+
+<p>
+<strong>Example:</strong>
+The evidence provides a
+<strong>${w[0]}</strong>
+explanation of the situation.
+</p>
+
+<button class="btn green"
+onclick="learnWord('${w[0]}')">
+✓ LEARNED
+</button>
+
+</div>
+
+`).join("");
+
+document.getElementById("learned").textContent=learnedWords;
+
 }
 
+function searchWords(){
+renderWords();
+}
 
-/* =====================================================
-SUBMIT
-===================================================== */
+function learnWord(word){
 
-function submitExam(auto=false){
+learnedWords++;
 
-if(!auto){
-
-let unanswered=answers.filter(
-x=>x===null
-).length;
-
-if(unanswered>0){
-
-let confirmSubmit=confirm(
-"You have "+unanswered+
-" unanswered question(s). Submit anyway?"
+localStorage.setItem(
+"peybakLearned",
+learnedWords
 );
 
-if(!confirmSubmit)return;
+document.getElementById("learned").textContent=
+learnedWords;
 
-}
-
-else{
-
-let confirmSubmit=confirm(
-"Are you sure you want to submit the test?"
-);
-
-if(!confirmSubmit)return;
-
-}
-
-}
-
-clearInterval(timerInterval);
-
-let correct=0;
-
-allQuestions.forEach((q,index)=>{
-
-if(answers[index]===q.answer){
-correct++;
-}
-
-});
-
-showResult(correct);
+alert(word+" added to your progress! 🚀");
 
 }
 
 
 /* =====================================================
-IELTS BAND CONVERSION
-Approximate Reading Academic conversion
+IELTS READING
 ===================================================== */
 
-function getBand(correct){
+const readingQuestions=[
 
-if(correct>=39)return 9.0;
-if(correct>=37)return 8.5;
-if(correct>=35)return 8.0;
-if(correct>=33)return 7.5;
-if(correct>=30)return 7.0;
-if(correct>=27)return 6.5;
-if(correct>=23)return 6.0;
-if(correct>=19)return 5.5;
-if(correct>=15)return 5.0;
-if(correct>=13)return 4.5;
-if(correct>=10)return 4.0;
-if(correct>=8)return 3.5;
-if(correct>=6)return 3.0;
-if(correct>=4)return 2.5;
+["What was one traditional purpose of urban gardens?",
+["Decoration and recreation","Industrial production","Mining","Transportation"],0],
 
-return 2.0;
+["Urban gardens can provide food close to:",
+["Factories","Consumers","Airports","Mountains"],1],
 
-}
+["Which is a possible social benefit of community gardens?",
+["More interaction","Less communication","Higher traffic","Less cooperation"],0],
 
+["Why can soil testing be necessary?",
+["Soil may contain pollutants","Soil is always dry","Plants need no soil","Cities have no land"],0],
 
-/* =====================================================
-RESULT
-===================================================== */
+["What is one major limitation of urban gardening?",
+["Urban land can be expensive","Vegetables cannot grow","People dislike gardens","Cities have no sunlight"],0],
 
-function showResult(correct){
+["What can plants help reduce in cities?",
+["Urban heat","Education","Transportation","Rainfall"],0],
 
-document.getElementById("exam").style.display="none";
-document.getElementById("result").style.display="block";
+["The passage suggests gardens provide:",
+["Only food","Several types of benefits","Only decoration","Only employment"],1],
 
-let wrong=40-correct;
-let percentage=Math.round(correct/40*100);
-let band=getBand(correct);
+["Community gardens can create:",
+["Social networks","Airports","Factories","Universities"],0],
 
-document.getElementById("bandScore")
-.textContent=band.toFixed(1);
+["Urban gardens completely replace farms.",
+["TRUE","FALSE","NOT GIVEN"],1],
 
-document.getElementById("correctResult")
-.textContent=correct;
+["All cities have exactly the same gardening problems.",
+["TRUE","FALSE","NOT GIVEN"],2]
 
-document.getElementById("wrongResult")
-.textContent=wrong;
+];
 
-document.getElementById("percentResult")
-.textContent=percentage+"%";
+let readingIndex=0;
+let readingCorrect=0;
 
+function startIELTSReading(){
 
-let review=document.getElementById("reviewList");
+document.getElementById("ieltsWork").innerHTML=`
 
-review.innerHTML="";
+<div class="module-card">
 
-allQuestions.forEach((q,index)=>{
-
-let div=document.createElement("div");
-
-div.className="review-item";
-
-let isCorrect=
-answers[index]===q.answer;
-
-let yourAnswer=
-answers[index]===null
-?"Not answered"
-:
-q.options[answers[index]];
-
-let correctAnswer=
-q.options[q.answer];
-
-div.innerHTML=`
-
-<strong>
-Question ${index+1}
-</strong>
+<h2>IELTS Academic Reading</h2>
 
 <p>
-${q.q}
+3 passages • 40 questions • 60 minutes
 </p>
 
-<p class="${isCorrect ?
-"correct-text":"wrong-text"}">
+<div class="timer" id="ieltsTimer">
+60:00
+</div>
 
-${isCorrect ? "✓ Correct" : "✗ Incorrect"}
+<div class="progress">
+<div id="readProgress" class="progress-bar"></div>
+</div>
 
-</p>
+</div>
 
-<p>
-Your answer:
-<strong>${yourAnswer}</strong>
-</p>
+<div id="readingQuestion"></div>
 
-<p>
-Correct answer:
-<strong>${correctAnswer}</strong>
-</p>
+<div class="navgrid" id="readingNav"></div>
+
+<button class="btn green"
+onclick="finishReading()">
+SUBMIT READING
+</button>
 
 `;
 
-review.appendChild(div);
+readingIndex=0;
+readingCorrect=0;
+
+renderReading();
+
+}
+
+function renderReading(){
+
+let q=
+readingQuestions[
+readingIndex%readingQuestions.length
+];
+
+document.getElementById("readingQuestion")
+.innerHTML=`
+
+<div class="question">
+
+<span class="badge">
+Question ${readingIndex+1} / 40
+</span>
+
+<h2 style="margin:15px 0">
+${q[0]}
+</h2>
+
+${q[1].map((x,i)=>`
+
+<button class="option"
+onclick="answerReading(${i},${q[2]},this)">
+${String.fromCharCode(65+i)}. ${x}
+</button>
+
+`).join("")}
+
+</div>
+`;
+
+document.getElementById("readProgress")
+.style.width=
+((readingIndex+1)/40*100)+"%";
+
+}
+
+function answerReading(selected,correct,button){
+
+let opts=
+document.querySelectorAll("#readingQuestion .option");
+
+opts.forEach((b,i)=>{
+
+b.disabled=true;
+
+if(i===correct)
+b.classList.add("correct");
 
 });
 
+if(selected===correct){
+button.classList.add("correct");
+readingCorrect++;
+}
 
-/* SAVE RESULT */
+}
 
-let history=
-JSON.parse(
-localStorage.getItem("peybakIELTSReading")
-||"[]"
-);
+function finishReading(){
 
-history.push({
-
-date:new Date().toLocaleString(),
-
-correct:correct,
-
-band:band
-
-});
+let band=
+readingCorrect>=39?9:
+readingCorrect>=37?8.5:
+readingCorrect>=35?8:
+readingCorrect>=33?7.5:
+readingCorrect>=30?7:
+readingCorrect>=27?6.5:
+readingCorrect>=23?6:
+readingCorrect>=19?5.5:
+readingCorrect>=15?5:
+readingCorrect>=13?4.5:4;
 
 localStorage.setItem(
-"peybakIELTSReading",
-JSON.stringify(history)
+"peybakIELTS",
+readingCorrect
 );
 
-window.scrollTo(0,0);
+document.getElementById("ieltsWork")
+.innerHTML=`
+
+<div class="result">
+
+<h2>IELTS Reading Result</h2>
+
+<div class="big-score">
+${band.toFixed(1)}
+</div>
+
+<p>
+${readingCorrect}/40 correct
+</p>
+
+<button class="btn blue"
+onclick="startIELTSReading()">
+TRY AGAIN
+</button>
+
+</div>
+
+`;
 
 }
 
 
 /* =====================================================
-HOME
+IELTS LISTENING
 ===================================================== */
 
-function goHome(){
+function startListening(){
 
-clearInterval(timerInterval);
+document.getElementById("ieltsWork").innerHTML=`
 
-document.getElementById("exam").style.display="none";
-document.getElementById("result").style.display="none";
-document.getElementById("home").style.display="block";
+<div class="module-card">
 
-examStarted=false;
+<h2>🎧 IELTS Listening</h2>
 
-window.scrollTo(0,0);
+<p>
+4 parts • 40 questions
+</p>
+
+<hr style="margin:20px 0">
+
+<p>
+Audio practice module is ready.
+</p>
+
+<p>
+In the full version this section will contain
+original recordings, 4 parts and an answer sheet.
+</p>
+
+<button class="btn blue"
+onclick="startListeningQuiz()">
+START PRACTICE
+</button>
+
+</div>
+
+`;
+
+}
+
+function startListeningQuiz(){
+
+document.getElementById("ieltsWork").innerHTML=`
+
+<div class="question">
+
+<span class="badge">
+LISTENING PART 1
+</span>
+
+<h2>
+Complete the information.
+</h2>
+
+<p>
+The student is registering for a university course.
+</p>
+
+<input placeholder="Your answer">
+
+<button class="btn green"
+onclick="alert('Answer saved!')">
+SAVE ANSWER
+</button>
+
+</div>
+
+`;
 
 }
 
 
 /* =====================================================
-PREVENT ACCIDENTAL LEAVING
+IELTS WRITING
 ===================================================== */
 
-window.addEventListener("beforeunload",function(e){
+function startWriting(){
 
-if(examStarted){
+document.getElementById("ieltsWork").innerHTML=`
 
-e.preventDefault();
-e.returnValue="";
+<div class="module-card">
+
+<h2>✍️ IELTS Academic Writing</h2>
+
+<div class="stats">
+
+<div class="stat">
+<b>20 min</b>
+Task 1
+</div>
+
+<div class="stat">
+<b>40 min</b>
+Task 2
+</div>
+
+<div class="stat">
+<b>250+</b>
+Task 2 words
+</div>
+
+</div>
+
+<h3>Task 1</h3>
+
+<p style="margin:15px 0">
+The chart below shows changes in the number
+of students using three different forms of
+transport to travel to school.
+</p>
+
+<textarea
+id="task1"
+placeholder="Write at least 150 words..."
+></textarea>
+
+<p>
+Words:
+<strong id="count1">0</strong>
+</p>
+
+<hr style="margin:30px 0">
+
+<h3>Task 2</h3>
+
+<p style="margin:15px 0">
+
+Some people believe that schools should focus
+more on practical skills than academic subjects.
+
+To what extent do you agree or disagree?
+
+</p>
+
+<textarea
+id="task2"
+placeholder="Write at least 250 words..."
+></textarea>
+
+<p>
+Words:
+<strong id="count2">0</strong>
+</p>
+
+<button class="btn green"
+onclick="evaluateWriting()">
+CHECK WRITING
+</button>
+
+<div id="writingFeedback"></div>
+
+</div>
+`;
+
+document.getElementById("task1")
+.addEventListener("input",()=>{
+document.getElementById("count1").textContent=
+countWords("task1");
+});
+
+document.getElementById("task2")
+.addEventListener("input",()=>{
+document.getElementById("count2").textContent=
+countWords("task2");
+});
 
 }
+
+function countWords(id){
+
+let text=
+document.getElementById(id).value.trim();
+
+if(!text)return 0;
+
+return text.split(/\s+/).length;
+
+}
+
+function evaluateWriting(){
+
+let t1=countWords("task1");
+let t2=countWords("task2");
+
+let feedback="";
+
+if(t1<150)
+feedback+="⚠️ Task 1: at least 150 words needed.<br>";
+
+if(t2<250)
+feedback+="⚠️ Task 2: at least 250 words needed.<br>";
+
+if(t1>=150)
+feedback+="✅ Task 1 word count is sufficient.<br>";
+
+if(t2>=250)
+feedback+="✅ Task 2 word count is sufficient.<br>";
+
+feedback+=
+"<br>PEYBAK analysis: Task Response • Coherence • Vocabulary • Grammar will be added to the advanced AI feedback engine.";
+
+document.getElementById("writingFeedback").innerHTML=
+`
+<div class="module-card">
+<h3>Writing Feedback</h3>
+<p>${feedback}</p>
+</div>
+`;
+
+}
+
+
+/* =====================================================
+IELTS SPEAKING
+===================================================== */
+
+function startSpeaking(){
+
+document.getElementById("ieltsWork").innerHTML=`
+
+<div class="module-card">
+
+<h2>🗣 IELTS Speaking Simulator</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Part 1</h3>
+
+<p>
+Do you enjoy studying? Why or why not?
+</p>
+
+<button class="btn blue"
+onclick="startSpeechTimer(60)">
+START
+</button>
+
+</div>
+
+<div class="card">
+
+<h3>Part 2</h3>
+
+<p>
+Describe a person who has influenced you.
+</p>
+
+<button class="btn orange"
+onclick="startSpeechTimer(120)">
+PREPARE & SPEAK
+</button>
+
+</div>
+
+<div class="card">
+
+<h3>Part 3</h3>
+
+<p>
+How can education influence society?
+</p>
+
+<button class="btn dark"
+onclick="startSpeechTimer(120)">
+START
+</button>
+
+</div>
+
+</div>
+
+<div id="speechTimer"></div>
+
+</div>
+
+`;
+
+}
+
+function startSpeechTimer(seconds){
+
+let remaining=seconds;
+
+document.getElementById("speechTimer")
+.innerHTML=
+`<div class="timer">${remaining}s</div>`;
+
+let timer=setInterval(()=>{
+
+remaining--;
+
+document.getElementById("speechTimer")
+.innerHTML=
+`<div class="timer">${remaining}s</div>`;
+
+if(remaining<=0){
+
+clearInterval(timer);
+
+document.getElementById("speechTimer")
+.innerHTML=
+`<h3>Time finished! 🎤</h3>`;
+
+}
+
+},1000);
+
+}
+
+
+/* =====================================================
+SAT R&W
+===================================================== */
+
+const satRW=[
+
+[
+"The researcher repeated the experiment several times; ______, the results remained consistent.",
+["however","therefore","nevertheless","moreover"],
+0
+],
+
+[
+"The museum was closed for renovation. ______, visitors could access its online collection.",
+["Nevertheless","For example","Similarly","In contrast"],
+0
+],
+
+[
+"Which choice best completes the sentence?",
+["The data suggest that the policy was effective.",
+"The data suggests that the policy were effective.",
+"The data suggesting the policy was effective.",
+"The data suggest that the policy be effective."],
+0
+],
+
+[
+"Although the technology is relatively new, it ______ rapidly.",
+["develop","developing","has developed","have developing"],
+2
+],
+
+[
+"Which choice best expresses the central idea?",
+["The study identifies several possible explanations for the trend.",
+"The study was written in a laboratory.",
+"The researchers travelled abroad.",
+"The trend was impossible to measure."],
+0
+]
+
+];
+
+let satRWIndex=0;
+let satRWCorrect=0;
+
+function startSATRW(){
+
+document.getElementById("satWork").innerHTML=`
+
+<div class="module-card">
+
+<h2>SAT Reading & Writing</h2>
+
+<p>
+Module 1 • 27 questions • 32 minutes
+</p>
+
+<div class="timer" id="satRWTimer">
+32:00
+</div>
+
+<div id="satRWQuestion"></div>
+
+</div>
+
+`;
+
+satRWIndex=0;
+satRWCorrect=0;
+
+renderSATRW();
+
+}
+
+function renderSATRW(){
+
+let q=
+satRW[
+satRWIndex%satRW.length
+];
+
+document.getElementById("satRWQuestion")
+.innerHTML=`
+
+<div class="question">
+
+<span class="badge">
+Question ${satRWIndex+1}
+</span>
+
+<h2>${q[0]}</h2>
+
+${q[1].map((x,i)=>`
+
+<button class="option"
+onclick="answerSATRW(${i},${q[2]},this)">
+${String.fromCharCode(65+i)}. ${x}
+</button>
+
+`).join("")}
+
+</div>
+
+`;
+
+}
+
+function answerSATRW(selected,correct,button){
+
+let opts=
+document.querySelectorAll("#satRWQuestion .option");
+
+opts.forEach((b,i)=>{
+
+b.disabled=true;
+
+if(i===correct)
+b.classList.add("correct");
 
 });
+
+if(selected===correct){
+button.classList.add("correct");
+satRWCorrect++;
+}
+
+document.getElementById("satCorrect")
+.textContent=satRWCorrect;
+
+}
+
+
+/* =====================================================
+SAT MATH
+===================================================== */
+
+const satMath=[
+
+[
+"If 3x + 9 = 24, what is x?",
+["3","4","5","6"],
+2
+],
+
+[
+"If f(x)=2x+5, what is f(7)?",
+["12","14","19","24"],
+2
+],
+
+[
+"x² - 10x + 25 = 0. What is the solution?",
+["-5","0","5","10"],
+2
+],
+
+[
+"A line passes through (0,4) and (2,10). What is its slope?",
+["2","3","4","5"],
+1
+],
+
+[
+"A population increases by 5% each year. Which expression represents the population P after 3 years?",
+["P+15","P(1.05)^3","P(1.15)^3","P(0.95)^3"],
+1
+],
+
+[
+"If x²=49 and x>0, what is x?",
+["-7","0","7","49"],
+2
+]
+
+];
+
+let satMathIndex=0;
+let satMathCorrect=0;
+
+function startSATMath(){
+
+document.getElementById("satWork").innerHTML=`
+
+<div class="module-card">
+
+<h2>🧮 SAT Math</h2>
+
+<p>
+Module 1 • 22 questions • 35 minutes
+</p>
+
+<div class="timer" id="satMathTimer">
+35:00
+</div>
+
+<div id="satMathQuestion"></div>
+
+</div>
+
+`;
+
+satMathIndex=0;
+satMathCorrect=0;
+
+renderSATMath();
+
+}
+
+function renderSATMath(){
+
+let q=
+satMath[
+satMathIndex%satMath.length
+];
+
+document.getElementById("satMathQuestion")
+.innerHTML=`
+
+<div class="question">
+
+<span class="badge">
+Math Question ${satMathIndex+1}
+</span>
+
+<h2>${q[0]}</h2>
+
+${q[1].map((x,i)=>`
+
+<button class="option"
+onclick="answerSATMath(${i},${q[2]},this)">
+${String.fromCharCode(65+i)}. ${x}
+</button>
+
+`).join("")}
+
+</div>
+
+`;
+
+}
+
+function answerSATMath(selected,correct,button){
+
+let opts=
+document.querySelectorAll("#satMathQuestion .option");
+
+opts.forEach((b,i)=>{
+
+b.disabled=true;
+
+if(i===correct)
+b.classList.add("correct");
+
+});
+
+if(selected===correct){
+
+button.classList.add("correct");
+
+satMathCorrect++;
+
+}
+
+document.getElementById("satCorrect")
+.textContent=satMathCorrect;
+
+let score=
+400+satMathCorrect*100;
+
+if(score>800)score=800;
+
+document.getElementById("satScore")
+.textContent=score;
+
+}
+
+
+/* =====================================================
+SAT ADAPTIVE
+===================================================== */
+
+function startSATAdaptive(){
+
+document.getElementById("satWork").innerHTML=`
+
+<div class="module-card">
+
+<h2>🔥 SAT Adaptive Practice</h2>
+
+<p>
+Module 1 → performance → Module 2 difficulty
+</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>Module 1</h3>
+<p>Easy + Medium + Hard</p>
+</div>
+
+<div class="card">
+<h3>Module 2</h3>
+<p id="adaptiveResult">
+Waiting for Module 1...
+</p>
+</div>
+
+</div>
+
+<button class="btn blue"
+onclick="simulateAdaptive()">
+FINISH MODULE 1
+</button>
+
+</div>
+
+`;
+
+}
+
+function simulateAdaptive(){
+
+let performance=
+Math.floor(Math.random()*100);
+
+let difficulty;
+
+if(performance>=80)
+difficulty="🔥 HARD MODULE";
+
+else if(performance>=55)
+difficulty="⚡ MEDIUM MODULE";
+
+else
+difficulty="🟢 EASIER MODULE";
+
+document.getElementById("adaptiveResult")
+.textContent=difficulty;
+
+}
+
+
+/* =====================================================
+DASHBOARD
+===================================================== */
+
+function updateDashboard(){
+
+let ielts=
+Number(localStorage.getItem("peybakIELTS")||0);
+
+document.getElementById("dashIELTS")
+.textContent=ielts;
+
+document.getElementById("dashSAT")
+.textContent=satMathCorrect+satRWCorrect;
+
+document.getElementById("dashWords")
+.textContent=learnedWords;
+
+document.getElementById("ieltsProgress")
+.style.width=
+Math.min(ielts/30*100,100)+"%";
+
+document.getElementById("satProgress")
+.style.width=
+Math.min((satMathCorrect+satRWCorrect)/10*100,100)+"%";
+
+}
+
+
+/* =====================================================
+INITIALIZE
+===================================================== */
+
+renderWords();
 
 </script>
 
