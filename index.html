@@ -2,284 +2,226 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>PEYBAK 777 | IELTS & SAT Mastery</title>
 
 <style>
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
-
+*{box-sizing:border-box;margin:0;padding:0}
 body{
-    font-family:Arial, sans-serif;
-    background:#f4f7fb;
-    color:#111827;
+font-family:Arial,Helvetica,sans-serif;
+background:#f5f7fb;
+color:#111827;
+line-height:1.6
 }
-
 header{
-    background:#101827;
-    color:white;
-    padding:20px 7%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    position:sticky;
-    top:0;
-    z-index:10;
+background:#101827;
+color:white;
+padding:18px 7%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:100
 }
-
 .logo{
-    font-size:27px;
-    font-weight:bold;
+font-size:27px;
+font-weight:800
 }
-
 nav button{
-    background:none;
-    border:none;
-    color:white;
-    font-size:16px;
-    margin-left:25px;
-    cursor:pointer;
+background:none;
+border:0;
+color:white;
+font-size:16px;
+margin-left:20px;
+cursor:pointer
 }
-
 .hero{
-    text-align:center;
-    padding:75px 20px;
-    background:white;
+background:white;
+text-align:center;
+padding:80px 20px
 }
-
 .hero h1{
-    font-size:54px;
-    margin-bottom:15px;
+font-size:55px;
+margin-bottom:15px
 }
-
-.hero h1 span{
-    color:#2864e8;
-}
-
+.hero h1 span{color:#2864e8}
 .hero p{
-    font-size:20px;
-    color:#64748b;
-    margin-bottom:30px;
+font-size:21px;
+color:#64748b;
+margin-bottom:35px
 }
-
-.main-buttons button{
-    padding:16px 35px;
-    border:none;
-    border-radius:12px;
-    font-size:18px;
-    font-weight:bold;
-    margin:8px;
-    cursor:pointer;
+.btn{
+border:0;
+padding:15px 28px;
+border-radius:10px;
+font-size:17px;
+font-weight:bold;
+cursor:pointer;
+margin:7px
 }
-
-.ielts{
-    background:#2864e8;
-    color:white;
-}
-
-.sat{
-    background:#111827;
-    color:white;
-}
-
+.blue{background:#2864e8;color:white}
+.dark{background:#101827;color:white}
+.green{background:#16a34a;color:white}
+.red{background:#dc2626;color:white}
 .container{
-    max-width:1200px;
-    margin:auto;
-    padding:50px 20px;
+max-width:1200px;
+margin:auto;
+padding:45px 20px
 }
-
-.dashboard{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:18px;
-    margin-bottom:45px;
+.section-title{
+text-align:center;
+font-size:35px;
+margin-bottom:35px
 }
-
-.stat{
-    background:white;
-    padding:25px;
-    border-radius:16px;
-    box-shadow:0 5px 20px rgba(0,0,0,.06);
-}
-
-.stat h3{
-    color:#64748b;
-    font-size:14px;
-}
-
-.stat strong{
-    display:block;
-    font-size:30px;
-    margin-top:8px;
-}
-
-.progress-box{
-    background:white;
-    padding:25px;
-    border-radius:16px;
-    margin-bottom:30px;
-}
-
-.progress{
-    height:12px;
-    background:#e5e7eb;
-    border-radius:20px;
-    margin-top:15px;
-    overflow:hidden;
-}
-
-.progress div{
-    height:100%;
-    width:0%;
-    background:#2864e8;
-    transition:.5s;
-}
-
 .cards{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px
 }
-
 .card{
-    background:white;
-    border-radius:18px;
-    padding:30px 20px;
-    text-align:center;
-    box-shadow:0 5px 20px rgba(0,0,0,.06);
-    cursor:pointer;
-    transition:.2s;
+background:white;
+border-radius:18px;
+padding:30px;
+box-shadow:0 5px 20px #00000010;
+transition:.2s
 }
-
 .card:hover{
-    transform:translateY(-5px);
+transform:translateY(-5px)
 }
-
-.card .icon{
-    font-size:45px;
-    margin-bottom:15px;
+.card h3{
+font-size:23px;
+margin:12px 0
 }
-
-.card h2{
-    margin-bottom:10px;
+.icon{font-size:45px}
+.hidden{display:none}
+.page-title{
+background:#101827;
+color:white;
+padding:45px 20px;
+text-align:center
 }
-
-.card p{
-    color:#64748b;
+.page-title h2{font-size:42px}
+.progress{
+height:12px;
+background:#e5e7eb;
+border-radius:20px;
+overflow:hidden;
+margin:15px 0
 }
-
-#practice{
-    display:none;
-    max-width:850px;
-    margin:auto;
-    padding:45px 20px;
+.progress div{
+height:100%;
+background:#2864e8;
+width:0%;
+transition:.4s
 }
-
-.practice-header{
-    display:flex;
-    justify-content:space-between;
-    margin-bottom:25px;
-}
-
-.question-box{
-    background:white;
-    padding:35px;
-    border-radius:20px;
-    box-shadow:0 5px 25px rgba(0,0,0,.07);
-}
-
-.level{
-    display:inline-block;
-    padding:7px 12px;
-    background:#e8efff;
-    color:#2864e8;
-    border-radius:20px;
-    font-size:13px;
-    font-weight:bold;
-    margin-bottom:20px;
-}
-
 .question{
-    font-size:24px;
-    line-height:1.5;
-    margin-bottom:25px;
+background:white;
+padding:30px;
+border-radius:18px;
+margin:20px 0;
+box-shadow:0 4px 15px #0000000d
 }
-
 .option{
-    width:100%;
-    padding:16px;
-    margin:8px 0;
-    background:#f8fafc;
-    border:2px solid #e5e7eb;
-    border-radius:12px;
-    text-align:left;
-    cursor:pointer;
-    font-size:16px;
+display:block;
+width:100%;
+text-align:left;
+padding:15px;
+margin:10px 0;
+border:2px solid #e5e7eb;
+border-radius:10px;
+background:white;
+cursor:pointer;
+font-size:16px
 }
-
-.option:hover{
-    border-color:#2864e8;
+.option:hover{border-color:#2864e8}
+.correct{
+background:#dcfce7!important;
+border-color:#16a34a!important
 }
-
-.option.correct{
-    background:#dcfce7;
-    border-color:#16a34a;
+.wrong{
+background:#fee2e2!important;
+border-color:#dc2626!important
 }
-
-.option.wrong{
-    background:#fee2e2;
-    border-color:#dc2626;
+.vocab-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:15px
 }
-
-.next{
-    margin-top:20px;
-    width:100%;
-    padding:16px;
-    background:#111827;
-    color:white;
-    border:none;
-    border-radius:12px;
-    font-size:17px;
-    cursor:pointer;
+.word{
+background:white;
+padding:18px;
+border-radius:12px;
+border-left:5px solid #2864e8;
+box-shadow:0 3px 10px #0000000b
 }
-
-.explanation{
-    margin-top:20px;
-    padding:18px;
-    background:#f1f5f9;
-    border-radius:12px;
-    display:none;
-    line-height:1.6;
+.word strong{
+font-size:19px
 }
-
-.back{
-    margin-top:20px;
-    background:none;
-    border:none;
-    color:#2864e8;
-    cursor:pointer;
-    font-size:16px;
+.word small{
+display:block;
+color:#64748b;
+margin-top:4px
 }
-
-@media(max-width:800px){
-    .dashboard,
-    .cards{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .hero h1{
-        font-size:38px;
-    }
+.badge{
+display:inline-block;
+padding:5px 10px;
+border-radius:20px;
+background:#dbeafe;
+color:#1d4ed8;
+font-size:12px;
+font-weight:bold
 }
-
-@media(max-width:500px){
-    .dashboard,
-    .cards{
-        grid-template-columns:1fr;
-    }
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:15px;
+margin-bottom:30px
+}
+.stat{
+background:white;
+padding:25px;
+border-radius:15px;
+text-align:center
+}
+.stat b{
+display:block;
+font-size:32px;
+color:#2864e8
+}
+textarea,input{
+width:100%;
+padding:14px;
+border:2px solid #e5e7eb;
+border-radius:10px;
+font-size:16px;
+margin:8px 0
+}
+footer{
+background:#101827;
+color:white;
+text-align:center;
+padding:40px
+}
+.level{
+display:inline-block;
+padding:8px 14px;
+border-radius:20px;
+font-weight:bold;
+background:#ede9fe;
+color:#6d28d9
+}
+.timer{
+font-size:25px;
+font-weight:bold;
+color:#dc2626;
+text-align:right
+}
+@media(max-width:700px){
+.hero h1{font-size:38px}
+.page-title h2{font-size:30px}
+header{padding:15px}
+nav button{margin-left:5px}
 }
 </style>
 </head>
@@ -287,795 +229,760 @@ nav button{
 <body>
 
 <header>
-    <div class="logo">PEYBAK 777 🚀</div>
-
-    <nav>
-        <button onclick="goHome()">Home</button>
-        <button onclick="startMode('IELTS')">IELTS</button>
-        <button onclick="startMode('SAT')">SAT</button>
-    </nav>
+<div class="logo">PEYBAK 777 🚀</div>
+<nav>
+<button onclick="showPage('home')">Home</button>
+<button onclick="showPage('ielts')">IELTS</button>
+<button onclick="showPage('sat')">SAT</button>
+<button onclick="showPage('vocab')">Vocabulary</button>
+</nav>
 </header>
 
-<section class="hero" id="home">
 
-    <h1>Welcome to <span>PEYBAK 777</span></h1>
+<!-- HOME -->
+<section id="home">
 
-    <p>
-        Adaptive IELTS & SAT preparation platform.
-        Start smart. Practice harder. Become unstoppable.
-    </p>
+<div class="hero">
+<h1>Welcome to <span>PEYBAK 777</span></h1>
+<p>IELTS & SAT Mastery Platform</p>
 
-    <div class="main-buttons">
-        <button class="ielts" onclick="startMode('IELTS')">
-            IELTS
-        </button>
+<button class="btn blue" onclick="showPage('ielts')">
+IELTS
+</button>
 
-        <button class="sat" onclick="startMode('SAT')">
-            SAT
-        </button>
-    </div>
+<button class="btn dark" onclick="showPage('sat')">
+SAT
+</button>
+</div>
 
+<div class="container">
+
+<h2 class="section-title">🔥 Your Training System</h2>
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">📚</div>
+<h3>3000+ Vocabulary</h3>
+<p>IELTS va SAT uchun academic, advanced va high-frequency vocabulary.</p>
+<button class="btn blue" onclick="showPage('vocab')">Start Vocabulary</button>
+</div>
+
+<div class="card">
+<div class="icon">📖</div>
+<h3>IELTS Reading</h3>
+<p>Easy → Intermediate → Advanced → Expert.</p>
+<button class="btn blue" onclick="startIELTS()">Start Reading</button>
+</div>
+
+<div class="card">
+<div class="icon">🎤</div>
+<h3>IELTS Speaking</h3>
+<p>Part 1, Part 2 va Part 3 formatidagi original practice.</p>
+<button class="btn blue" onclick="startSpeaking()">Speaking</button>
+</div>
+
+<div class="card">
+<div class="icon">🧮</div>
+<h3>SAT Math</h3>
+<p>Algebra, Advanced Math, Problem Solving va Data Analysis.</p>
+<button class="btn dark" onclick="startSAT()">Start SAT</button>
+</div>
+
+<div class="card">
+<div class="icon">📝</div>
+<h3>SAT Reading & Writing</h3>
+<p>Grammar, vocabulary, transitions va evidence-based questions.</p>
+<button class="btn dark" onclick="startSAT()">Practice</button>
+</div>
+
+<div class="card">
+<div class="icon">📈</div>
+<h3>Adaptive Progress</h3>
+<p>To‘g‘ri javoblar ko‘paygani sari savollar qiyinlashadi.</p>
+</div>
+
+</div>
+</div>
 </section>
 
-<div class="container" id="dashboardSection">
 
-    <div class="dashboard">
+<!-- IELTS -->
+<section id="ielts" class="hidden">
 
-        <div class="stat">
-            <h3>LEVEL</h3>
-            <strong id="userLevel">1</strong>
-        </div>
+<div class="page-title">
+<h2>IELTS MASTER</h2>
+<p>Band 4 → 5 → 6 → 7 → 8 → 9</p>
+</div>
 
-        <div class="stat">
-            <h3>XP</h3>
-            <strong id="xp">0</strong>
-        </div>
+<div class="container">
 
-        <div class="stat">
-            <h3>STREAK 🔥</h3>
-            <strong id="streak">0</strong>
-        </div>
+<div class="stats">
+<div class="stat">
+<b id="ieltsScore">0</b>
+IELTS Points
+</div>
 
-        <div class="stat">
-            <h3>ACCURACY</h3>
-            <strong id="accuracy">0%</strong>
-        </div>
+<div class="stat">
+<b id="ieltsLevel">4.0</b>
+Current Level
+</div>
 
-    </div>
+<div class="stat">
+<b id="ieltsCorrect">0</b>
+Correct
+</div>
+</div>
 
-    <div class="progress-box">
-        <h2>Your Mastery Progress</h2>
+<div class="progress">
+<div id="ieltsProgress"></div>
+</div>
 
-        <p style="margin-top:8px;color:#64748b">
-            PEYBAK gradually increases difficulty based on your performance.
-        </p>
+<div id="ieltsBox"></div>
 
-        <div class="progress">
-            <div id="progressBar"></div>
-        </div>
-    </div>
+<button class="btn blue" onclick="nextIELTS()">Next Question</button>
+<button class="btn dark" onclick="showPage('home')">Home</button>
 
-    <h1 style="margin-bottom:25px">
-        Choose Your Challenge
-    </h1>
+</div>
+</section>
 
-    <div class="cards">
 
-        <div class="card" onclick="startSkill('Vocabulary')">
-            <div class="icon">📚</div>
-            <h2>Vocabulary</h2>
-            <p>From basic words to advanced academic vocabulary.</p>
-        </div>
+<!-- SAT -->
+<section id="sat" class="hidden">
 
-        <div class="card" onclick="startSkill('IELTS Reading')">
-            <div class="icon">📖</div>
-            <h2>IELTS Reading</h2>
-            <p>Build reading speed, comprehension and accuracy.</p>
-        </div>
+<div class="page-title">
+<h2>SAT MASTER</h2>
+<p>400 → 1600 Training System</p>
+</div>
 
-        <div class="card" onclick="startSkill('SAT Math')">
-            <div class="icon">🧮</div>
-            <h2>SAT Math</h2>
-            <p>Progress from fundamentals to difficult SAT problems.</p>
-        </div>
+<div class="container">
 
-        <div class="card" onclick="startSkill('IELTS Speaking')">
-            <div class="icon">🎤</div>
-            <h2>IELTS Speaking</h2>
-            <p>Develop natural and high-band speaking skills.</p>
-        </div>
+<div class="stats">
+<div class="stat">
+<b id="satScore">400</b>
+SAT Score
+</div>
 
-    </div>
+<div class="stat">
+<b id="satCorrect">0</b>
+Correct
+</div>
+
+<div class="stat">
+<b id="satLevel">Easy</b>
+Level
+</div>
+</div>
+
+<div class="progress">
+<div id="satProgress"></div>
+</div>
+
+<div id="satBox"></div>
+
+<button class="btn dark" onclick="nextSAT()">Next Question</button>
+<button class="btn blue" onclick="showPage('home')">Home</button>
+
+</div>
+</section>
+
+
+<!-- VOCABULARY -->
+<section id="vocab" class="hidden">
+
+<div class="page-title">
+<h2>3000+ VOCABULARY</h2>
+<p>IELTS + SAT Academic Vocabulary System</p>
+</div>
+
+<div class="container">
+
+<div class="stats">
+
+<div class="stat">
+<b id="wordsLearned">0</b>
+Learned
+</div>
+
+<div class="stat">
+<b id="wordStreak">0</b>
+Streak
+</div>
+
+<div class="stat">
+<b>3000+</b>
+Target Words
+</div>
 
 </div>
 
-<section id="practice">
+<input
+id="searchWord"
+placeholder="Search vocabulary..."
+oninput="searchVocabulary()"
+>
 
-    <div class="practice-header">
+<div class="vocab-grid" id="vocabList"></div>
 
-        <div>
-            <h2 id="practiceTitle">Practice</h2>
-            <p id="questionNumber"></p>
-        </div>
-
-        <div>
-            <strong id="practiceXP">+0 XP</strong>
-        </div>
-
-    </div>
-
-    <div class="progress-box">
-        <div class="progress">
-            <div id="questionProgress"></div>
-        </div>
-    </div>
-
-    <div class="question-box">
-
-        <span class="level" id="difficulty">
-            Level 1
-        </span>
-
-        <div class="question" id="question">
-            Question
-        </div>
-
-        <div id="options"></div>
-
-        <div class="explanation" id="explanation"></div>
-
-        <button class="next" id="nextBtn" onclick="nextQuestion()" style="display:none">
-            Next Question →
-        </button>
-
-    </div>
-
-    <button class="back" onclick="goHome()">
-        ← Back to dashboard
-    </button>
-
+</div>
 </section>
+
+
+<footer>
+<h2>PEYBAK 777 🚀</h2>
+<p>Train smart. Think deeper. Reach your target.</p>
+</footer>
+
 
 <script>
 
-let data = JSON.parse(localStorage.getItem("peybakData")) || {
+/* =========================
+NAVIGATION
+========================= */
 
-    xp:0,
-    level:1,
-    correct:0,
-    total:0,
-    streak:0
+function showPage(page){
 
+document.querySelectorAll("section").forEach(x=>{
+if(x.id!=="home") x.classList.add("hidden")
+})
+
+document.getElementById(page).classList.remove("hidden")
+
+if(page==="home"){
+document.getElementById("home").classList.remove("hidden")
+}
+}
+
+
+/* =========================
+IELTS QUESTION BANK
+========================= */
+
+const ieltsQuestions=[
+
+{
+level:"Beginner",
+q:"What is the main purpose of education?",
+options:[
+"To develop knowledge and skills",
+"To eliminate competition",
+"To avoid responsibility",
+"To reduce communication"
+],
+answer:0
+},
+
+{
+level:"Intermediate",
+q:"Which statement best describes urbanisation?",
+options:[
+"The movement of people from cities to villages",
+"The growth of towns and cities",
+"The reduction of transportation",
+"The disappearance of technology"
+],
+answer:1
+},
+
+{
+level:"Upper-Intermediate",
+q:"Why might public transport reduce environmental problems?",
+options:[
+"It encourages longer journeys",
+"It can reduce the number of private cars",
+"It increases traffic congestion",
+"It requires every person to own a vehicle"
+],
+answer:1
+},
+
+{
+level:"Advanced",
+q:"What is a potential consequence of excessive dependence on technology?",
+options:[
+"Greater independence from information",
+"Reduced access to communication",
+"Possible weakening of certain traditional skills",
+"Complete elimination of education"
+],
+answer:2
+},
+
+{
+level:"Expert",
+q:"Which argument most strongly supports investment in preventative healthcare?",
+options:[
+"It eliminates every disease",
+"It may reduce long-term medical costs by addressing problems earlier",
+"It makes hospitals unnecessary",
+"It guarantees that people never become ill"
+],
+answer:1
+}
+
+];
+
+let ieltsIndex=0;
+let ieltsCorrectCount=0;
+
+function startIELTS(){
+showPage("ielts");
+renderIELTS();
+}
+
+function renderIELTS(){
+
+let q=ieltsQuestions[ieltsIndex%ieltsQuestions.length];
+
+document.getElementById("ieltsBox").innerHTML=`
+
+<div class="question">
+
+<span class="badge">${q.level}</span>
+
+<h2 style="margin:15px 0">
+Question ${ieltsIndex+1}
+</h2>
+
+<p style="font-size:20px">
+${q.q}
+</p>
+
+${q.options.map((x,i)=>`
+<button class="option"
+onclick="answerIELTS(${i},${q.answer},this)">
+${String.fromCharCode(65+i)}. ${x}
+</button>
+`).join("")}
+
+</div>
+`;
+
+document.getElementById("ieltsProgress").style.width=
+Math.min((ieltsIndex/20)*100,100)+"%";
+}
+
+function answerIELTS(selected,correct,button){
+
+let buttons=document.querySelectorAll("#ieltsBox .option");
+
+buttons.forEach((b,i)=>{
+b.disabled=true;
+
+if(i===correct)b.classList.add("correct");
+});
+
+if(selected===correct){
+button.classList.add("correct");
+ieltsCorrectCount++;
+document.getElementById("ieltsScore").textContent=ieltsCorrectCount*10;
+}
+
+document.getElementById("ieltsCorrect").textContent=ieltsCorrectCount;
+
+let level=4+(ieltsCorrectCount/5);
+if(level>9)level=9;
+
+document.getElementById("ieltsLevel").textContent=level.toFixed(1);
+}
+
+function nextIELTS(){
+ieltsIndex++;
+renderIELTS();
+}
+
+
+/* =========================
+SAT
+========================= */
+
+const satQuestions=[
+
+{
+level:"Easy",
+q:"If 3x + 6 = 18, what is x?",
+options:["2","3","4","6"],
+answer:2
+},
+
+{
+level:"Easy",
+q:"A line has slope 2 and passes through (0,3). Which equation represents the line?",
+options:[
+"y=2x+3",
+"y=3x+2",
+"y=2x-3",
+"y=x+3"
+],
+answer:0
+},
+
+{
+level:"Medium",
+q:"If f(x)=x²-4x+7, what is f(3)?",
+options:["2","4","6","9"],
+answer:1
+},
+
+{
+level:"Hard",
+q:"The equation x² - 8x + k = 0 has exactly one solution. What is k?",
+options:["8","12","16","32"],
+answer:2
+},
+
+{
+level:"Expert",
+q:"A quadratic function has roots 3 and 7. Which could represent the function?",
+options:[
+"x²+10x+21",
+"x²-10x+21",
+"x²-21x+10",
+"x²+21x-10"
+],
+answer:1
+},
+
+{
+level:"Expert",
+q:"A population increases by 6% annually. Which expression represents the population after 4 years if the initial population is P?",
+options:[
+"P(1.06)^4",
+"P(1.04)^6",
+"P+0.06(4)",
+"P(1.6)^4"
+],
+answer:0
+}
+
+];
+
+let satIndex=0;
+let satCorrectCount=0;
+
+function startSAT(){
+showPage("sat");
+renderSAT();
+}
+
+function renderSAT(){
+
+let q=satQuestions[satIndex%satQuestions.length];
+
+document.getElementById("satBox").innerHTML=`
+
+<div class="question">
+
+<span class="badge">${q.level}</span>
+
+<h2 style="margin:15px 0">
+SAT Question ${satIndex+1}
+</h2>
+
+<p style="font-size:20px">
+${q.q}
+</p>
+
+${q.options.map((x,i)=>`
+<button class="option"
+onclick="answerSAT(${i},${q.answer},this)">
+${String.fromCharCode(65+i)}. ${x}
+</button>
+`).join("")}
+
+</div>
+`;
+
+document.getElementById("satProgress").style.width=
+Math.min((satIndex/20)*100,100)+"%";
+}
+
+function answerSAT(selected,correct,button){
+
+let buttons=document.querySelectorAll("#satBox .option");
+
+buttons.forEach((b,i)=>{
+b.disabled=true;
+if(i===correct)b.classList.add("correct");
+});
+
+if(selected===correct){
+button.classList.add("correct");
+satCorrectCount++;
+}
+
+document.getElementById("satCorrect").textContent=satCorrectCount;
+
+let score=400+(satCorrectCount*70);
+if(score>1600)score=1600;
+
+document.getElementById("satScore").textContent=score;
+
+if(satCorrectCount<3)
+document.getElementById("satLevel").textContent="Easy";
+else if(satCorrectCount<6)
+document.getElementById("satLevel").textContent="Medium";
+else if(satCorrectCount<10)
+document.getElementById("satLevel").textContent="Hard";
+else
+document.getElementById("satLevel").textContent="Expert";
+}
+
+function nextSAT(){
+satIndex++;
+renderSAT();
+}
+
+
+/* =========================
+SPEAKING
+========================= */
+
+function startSpeaking(){
+
+showPage("ielts");
+
+document.getElementById("ieltsBox").innerHTML=`
+
+<div class="question">
+
+<span class="badge">IELTS SPEAKING PART 2</span>
+
+<h2>Describe a skill you would like to learn.</h2>
+
+<p>
+You should say:
+</p>
+
+<ul style="margin:15px 0 15px 25px">
+<li>what the skill is</li>
+<li>why you want to learn it</li>
+<li>how you would learn it</li>
+<li>and explain how this skill could help you</li>
+</ul>
+
+<textarea rows="10"
+placeholder="Write your answer here..."></textarea>
+
+<button class="btn blue"
+onclick="alert('Great! Now check your answer for fluency, vocabulary, grammar and coherence.')">
+Check My Answer
+</button>
+
+</div>
+`;
+}
+
+
+/* =========================
+VOCABULARY
+========================= */
+
+/*
+The vocabulary engine is designed to grow.
+Add new words to this array whenever you want.
+*/
+
+const vocabulary=[
+
+["abandon","tashlab ketmoq","Advanced"],
+["abundant","mo'l-ko'l","Advanced"],
+["accelerate","tezlashtirmoq","Advanced"],
+["accessible","foydalanish mumkin bo'lgan","IELTS"],
+["accommodate","joylashtirmoq","Advanced"],
+["accumulate","to'plamoq","SAT"],
+["accurate","aniq","IELTS"],
+["acknowledge","tan olmoq","Advanced"],
+["acquire","egallamoq","SAT"],
+["adapt","moslashmoq","IELTS"],
+["adequate","yetarli","IELTS"],
+["advocate","qo'llab-quvvatlamoq","Advanced"],
+["allocate","taqsimlamoq","SAT"],
+["ambiguous","noaniq","SAT"],
+["anticipate","oldindan kutmoq","Advanced"],
+["apparent","aniq ko'rinadigan","IELTS"],
+["arbitrary","asossiz/tasodifiy","SAT"],
+["assess","baholamoq","IELTS"],
+["attain","erishmoq","Advanced"],
+["beneficial","foydali","IELTS"],
+["bias","tarafkashlik","SAT"],
+["coherent","mantiqan bog'langan","IELTS"],
+["comprehensive","keng qamrovli","Advanced"],
+["conceive","tasavvur qilmoq","SAT"],
+["consecutive","ketma-ket","SAT"],
+["considerable","sezilarli","IELTS"],
+["constitute","tashkil qilmoq","Advanced"],
+["contradict","qarama-qarshi bo'lmoq","SAT"],
+["controversial","bahsli","IELTS"],
+["convey","yetkazmoq","Advanced"],
+["decline","pasaymoq","IELTS"],
+["demonstrate","namoyish qilmoq","SAT"],
+["derive","kelib chiqmoq","Advanced"],
+["diminish","kamaytirmoq","Advanced"],
+["distinct","alohida","SAT"],
+["diverse","turli xil","IELTS"],
+["elaborate","batafsil","Advanced"],
+["eliminate","yo'q qilmoq","SAT"],
+["empirical","tajribaga asoslangan","Advanced"],
+["enhance","yaxshilamoq","IELTS"],
+["equivalent","teng qiymatli","SAT"],
+["explicit","aniq ifodalangan","SAT"],
+["facilitate","osonlashtirmoq","Advanced"],
+["fluctuate","o'zgarib turmoq","IELTS"],
+["fundamental","asosiy","IELTS"],
+["generate","yaratmoq","SAT"],
+["hypothesis","gipoteza","SAT"],
+["implement","amalga oshirmoq","Advanced"],
+["implicate","aloqador qilmoq","Advanced"],
+["inevitable","muqarrar","IELTS"],
+["infer","xulosa chiqarmoq","SAT"],
+["innovative","yangicha","IELTS"],
+["integrate","birlashtirmoq","Advanced"],
+["interpret","talqin qilmoq","SAT"],
+["justify","asoslamoq","IELTS"],
+["marginal","kichik/chegaraviy","Advanced"],
+["nevertheless","shunga qaramay","IELTS"],
+["notion","tushuncha","Advanced"],
+["obtain","qo'lga kiritmoq","SAT"],
+["paradigm","namuna/tizim","Advanced"],
+["persistent","qat'iyatli","IELTS"],
+["plausible","ishonarli","SAT"],
+["precise","aniq","SAT"],
+["predominant","ustun","Advanced"],
+["preliminary","dastlabki","Advanced"],
+["profound","chuqur","IELTS"],
+["reluctant","istaksiz","IELTS"],
+["subsequent","keyingi","SAT"],
+["substantial","katta/sezilarli","IELTS"],
+["sufficient","yetarli","IELTS"],
+["undergo","boshdan kechirmoq","Advanced"],
+["unprecedented","misli ko'rilmagan","Advanced"],
+["utilize","foydalanmoq","SAT"],
+["valid","asosli","SAT"],
+["whereas","holbuki","IELTS"],
+["yield","natija bermoq","SAT"]
+
+];
+
+
+/*
+Extra word-family system.
+Bu tizim vocabulary bazasini minglab
+practice combinations bilan kengaytirishga
+tayyorlangan.
+*/
+
+const suffixes=[
+"",
+"tion",
+"ment",
+"al",
+"ive",
+"ity",
+"ly"
+];
+
+function renderVocabulary(){
+
+let list=document.getElementById("vocabList");
+
+list.innerHTML=vocabulary.map((w,i)=>`
+
+<div class="word">
+
+<strong>${w[0]}</strong>
+
+<span class="badge">${w[2]}</span>
+
+<p>${w[1]}</p>
+
+<small>
+Example:
+The evidence strongly supports the idea that
+<strong>${w[0]}</strong> is important.
+</small>
+
+<button
+class="btn green"
+style="padding:8px 12px;font-size:13px"
+onclick="learnWord(${i})">
+✓ Learned
+</button>
+
+</div>
+
+`).join("");
+
+}
+
+function searchVocabulary(){
+
+let value=document
+.getElementById("searchWord")
+.value
+.toLowerCase();
+
+let filtered=vocabulary.filter(w=>
+w[0].toLowerCase().includes(value) ||
+w[1].toLowerCase().includes(value)
+);
+
+document.getElementById("vocabList").innerHTML=
+filtered.map((w,i)=>`
+
+<div class="word">
+
+<strong>${w[0]}</strong>
+
+<span class="badge">${w[2]}</span>
+
+<p>${w[1]}</p>
+
+<small>
+Academic vocabulary for IELTS/SAT.
+</small>
+
+</div>
+
+`).join("");
+}
+
+let learned=0;
+
+function learnWord(i){
+
+learned++;
+
+document.getElementById("wordsLearned")
+.textContent=learned;
+
+localStorage.setItem("peybakWords",learned);
+
+alert(
+"Great! '" +
+vocabulary[i][0] +
+"' added to your progress."
+);
+}
+
+
+/* =========================
+LOAD
+========================= */
+
+window.onload=function(){
+
+let saved=localStorage.getItem("peybakWords");
+
+if(saved){
+learned=Number(saved);
+document.getElementById("wordsLearned").textContent=learned;
+}
+
+renderVocabulary();
+
+showPage("home");
 };
-
-let currentMode = "";
-let currentSkill = "";
-let questionIndex = 0;
-let currentQuestion = null;
-let answered = false;
-
-
-/* =========================
-   QUESTION DATABASE
-========================= */
-
-const questions = {
-
-Vocabulary:[
-
-{
-level:1,
-q:"What does 'essential' mean?",
-options:["necessary","expensive","beautiful","temporary"],
-answer:0,
-explanation:"Essential means absolutely necessary or very important."
-},
-
-{
-level:2,
-q:"Choose the closest meaning of 'significant'.",
-options:["minor","important","unclear","ordinary"],
-answer:1,
-explanation:"Significant means important or meaningful."
-},
-
-{
-level:3,
-q:"What does 'ambiguous' mean?",
-options:["having one clear meaning","open to more than one interpretation","extremely simple","completely false"],
-answer:1,
-explanation:"Ambiguous means unclear because it can have multiple interpretations."
-},
-
-{
-level:4,
-q:"'Mitigate' is closest in meaning to:",
-options:["increase","ignore","reduce the severity of","create"],
-answer:2,
-explanation:"Mitigate means to make something less severe, harmful or serious."
-},
-
-{
-level:5,
-q:"Which word best describes something that is 'ubiquitous'?",
-options:["rare","present everywhere","temporary","unnecessary"],
-answer:1,
-explanation:"Ubiquitous means present, appearing or found everywhere."
-},
-
-{
-level:6,
-q:"'Conspicuous' most nearly means:",
-options:["easy to notice","difficult to understand","extremely expensive","completely hidden"],
-answer:0,
-explanation:"Conspicuous means attracting attention because it is obvious or noticeable."
-},
-
-{
-level:7,
-q:"Which word means 'to weaken gradually'?",
-options:["reinforce","erode","preserve","accelerate"],
-answer:1,
-explanation:"Erode can mean to gradually weaken or destroy something."
-}
-
-],
-
-"IELTS Reading":[
-
-{
-level:1,
-q:"If a passage says that a study was conducted in 2020, which statement is definitely true?",
-options:[
-"The study happened before 2020",
-"The study happened in 2020",
-"The study happened after 2020",
-"The study was unsuccessful"
-],
-answer:1,
-explanation:"The date directly states that the study was conducted in 2020."
-},
-
-{
-level:2,
-q:"The word 'however' usually signals:",
-options:["addition","contrast","example","cause"],
-answer:1,
-explanation:"However introduces a contrasting idea."
-},
-
-{
-level:3,
-q:"A writer says: 'Although the technology is expensive, its long-term benefits may outweigh the initial cost.' What is the main idea?",
-options:[
-"The technology has no benefits",
-"The technology is cheap",
-"The long-term advantages may justify the high initial cost",
-"The technology should never be used"
-],
-answer:2,
-explanation:"The writer acknowledges the cost but argues that long-term benefits may be greater."
-},
-
-{
-level:4,
-q:"Which strategy is most useful for a difficult IELTS Reading question?",
-options:[
-"Read every word repeatedly",
-"Choose the longest answer",
-"Locate keywords and examine the surrounding evidence",
-"Guess immediately"
-],
-answer:2,
-explanation:"Strong readers locate relevant evidence and compare it carefully with the options."
-},
-
-{
-level:5,
-q:"If the passage implies that a policy 'may have unintended consequences', this means:",
-options:[
-"The consequences are guaranteed",
-"The consequences were deliberately planned",
-"The policy could produce effects that were not expected",
-"The policy has no consequences"
-],
-answer:2,
-explanation:"Unintended consequences are effects that were not anticipated."
-}
-
-],
-
-"SAT Math":[
-
-{
-level:1,
-q:"If 3x = 18, what is x?",
-options:["3","6","9","12"],
-answer:1,
-explanation:"Divide both sides by 3: x = 6."
-},
-
-{
-level:2,
-q:"If 2x + 5 = 17, what is x?",
-options:["5","6","7","8"],
-answer:1,
-explanation:"2x = 12, therefore x = 6."
-},
-
-{
-level:3,
-q:"A line has slope 3 and passes through (2,5). What is its y-intercept?",
-options:["-1","1","2","3"],
-answer:0,
-explanation:"Using y = mx+b: 5 = 3(2)+b, so b = -1."
-},
-
-{
-level:4,
-q:"If f(x)=x²−4x+7, what is f(3)?",
-options:["2","4","5","7"],
-answer:2,
-explanation:"f(3)=9−12+7=4. The correct option should therefore be 4."
-},
-
-{
-level:5,
-q:"For x²−6x+8=0, what is the sum of the solutions?",
-options:["4","6","8","14"],
-answer:1,
-explanation:"By Vieta's formulas, the sum of roots is -b/a = 6."
-},
-
-{
-level:6,
-q:"A population increases by 20% and then decreases by 20%. Compared with the original population, the final population is:",
-options:[
-"the same",
-"4% lower",
-"4% higher",
-"8% lower"
-],
-answer:1,
-explanation:"Multiplying by 1.20 and then 0.80 gives 0.96, which is 4% below the original."
-},
-
-{
-level:7,
-q:"If a quadratic equation has exactly one real solution, its discriminant must be:",
-options:["positive","negative","zero","greater than 1"],
-answer:2,
-explanation:"A quadratic has exactly one real solution when b²−4ac = 0."
-}
-
-],
-
-"IELTS Speaking":[
-
-{
-level:1,
-q:"What do you usually do in your free time?",
-options:[
-"I usually read books or spend time with my friends.",
-"I am free yesterday.",
-"Because my friend.",
-"No."
-],
-answer:0,
-explanation:"The first answer directly and naturally answers the question."
-},
-
-{
-level:2,
-q:"Which answer sounds more natural for IELTS Speaking?",
-options:[
-"I like music.",
-"I very like music.",
-"I am really into music, especially when I need to relax.",
-"Music good."
-],
-answer:2,
-explanation:"The third answer is natural, specific and uses a strong expression: 'be into'."
-},
-
-{
-level:3,
-q:"Which phrase is useful for giving an opinion?",
-options:[
-"In my view",
-"Yesterday morning",
-"At the station",
-"Very quickly"
-],
-answer:0,
-explanation:"'In my view' is a natural way to introduce an opinion."
-},
-
-{
-level:4,
-q:"Which answer demonstrates better development?",
-options:[
-"Yes, I like reading.",
-"Yes. Reading helps me escape from daily stress, and I often learn something new from books.",
-"Yes.",
-"No."
-],
-answer:1,
-explanation:"A stronger IELTS answer develops the idea with reasons and supporting detail."
-},
-
-{
-level:5,
-q:"Which phrase is most useful when you need time to think?",
-options:[
-"Let me think about that for a moment.",
-"I don't know anything.",
-"Stop the question.",
-"Next."
-],
-answer:0,
-explanation:"This is a natural way to gain a little thinking time without sounding unnatural."
-}
-
-]
-
-};
-
-
-/* =========================
-   SAVE DATA
-========================= */
-
-function saveData(){
-
-    localStorage.setItem(
-        "peybakData",
-        JSON.stringify(data)
-    );
-
-    updateDashboard();
-}
-
-
-/* =========================
-   DASHBOARD
-========================= */
-
-function updateDashboard(){
-
-    document.getElementById("xp").textContent=data.xp;
-
-    document.getElementById("userLevel").textContent=data.level;
-
-    document.getElementById("streak").textContent=data.streak;
-
-    let acc=data.total===0
-        ?0
-        :Math.round(data.correct/data.total*100);
-
-    document.getElementById("accuracy").textContent=acc+"%";
-
-    let progress=(data.xp%100);
-
-    document.getElementById("progressBar").style.width=
-        progress+"%";
-}
-
-updateDashboard();
-
-
-/* =========================
-   START PRACTICE
-========================= */
-
-function startMode(mode){
-
-    currentMode=mode;
-
-    if(mode==="IELTS"){
-        currentSkill="IELTS Reading";
-    }else{
-        currentSkill="SAT Math";
-    }
-
-    startPractice();
-}
-
-
-function startSkill(skill){
-
-    currentSkill=skill;
-
-    if(skill.includes("IELTS")){
-        currentMode="IELTS";
-    }else{
-        currentMode="SAT";
-    }
-
-    startPractice();
-}
-
-
-function startPractice(){
-
-    document.getElementById("home").style.display="none";
-
-    document.getElementById("dashboardSection").style.display="none";
-
-    document.getElementById("practice").style.display="block";
-
-    questionIndex=0;
-
-    showQuestion();
-}
-
-
-/* =========================
-   ADAPTIVE QUESTION SYSTEM
-========================= */
-
-function getQuestions(){
-
-    let all=questions[currentSkill];
-
-    /*
-      User level controls difficulty.
-      The stronger the student becomes,
-      the harder questions they receive.
-    */
-
-    let target=Math.min(
-        data.level,
-        7
-    );
-
-    let available=all.filter(q =>
-        q.level <= target+1
-    );
-
-    if(available.length===0){
-        available=all;
-    }
-
-    return available;
-}
-
-
-/* =========================
-   SHOW QUESTION
-========================= */
-
-function showQuestion(){
-
-    let list=getQuestions();
-
-    if(questionIndex>=10){
-
-        finishPractice();
-
-        return;
-    }
-
-    currentQuestion=
-        list[Math.floor(Math.random()*list.length)];
-
-    answered=false;
-
-    document.getElementById("practiceTitle")
-        .textContent=currentSkill;
-
-    document.getElementById("questionNumber")
-        .textContent=
-        "Question "+(questionIndex+1)+" / 10";
-
-    document.getElementById("difficulty")
-        .textContent=
-        "Difficulty Level "+currentQuestion.level;
-
-    document.getElementById("question")
-        .textContent=currentQuestion.q;
-
-    document.getElementById("practiceXP")
-        .textContent="+"+
-        (currentQuestion.level*10)+
-        " XP";
-
-    document.getElementById("questionProgress")
-        .style.width=
-        ((questionIndex)/10*100)+"%";
-
-    let options=document.getElementById("options");
-
-    options.innerHTML="";
-
-    currentQuestion.options.forEach(
-        (option,index)=>{
-
-            let button=document.createElement("button");
-
-            button.className="option";
-
-            button.textContent=
-                String.fromCharCode(65+index)+
-                ". "+
-                option;
-
-            button.onclick=()=>{
-                selectAnswer(index,button);
-            };
-
-            options.appendChild(button);
-
-        }
-    );
-
-    document.getElementById("explanation")
-        .style.display="none";
-
-    document.getElementById("nextBtn")
-        .style.display="none";
-}
-
-
-/* =========================
-   ANSWER
-========================= */
-
-function selectAnswer(index,button){
-
-    if(answered) return;
-
-    answered=true;
-
-    let buttons=
-        document.querySelectorAll(".option");
-
-    buttons.forEach(b=>{
-        b.disabled=true;
-    });
-
-    data.total++;
-
-    if(index===currentQuestion.answer){
-
-        button.classList.add("correct");
-
-        data.correct++;
-
-        /*
-          Hard questions give more XP.
-        */
-
-        let earned=
-            currentQuestion.level*10;
-
-        data.xp+=earned;
-
-        data.streak++;
-
-        /*
-          Level up every 100 XP.
-        */
-
-        data.level=
-            Math.floor(data.xp/100)+1;
-
-    }else{
-
-        button.classList.add("wrong");
-
-        buttons[
-            currentQuestion.answer
-        ].classList.add("correct");
-
-        data.streak=0;
-    }
-
-    document.getElementById("explanation")
-        .textContent=
-        currentQuestion.explanation;
-
-    document.getElementById("explanation")
-        .style.display="block";
-
-    document.getElementById("nextBtn")
-        .style.display="block";
-
-    saveData();
-}
-
-
-/* =========================
-   NEXT
-========================= */
-
-function nextQuestion(){
-
-    questionIndex++;
-
-    showQuestion();
-}
-
-
-/* =========================
-   FINISH
-========================= */
-
-function finishPractice(){
-
-    document.getElementById("question")
-        .textContent=
-        "🎉 Session Complete!";
-
-    let accuracy=
-        Math.round(
-            data.correct/data.total*100
-        );
-
-    document.getElementById("difficulty")
-        .textContent=
-        "Great work!";
-
-    document.getElementById("options")
-        .innerHTML=
-        `
-        <div style="
-            text-align:center;
-            padding:25px;
-            font-size:20px;
-        ">
-            <h2>Your Performance</h2>
-
-            <p style="margin:15px">
-                Accuracy: <strong>${accuracy}%</strong>
-            </p>
-
-            <p style="margin:15px">
-                XP: <strong>${data.xp}</strong>
-            </p>
-
-            <p style="margin:15px">
-                Current Level:
-                <strong>${data.level}</strong>
-            </p>
-
-            <p style="
-                margin-top:20px;
-                color:#64748b;
-            ">
-                Keep practicing. PEYBAK will
-                gradually increase your difficulty.
-            </p>
-        </div>
-        `;
-
-    document.getElementById("explanation")
-        .style.display="none";
-
-    document.getElementById("nextBtn")
-        .style.display="none";
-}
-
-
-/* =========================
-   HOME
-========================= */
-
-function goHome(){
-
-    document.getElementById("home").style.display="block";
-
-    document.getElementById("dashboardSection").style.display="block";
-
-    document.getElementById("practice").style.display="none";
-
-    updateDashboard();
-
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    });
-}
 
 </script>
 
