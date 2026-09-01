@@ -27,10 +27,7 @@ top:0;
 z-index:999;
 }
 
-.logo{
-font-size:25px;
-font-weight:900;
-}
+.logo{font-size:25px;font-weight:900}
 
 nav button{
 background:none;
@@ -52,11 +49,7 @@ padding:75px 20px;
 text-align:center;
 }
 
-.hero h1{
-font-size:55px;
-margin-bottom:12px;
-}
-
+.hero h1{font-size:55px;margin-bottom:12px}
 .hero h1 span{color:#2563eb}
 
 .hero p{
@@ -88,15 +81,8 @@ margin:auto;
 padding:40px 20px;
 }
 
-.title{
-font-size:36px;
-margin-bottom:10px;
-}
-
-.subtitle{
-color:#64748b;
-margin-bottom:30px;
-}
+.title{font-size:36px;margin-bottom:10px}
+.subtitle{color:#64748b;margin-bottom:30px}
 
 .cards{
 display:grid;
@@ -111,16 +97,9 @@ border-radius:18px;
 box-shadow:0 5px 20px #0000000b;
 }
 
-.card:hover{
-transform:translateY(-3px);
-}
-
+.card:hover{transform:translateY(-3px)}
 .card .icon{font-size:42px}
-
-.card h3{
-font-size:23px;
-margin:12px 0;
-}
+.card h3{font-size:23px;margin:12px 0}
 
 .stats{
 display:grid;
@@ -181,11 +160,6 @@ font-size:16px;
 
 .option:hover{border-color:#2563eb}
 
-.option.selected{
-border-color:#2563eb;
-background:#dbeafe;
-}
-
 .correct{
 border-color:#16a34a!important;
 background:#dcfce7!important;
@@ -238,91 +212,11 @@ background:#2563eb;
 color:white;
 }
 
-.passage{
-background:white;
-padding:35px;
-border-radius:18px;
-box-shadow:0 5px 20px #0000000b;
-line-height:1.8;
-font-size:17px;
-margin-bottom:25px;
+.navq.current{
+outline:3px solid #93c5fd;
 }
 
-.passage h2{
-margin-bottom:20px;
-font-size:28px;
-}
-
-.passage p{
-margin-bottom:18px;
-}
-
-.passage-highlight{
-background:#eff6ff;
-border-left:5px solid #2563eb;
-padding:15px;
-margin:20px 0;
-}
-
-.exam-navigation{
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:10px;
-margin-top:25px;
-flex-wrap:wrap;
-}
-
-.part-indicator{
-display:flex;
-gap:8px;
-margin:20px 0;
-}
-
-.part-dot{
-padding:10px 15px;
-border-radius:8px;
-background:#e5e7eb;
-font-weight:bold;
-}
-
-.part-dot.active{
-background:#2563eb;
-color:white;
-}
-
-.audio-box{
-background:#0f172a;
-color:white;
-padding:25px;
-border-radius:15px;
-margin:20px 0;
-}
-
-.audio-box audio{
-width:100%;
-margin-top:15px;
-}
-
-.audio-warning{
-background:#fff7ed;
-border:1px solid #fed7aa;
-padding:15px;
-border-radius:10px;
-color:#9a3412;
-margin-top:15px;
-}
-
-.input-answer{
-width:100%;
-padding:14px;
-border:2px solid #e5e7eb;
-border-radius:10px;
-font-size:16px;
-margin:10px 0;
-}
-
-select,input,textarea{
+textarea,input,select{
 width:100%;
 padding:14px;
 border:2px solid #e5e7eb;
@@ -376,6 +270,37 @@ color:#2563eb;
 margin:20px;
 }
 
+.passage{
+background:#fff;
+padding:30px;
+border-radius:16px;
+line-height:1.8;
+font-size:17px;
+box-shadow:0 3px 15px #0000000b;
+margin:20px 0;
+}
+
+.passage h2{
+margin-bottom:18px;
+color:#0f172a;
+}
+
+.passage p{
+margin-bottom:18px;
+}
+
+.audio-box{
+background:#eef2ff;
+padding:25px;
+border-radius:16px;
+margin:20px 0;
+}
+
+.audio-box audio{
+width:100%;
+margin-top:15px;
+}
+
 footer{
 background:#0f172a;
 color:white;
@@ -384,49 +309,11 @@ padding:40px;
 margin-top:40px;
 }
 
-.test-list{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:15px;
-}
-
-.test-card{
-background:white;
-padding:22px;
-border-radius:15px;
-box-shadow:0 3px 15px #0000000b;
-}
-
-.test-card h3{
-color:#2563eb;
-margin-bottom:10px;
-}
-
-.small{
-font-size:14px;
-color:#64748b;
-}
-
 @media(max-width:700px){
-
 .hero h1{font-size:38px}
-
-nav button{
-margin-left:5px;
-font-size:12px;
-}
-
+nav button{margin-left:5px;font-size:12px}
 .exam-head h1{font-size:30px}
-
-.navgrid{
-grid-template-columns:repeat(5,1fr);
-}
-
-.passage{
-padding:22px;
-font-size:16px;
-}
-
+.navgrid{grid-template-columns:repeat(5,1fr)}
 }
 </style>
 </head>
@@ -458,19 +345,11 @@ font-size:16px;
 
 <p>IELTS + SAT Mastery Platform</p>
 
-<p>Your target: IELTS 7.0+ + SAT 1500+</p>
+<p>Your target: IELTS 7.0 + SAT 1500+</p>
 
-<button class="btn blue" onclick="show('ielts')">
-IELTS
-</button>
-
-<button class="btn dark" onclick="show('sat')">
-SAT
-</button>
-
-<button class="btn orange" onclick="show('vocab')">
-5000+ VOCABULARY
-</button>
+<button class="btn blue" onclick="show('ielts')">IELTS</button>
+<button class="btn dark" onclick="show('sat')">SAT</button>
+<button class="btn orange" onclick="show('vocab')">5000+ VOCABULARY</button>
 
 </div>
 
@@ -478,50 +357,37 @@ SAT
 
 <h2 class="title">🔥 Training System</h2>
 
-<p class="subtitle">
-Real-exam style practice
-</p>
-
 <div class="cards">
 
 <div class="card">
 <div class="icon">📖</div>
-<h3>IELTS Reading</h3>
-<p>150 tests • 3 passages • 40 questions</p>
-<button class="btn blue" onclick="show('ielts')">
-Open IELTS
-</button>
-</div>
-
-<div class="card">
-<div class="icon">🎧</div>
-<h3>IELTS Listening</h3>
-<p>4 parts • 40 questions • Audio</p>
-<button class="btn blue" onclick="show('ielts')">
-Open Listening
-</button>
+<h3>IELTS</h3>
+<p>Reading, Listening, Writing and Speaking.</p>
+<button class="btn blue" onclick="show('ielts')">Open IELTS</button>
 </div>
 
 <div class="card">
 <div class="icon">🎯</div>
 <h3>SAT</h3>
-<p>Reading & Writing + Math</p>
-<button class="btn dark" onclick="show('sat')">
-Open SAT
-</button>
+<p>Reading & Writing + Math.</p>
+<button class="btn dark" onclick="show('sat')">Open SAT</button>
 </div>
 
 <div class="card">
 <div class="icon">📚</div>
 <h3>5000+ Vocabulary</h3>
-<p>IELTS + SAT academic words</p>
-<button class="btn orange" onclick="show('vocab')">
-Learn Words
-</button>
+<p>Academic vocabulary for IELTS and SAT.</p>
+<button class="btn orange" onclick="show('vocab')">Learn Words</button>
+</div>
+
+<div class="card">
+<div class="icon">📊</div>
+<h3>Dashboard</h3>
+<p>Track your progress.</p>
+<button class="btn green" onclick="show('dashboard')">My Progress</button>
 </div>
 
 </div>
-
 </div>
 
 </section>
@@ -532,11 +398,8 @@ Learn Words
 <section id="ielts" class="page">
 
 <div class="exam-head">
-
 <h1>IELTS ACADEMIC</h1>
-
 <p>Full Training Center</p>
-
 </div>
 
 <div class="container">
@@ -544,66 +407,31 @@ Learn Words
 <div class="cards">
 
 <div class="card">
-
 <div class="icon">📖</div>
-
 <h3>Reading</h3>
-
-<p>150 tests • 3 passages • 40 questions • 60 minutes</p>
-
-<button class="btn blue"
-onclick="openReadingTests()">
-START READING
-</button>
-
+<p>3 passages • 40 questions • 60 minutes</p>
+<button class="btn blue" onclick="startIELTSReading()">START READING</button>
 </div>
 
-
 <div class="card">
-
 <div class="icon">🎧</div>
-
 <h3>Listening</h3>
-
-<p>4 parts • 40 questions • Audio</p>
-
-<button class="btn blue"
-onclick="startListening()">
-START LISTENING
-</button>
-
+<p>4 parts • 40 questions</p>
+<button class="btn blue" onclick="startListening()">START LISTENING</button>
 </div>
 
-
 <div class="card">
-
 <div class="icon">✍️</div>
-
 <h3>Writing</h3>
-
 <p>Task 1 + Task 2 • 60 minutes</p>
-
-<button class="btn blue"
-onclick="startWriting()">
-START WRITING
-</button>
-
+<button class="btn blue" onclick="startWriting()">START WRITING</button>
 </div>
 
-
 <div class="card">
-
 <div class="icon">🗣️</div>
-
 <h3>Speaking</h3>
-
 <p>Part 1 + Part 2 + Part 3</p>
-
-<button class="btn blue"
-onclick="startSpeaking()">
-START SPEAKING
-</button>
-
+<button class="btn blue" onclick="startSpeaking()">START SPEAKING</button>
 </div>
 
 </div>
@@ -620,11 +448,8 @@ START SPEAKING
 <section id="sat" class="page">
 
 <div class="exam-head">
-
 <h1>DIGITAL SAT</h1>
-
 <p>Target Score: 1500+</p>
-
 </div>
 
 <div class="container">
@@ -651,50 +476,24 @@ Difficulty
 <div class="cards">
 
 <div class="card">
-
 <div class="icon">📚</div>
-
 <h3>Reading & Writing</h3>
-
 <p>54 questions • 64 minutes • 2 modules</p>
-
-<button class="btn dark"
-onclick="startSATRW()">
-START R&W
-</button>
-
+<button class="btn dark" onclick="startSATRW()">START R&W</button>
 </div>
 
-
 <div class="card">
-
 <div class="icon">🧮</div>
-
 <h3>Math</h3>
-
 <p>44 questions • 70 minutes • 2 modules</p>
-
-<button class="btn dark"
-onclick="startSATMath()">
-START MATH
-</button>
-
+<button class="btn dark" onclick="startSATMath()">START MATH</button>
 </div>
 
-
 <div class="card">
-
 <div class="icon">🔥</div>
-
 <h3>Adaptive Practice</h3>
-
-<p>Performance determines difficulty.</p>
-
-<button class="btn orange"
-onclick="startSATAdaptive()">
-ADAPTIVE MODE
-</button>
-
+<p>Difficulty changes according to performance.</p>
+<button class="btn orange" onclick="startSATAdaptive()">ADAPTIVE MODE</button>
 </div>
 
 </div>
@@ -711,11 +510,8 @@ ADAPTIVE MODE
 <section id="vocab" class="page">
 
 <div class="exam-head">
-
 <h1>📚 PEYBAK VOCABULARY</h1>
-
 <p>IELTS + SAT Academic Vocabulary</p>
-
 </div>
 
 <div class="container">
@@ -733,26 +529,22 @@ Target
 </div>
 
 <div class="stat">
-<b id="vocabLevel">B2</b>
+<b id="vocabLevel">B1</b>
 Current Level
 </div>
 
 </div>
 
-<input
-id="wordSearch"
+<input id="wordSearch"
 placeholder="Search word..."
-oninput="searchWords()"
->
+oninput="searchWords()">
 
 <select id="wordFilter" onchange="searchWords()">
-
 <option value="all">All Levels</option>
 <option value="B1">B1</option>
 <option value="B2">B2</option>
 <option value="C1">C1</option>
 <option value="C2">C2</option>
-
 </select>
 
 <div class="word-grid" id="wordGrid"></div>
@@ -767,11 +559,8 @@ oninput="searchWords()"
 <section id="dashboard" class="page">
 
 <div class="exam-head">
-
 <h1>📊 YOUR DASHBOARD</h1>
-
 <p>PEYBAK 777 Progress</p>
-
 </div>
 
 <div class="container">
@@ -804,22 +593,16 @@ Daily Streak
 
 <h2>🎯 Target</h2>
 
-<p style="margin-top:15px">
-IELTS: <strong>7.0+</strong>
-</p>
+<p style="margin-top:15px">IELTS: <strong>7.0+</strong></p>
 
 <div class="progress">
-<div id="ieltsProgress"
-class="progress-bar">
-</div>
+<div id="ieltsProgress" class="progress-bar"></div>
 </div>
 
 <p>SAT: <strong>1500+</strong></p>
 
 <div class="progress">
-<div id="satProgress"
-class="progress-bar">
-</div>
+<div id="satProgress" class="progress-bar"></div>
 </div>
 
 </div>
@@ -832,7 +615,6 @@ class="progress-bar">
 <footer>
 
 <h2>PEYBAK 777 🚀</h2>
-
 <p>Train harder. Think deeper. Reach your target.</p>
 
 </footer>
@@ -840,20 +622,17 @@ class="progress-bar">
 
 <script>
 
-/* =====================================================
-NAVIGATION
-===================================================== */
+/* ================= NAVIGATION ================= */
 
 function show(id){
 
-document.querySelectorAll(".page")
-.forEach(page=>page.classList.remove("active"));
+document.querySelectorAll(".page").forEach(
+page=>page.classList.remove("active")
+);
 
-document.getElementById(id)
-.classList.add("active");
+document.getElementById(id).classList.add("active");
 
 if(id==="vocab") renderWords();
-
 if(id==="dashboard") updateDashboard();
 
 window.scrollTo(0,0);
@@ -861,12 +640,9 @@ window.scrollTo(0,0);
 }
 
 
-/* =====================================================
-VOCABULARY
-5000+ STRUCTURE
-===================================================== */
+/* ================= VOCABULARY ================= */
 
-const baseWords=[
+const words=[
 
 ["abandon","tashlab ketmoq","B2","leave, desert"],
 ["abundant","mo'l-ko'l","C1","plentiful"],
@@ -906,7 +682,6 @@ const baseWords=[
 ["diverse","turli xil","B2","varied"],
 ["elaborate","batafsil","C1","detailed"],
 ["eliminate","yo'q qilmoq","B2","remove"],
-["empirical","tajribaga asoslangan","C2","evidence-based"],
 ["enhance","yaxshilamoq","B2","improve"],
 ["equivalent","teng qiymatli","C1","equal"],
 ["explicit","aniq ifodalangan","C1","clear"],
@@ -941,69 +716,9 @@ const baseWords=[
 ["utilize","foydalanmoq","B2","use"],
 ["valid","asosli","B2","reasonable"],
 ["whereas","holbuki","B2","while"],
-["yield","natija bermoq","C1","produce"],
-
-["analyze","tahlil qilmoq","B2","examine"],
-["approximate","taxminiy","C1","rough"],
-["capacity","salohiyat","B2","ability"],
-["clarify","aniqlashtirmoq","B2","explain"],
-["collaborate","hamkorlik qilmoq","B2","cooperate"],
-["commodity","tovar","C1","product"],
-["compile","jamlash","C1","collect"],
-["concurrent","bir vaqtdagi","C2","simultaneous"],
-["confer","maslahatlashmoq","C1","consult"],
-["consent","rozilik","C1","permission"],
-["crucial","juda muhim","B2","essential"],
-["deduce","xulosa qilmoq","C1","infer"],
-["devise","ishlab chiqmoq","C1","design"],
-["detrimental","zararli","C2","harmful"],
-["discrete","alohida","C2","separate"],
-["diverge","farq qilmoq","C1","differ"],
-["domain","soha","B2","field"],
-["drastic","keskin","C1","extreme"],
-["ethical","axloqiy","B2","moral"],
-["exceed","oshmoq","B2","surpass"],
-["exclude","chiqarib tashlamoq","B2","omit"],
-["exploit","foydalanmoq","C1","use"],
-["feasible","amalga oshirish mumkin","C1","practical"],
-["forthcoming","yaqinlashayotgan","C1","upcoming"],
-["framework","asosiy tizim","C1","structure"],
-["hierarchy","pog'ona tizimi","C1","ranking"],
-["implicit","bilvosita","C1","indirect"],
-["inherent","ajralmas","C1","intrinsic"],
-["mitigate","yumshatmoq","C1","reduce"],
-["notwithstanding","qaramay","C2","despite"],
-["objective","maqsad","B1","goal"],
-["ongoing","davom etayotgan","B2","continuing"],
-["paradigm","model","C2","model"],
-["persistent","davomli","B2","continuous"],
-["predominantly","asosan","C1","mainly"],
-["quantify","miqdorini aniqlamoq","C1","measure"],
-["refine","takomillashtirmoq","C1","improve"],
-["retain","saqlab qolmoq","C1","keep"],
-["rigid","qat'iy","C1","strict"],
-["scenario","vaziyat","B2","situation"],
-["substitute","o'rnini bosmoq","B2","replace"],
-["sustain","qo'llab-quvvatlamoq","C1","maintain"],
-["trigger","sabab bo'lmoq","B2","cause"],
-["underlying","asosiy","C1","fundamental"],
-["validity","asoslanganlik","C1","soundness"],
-["whereby","shu orqali","C2","by which"]
+["yield","natija bermoq","C1","produce"]
 
 ];
-
-
-/*
-5000+ ENGINE
-
-Real 5000+ vocabularyni keyingi data paketlar
-orqali shu arrayga qo'shish mumkin.
-
-Demo ishlashi uchun mavjud akademik baza
-ko'paytirilgan emas — soxta so'zlar ishlatilmaydi.
-*/
-
-const words=[...baseWords];
 
 let learnedWords=
 Number(localStorage.getItem("peybakLearned")||0);
@@ -1031,7 +746,6 @@ return searchOK&&levelOK;
 });
 
 document.getElementById("wordGrid").innerHTML=
-
 result.map(w=>`
 
 <div class="word">
@@ -1046,9 +760,9 @@ result.map(w=>`
 
 <p>
 <strong>Example:</strong>
-The researchers used a
+The researchers provided a
 <strong>${w[0]}</strong>
-approach to explain the results.
+explanation of the situation.
 </p>
 
 <button class="btn green"
@@ -1060,14 +774,11 @@ onclick="learnWord('${w[0]}')">
 
 `).join("");
 
-document.getElementById("learned")
-.textContent=learnedWords;
+document.getElementById("learned").textContent=learnedWords;
 
 }
 
-function searchWords(){
-renderWords();
-}
+function searchWords(){renderWords()}
 
 function learnWord(word){
 
@@ -1078,138 +789,111 @@ localStorage.setItem(
 learnedWords
 );
 
-document.getElementById("learned")
-.textContent=learnedWords;
-
-alert(word+" added to your progress! 🚀");
+document.getElementById("learned").textContent=
+learnedWords;
 
 }
 
 
 /* =====================================================
 IELTS READING
-REAL EXAM STYLE
-PASSAGE → QUESTIONS → NEXT PASSAGE
+PASSAGE 1 → PASSAGE 2 → PASSAGE 3
 ===================================================== */
-
-
-/*
-Har test:
-
-Passage 1 = 13 questions
-Passage 2 = 13 questions
-Passage 3 = 14 questions
-
-Jami = 40
-*/
 
 const readingTests=[
 
 {
 
-title:"IELTS Academic Reading Test 1",
+title:"The Hidden Value of Urban Trees",
 
-passages:[
-
-{
-
-title:"Passage 1 — Urban Gardens",
-
-text:`
+passage:`
 
 <p>
-Urban gardening has become increasingly common in cities around
-the world. What was once considered a small-scale hobby is now
-being examined by researchers as a possible way of improving
-food access, community life and environmental conditions.
+Cities are often associated with concrete buildings, busy roads,
+and large populations. However, trees can play an important role
+in making urban environments healthier and more comfortable.
+In addition to providing shade, trees can influence temperature,
+air quality, and even people's behaviour.
 </p>
 
 <p>
-Historically, gardens inside towns served several purposes.
-Families often grew vegetables near their homes because fresh
-produce was not always easy to obtain. During periods of economic
-difficulty, community gardens also helped households supplement
-their food supplies.
+One important benefit of urban trees is their ability to reduce
+heat. Concrete and asphalt absorb sunlight during the day and
+release heat slowly. As a result, cities can become considerably
+warmer than surrounding rural areas. Trees provide shade and
+release moisture through their leaves, which can help lower
+temperatures in streets and public spaces.
 </p>
 
 <p>
-Modern urban gardens are often located on unused land, rooftops,
-school grounds and spaces between buildings. Their proximity to
-consumers means that vegetables can sometimes reach people soon
-after harvesting. This can reduce the distance food travels before
-being eaten.
-</p>
-
-<div class="passage-highlight">
-Researchers also emphasize social benefits. People who work in
-community gardens frequently meet neighbours they might otherwise
-never know. These spaces can therefore encourage cooperation,
-conversation and the development of local social networks.
-</div>
-
-<p>
-There are, however, limitations. Land in large cities can be
-expensive, and some vacant areas may contain pollutants left by
-previous industrial activity. For this reason, soil testing can be
-important before food is grown.
+Trees may also improve air quality. Their leaves can capture some
+airborne particles, while their presence can encourage city
+planners to create greener areas with fewer vehicles. However,
+trees cannot remove all forms of pollution. Their effectiveness
+depends on factors such as the type of tree, its location, and
+the surrounding environment.
 </p>
 
 <p>
-Plants may also contribute to cooling urban areas. Vegetation can
-provide shade and can influence local temperatures, although the
-extent of this effect varies according to the size and design of
-the garden.
+Urban trees can also affect people's daily lives. Parks and
+tree-lined streets may encourage residents to walk, exercise,
+or spend more time outdoors. Researchers have found that access
+to natural spaces can contribute to people's sense of well-being.
+For this reason, some cities are investing in planting programmes
+rather than treating trees simply as decorative features.
 </p>
 
 <p>
-Urban gardening is therefore not a complete replacement for
-traditional agriculture. Instead, it can provide several
-complementary benefits when suitable land, resources and community
-participation are available.
+Nevertheless, planting trees in cities is not always easy.
+Young trees require water and regular care, particularly during
+their first years. Tree roots can also interfere with underground
+infrastructure if the wrong species is planted in an unsuitable
+location. Therefore, successful urban forestry requires careful
+planning rather than simply planting as many trees as possible.
 </p>
 
 `,
 
 questions:[
 
-["What was one traditional reason families grew vegetables in towns?",
-["For decoration","To supplement food supplies","To build factories","To reduce rainfall"],1],
+["Urban trees can help reduce temperatures in cities.",
+["TRUE","FALSE","NOT GIVEN"],0],
 
-["Modern urban gardens may be found on:",
-["Only farms","Rooftops","Airports","Highways"],1],
-
-["Why can food reach consumers quickly from urban gardens?",
-["They are close to consumers","They use airplanes","They are underground","They use factories"],0],
-
-["What social benefit can community gardens provide?",
-["Less cooperation","Local social networks","Higher traffic","Less communication"],1],
-
-["Why may soil testing be necessary?",
-["Some land may contain pollutants","Plants cannot grow in cities","All soil is dry","Gardens require no soil"],0],
-
-["What can vegetation influence?",
-["Local temperatures","School grades","Airline prices","Population statistics"],0],
-
-["The writer suggests urban gardening:",
-["Can replace all farms","Has several complementary benefits","Has no environmental value","Is only a hobby"],1],
-
-["Where can urban gardens sometimes be located?",
-["Rooftops","Deep oceans","Airports only","Mountain caves"],0],
-
-["Community gardens may encourage:",
-["Cooperation","Isolation","Traffic","Industrial production"],0],
-
-["Urban gardens completely replace traditional agriculture.",
+["Concrete releases all of its stored heat immediately after sunset.",
 ["TRUE","FALSE","NOT GIVEN"],1],
 
-["All vacant urban land is safe for growing food.",
+["Trees can remove every type of air pollution.",
 ["TRUE","FALSE","NOT GIVEN"],1],
 
-["The environmental effect of vegetation is identical in every city.",
-["TRUE","FALSE","NOT GIVEN"],1],
+["Natural spaces may improve people's sense of well-being.",
+["TRUE","FALSE","NOT GIVEN"],0],
 
-["Urban gardening can provide benefits when suitable resources are available.",
-["TRUE","FALSE","NOT GIVEN"],0]
+["All cities have successful tree-planting programmes.",
+["TRUE","FALSE","NOT GIVEN"],2],
+
+["Why can cities become hotter than rural areas?",
+["Cities receive more sunlight","Buildings and roads absorb heat","Trees produce excessive heat","Rural areas have more vehicles"],1],
+
+["What can tree leaves capture?",
+["Underground water","Sunlight","Some airborne particles","Vehicle engines"],2],
+
+["What may encourage people to spend more time outdoors?",
+["Tree-lined streets and parks","Underground infrastructure","Large parking areas","Concrete buildings"],0],
+
+["What does successful urban forestry require?",
+["Removing all old trees","Planting only one species","Careful planning","More roads"],2],
+
+["Trees provide ______ and release moisture through their leaves.",
+["shade","pollution","transport","food"],0],
+
+["The effectiveness of trees in improving air quality depends on several ______.",
+["vehicles","factors","buildings","countries"],1],
+
+["Young trees require water and regular ______.",
+["travel","care","pollution","transport"],1],
+
+["Tree roots can interfere with ______ infrastructure.",
+["underground","international","digital","agricultural"],0]
 
 ]
 
@@ -1217,100 +901,89 @@ questions:[
 
 {
 
-title:"Passage 2 — The Changing Nature of Libraries",
+title:"How Bees Communicate",
 
-text:`
+passage:`
 
 <p>
-For centuries, libraries were primarily places where people could
-access printed books and other physical documents. Today, however,
-their role is changing rapidly as digital technology transforms
-the way information is stored and shared.
+Honeybees live in highly organised colonies in which thousands
+of individuals work together. Although a single bee is small,
+the colony can behave like a coordinated society. One of the
+most interesting examples of this organisation is the way bees
+communicate about sources of food.
 </p>
 
 <p>
-Electronic books have made it possible for readers to access large
-collections without physically visiting a library. Nevertheless,
-libraries have not become unnecessary. Many institutions now
-provide computers, internet access, digital databases and training
-in information literacy.
+When a worker bee discovers flowers containing a large amount
+of nectar, it returns to the colony. Instead of simply leading
+other bees to the flowers, it can perform a series of movements
+known as a waggle dance. The direction and duration of the dance
+provide information about where the food can be found.
 </p>
 
 <p>
-The modern library can therefore function as a community learning
-centre. Students may use quiet study areas, while other visitors
-attend lectures, workshops or technology classes.
-</p>
-
-<div class="passage-highlight">
-One important challenge is ensuring equal access. Not every member
-of a community has a reliable computer or fast internet connection
-at home. Public libraries can help reduce this digital divide by
-providing equipment and internet access free of charge.
-</div>
-
-<p>
-Librarians themselves are also taking on new responsibilities.
-Instead of simply helping visitors locate books, they may teach
-people how to evaluate online information, identify unreliable
-sources and conduct effective research.
+The position of the sun is important in this system. Bees can
+use the sun as a reference point when communicating direction.
+Even when clouds partly hide the sun, bees are capable of using
+other visual information to maintain their orientation.
 </p>
 
 <p>
-This transformation does not mean that printed books are
-disappearing. Many readers continue to prefer physical books, and
-libraries still maintain collections that are valuable for
-historical and educational reasons.
+Communication is not limited to food. Bees also use chemical
+signals. Certain scents can help members of the colony recognise
+their nest and distinguish members of their own colony from
+unfamiliar bees.
 </p>
 
 <p>
-The future library is therefore likely to combine traditional
-collections with digital services rather than choosing one
-completely over the other.
+The efficiency of bee communication allows colonies to respond
+quickly when environmental conditions change. If one food source
+becomes less productive, workers can locate other sources and
+inform additional members of the colony.
 </p>
 
 `,
 
 questions:[
 
-["What was the traditional role of libraries?",
-["Providing printed documents","Selling computers","Teaching sports","Building houses"],0],
+["What does a worker bee do after discovering a rich food source?",
+["It leaves the colony permanently","It returns to the colony","It destroys the flowers","It sleeps"],1],
 
-["Electronic books allow readers to:",
-["Access large collections digitally","Avoid reading","Print every book","Visit farms"],0],
+["What is the waggle dance used for?",
+["Finding a queen","Communicating information about food","Building the nest","Defending flowers"],1],
 
-["Modern libraries may provide:",
-["Digital databases","Airline tickets","Factories","Hotels"],0],
+["What can the direction of the dance indicate?",
+["The weather","The location of food","The age of a bee","The size of the colony"],1],
 
-["What can students use libraries for?",
-["Quiet study","Driving lessons only","Shopping","Mining"],0],
+["What does the sun provide for bees?",
+["A source of food","A reference point for direction","Protection from insects","A place to build nests"],1],
 
-["What problem can public libraries help reduce?",
-["The digital divide","Traffic congestion","Air pollution only","Food shortages"],0],
-
-["Librarians may teach visitors how to:",
-["Evaluate online information","Repair cars","Grow crops","Build roads"],0],
-
-["Why do printed books remain important?",
-["Some readers prefer them","They are always cheaper","They cannot be stored","They require no space"],0],
-
-["The future library is likely to:",
-["Combine traditional and digital services","Remove all books","Close all computers","Stop teaching"],0],
-
-["Which service is mentioned as a modern library service?",
-["Internet access","Airport transport","Restaurant delivery","Vehicle repair"],0],
-
-["Libraries have become completely unnecessary because of the internet.",
+["Bees are unable to navigate when clouds hide the sun.",
 ["TRUE","FALSE","NOT GIVEN"],1],
 
-["Every household has reliable internet access.",
-["TRUE","FALSE","NOT GIVEN"],1],
+["What else do bees use for communication?",
+["Chemical signals","Sound recordings","Written messages","Water"],0],
 
-["Librarians have responsibilities beyond locating books.",
-["TRUE","FALSE","NOT GIVEN"],0],
+["Why are scents important?",
+["They help bees recognise their nest and colony members","They make flowers grow","They provide energy","They prevent rain"],0],
 
-["Printed books are expected to disappear immediately.",
-["TRUE","FALSE","NOT GIVEN"],2]
+["The word 'orientation' is closest in meaning to:",
+["direction","temperature","nutrition","competition"],0],
+
+["What happens if a food source becomes less productive?",
+["The colony stops working","Workers can search for alternatives","All bees leave the nest","The queen searches for food"],1],
+
+["Bee colonies are described as:",
+["completely unorganised","highly organised","inactive","solitary"],1],
+
+["The waggle dance provides information about:",
+["food location","nest temperature","bee age","rainfall"],0],
+
+["Chemical signals can help bees distinguish:",
+["flowers from trees","their colony members from unfamiliar bees","young bees from old bees","sunlight from clouds"],1],
+
+["The communication system helps colonies respond to:",
+["environmental changes","human instructions","winter holidays","traffic"],0]
 
 ]
 
@@ -1318,107 +991,87 @@ questions:[
 
 {
 
-title:"Passage 3 — Memory and Learning",
+title:"The Development of Public Libraries",
 
-text:`
+passage:`
 
 <p>
-Learning is often described as the process of acquiring information,
-but successful learning depends on more than simply reading or
-hearing new material. Memory researchers have identified several
-conditions that can influence how effectively information is
-retained.
+Public libraries have changed significantly over time. In the
+past, books were often expensive and difficult for ordinary people
+to obtain. Libraries therefore played an important role in making
+knowledge available to a wider part of society.
 </p>
 
 <p>
-One important factor is retrieval. When learners attempt to recall
-information without looking at their notes, they strengthen their
-ability to access that information later. This is sometimes called
-retrieval practice.
+Early libraries were not always free or open to everyone. Some
+were connected to universities, religious institutions, or private
+organisations. Access could depend on a person's social position
+or membership of a particular group.
 </p>
 
 <p>
-Spacing is another important principle. Studying the same material
-over several sessions can be more effective than concentrating all
-study into a single long session. The intervals between sessions
-give the brain opportunities to process and reorganize information.
-</p>
-
-<div class="passage-highlight">
-Sleep also plays an important role. Research suggests that sleep
-can support the consolidation of newly learned information.
-Consequently, studying late into the night is not necessarily the
-most effective strategy.
-</div>
-
-<p>
-Attention is equally important. When learners constantly switch
-between tasks, they may remember less because each activity
-competes for limited attention. Reducing unnecessary distractions
-can therefore improve the quality of study.
+During the nineteenth century, the idea of a publicly supported
+library became increasingly popular in several countries. Supporters
+argued that libraries could improve education and provide workers
+and students with opportunities to learn outside formal classrooms.
 </p>
 
 <p>
-Another useful technique is elaboration. Instead of memorising a
-definition in isolation, learners can connect a new concept to
-examples, previous knowledge or real-world situations. These
-connections create additional routes through which the information
-can later be retrieved.
+Modern libraries provide much more than printed books. Many offer
+computers, internet access, study areas, educational programmes,
+and community events. Some libraries also provide digital books
+that can be borrowed remotely.
 </p>
 
 <p>
-Effective learning is therefore not based on one magic technique.
-A combination of retrieval, spacing, adequate sleep, focused
-attention and meaningful connections can produce stronger learning
-outcomes.
+Despite these changes, the central purpose of libraries remains
+similar: helping people access information and learn. Libraries
+continue to adapt because the ways people create, store, and
+consume information are constantly changing.
 </p>
 
 `,
 
 questions:[
 
-["What does retrieval practice involve?",
-["Trying to recall information","Reading without thinking","Sleeping all day","Avoiding questions"],0],
-
-["What is the advantage of spacing study sessions?",
-["It allows processing over time","It eliminates memory","It prevents learning","It requires no attention"],0],
-
-["Sleep can support:",
-["Memory consolidation","Traffic control","Food production","Language loss"],0],
-
-["Why can constant task switching be harmful?",
-["Activities compete for attention","It improves every memory","It increases sleep","It removes distractions"],0],
-
-["What is elaboration?",
-["Connecting new ideas to existing knowledge","Ignoring examples","Repeating one word","Avoiding concepts"],0],
-
-["Which factor is described as important for learning?",
-["Attention","Noise","Hunger","Speed"],0],
-
-["The passage recommends:",
-["Using several learning strategies","Studying only once","Avoiding sleep","Memorising without understanding"],0],
-
-["What may happen when learners recall information?",
-["Their ability to access it later can improve","They immediately forget it","They stop learning","They lose attention permanently"],0],
-
-["Why can examples be useful?",
-["They create connections to new concepts","They prevent understanding","They replace all study","They reduce memory"],0],
-
-["Studying everything in one long session is always best.",
-["TRUE","FALSE","NOT GIVEN"],1],
-
-["Sleep has no relationship with learning.",
-["TRUE","FALSE","NOT GIVEN"],1],
-
-["Task switching can reduce the quality of learning.",
+["Books were historically difficult for ordinary people to obtain.",
 ["TRUE","FALSE","NOT GIVEN"],0],
 
-["The passage claims that one technique works for everyone.",
-["TRUE","FALSE","NOT GIVEN"],1]
+["All early libraries were free.",
+["TRUE","FALSE","NOT GIVEN"],1],
 
-]
+["Some early libraries were associated with religious institutions.",
+["TRUE","FALSE","NOT GIVEN"],0],
 
-}
+["The idea of publicly supported libraries became more popular during the nineteenth century.",
+["TRUE","FALSE","NOT GIVEN"],0],
+
+["Supporters believed libraries could provide learning opportunities.",
+["TRUE","FALSE","NOT GIVEN"],0],
+
+["Why were libraries important historically?",
+["They made knowledge more accessible","They sold expensive computers","They replaced schools","They produced books"],0],
+
+["What could determine access to some early libraries?",
+["Social position or membership","Weather","Age of books","Distance from a city"],0],
+
+["What do many modern libraries provide besides books?",
+["Computers and internet access","Airports","Factories","Hotels"],0],
+
+["What can sometimes be borrowed remotely?",
+["Cars","Digital books","Furniture","Food"],1],
+
+["Libraries continue to adapt because information is:",
+["disappearing","constantly changing","always expensive","only printed"],1],
+
+["The main purpose of libraries remains helping people access:",
+["information","transport","food","housing"],0],
+
+["Public libraries can provide educational programmes and:",
+["community events","factories","airports","farms"],0],
+
+["Historically, books were often:",
+["expensive","free everywhere","illegal","unavailable to universities"],0]
 
 ]
 
@@ -1428,173 +1081,83 @@ questions:[
 
 let currentReadingTest=0;
 let currentPassage=0;
-let readingAnswers=[];
 let readingCorrect=0;
-let readingTime=3600;
-let readingTimer=null;
+let readingAnswers={};
 
+function startIELTSReading(){
 
-function openReadingTests(){
+currentReadingTest=0;
+currentPassage=0;
+readingCorrect=0;
+readingAnswers={};
+
+renderReading();
+
+}
+
+function renderReading(){
+
+let test=readingTests[currentReadingTest];
+
+let start=currentPassage===0?0:
+currentPassage===1?13:26;
+
+let end=currentPassage===0?13:
+currentPassage===1?26:39;
+
+let qs=test.questions.slice(start,end);
+
+let passageNumber=currentPassage+1;
 
 document.getElementById("ieltsWork").innerHTML=`
 
 <div class="module-card">
 
-<h2>📖 IELTS READING — TEST CENTER</h2>
+<h2>📖 IELTS Academic Reading</h2>
 
 <p>
-Choose a full Reading test. PEYBAK contains a system for
-<strong>150 IELTS Reading tests</strong>.
+Test ${currentReadingTest+1} • Passage ${passageNumber} of 3
 </p>
 
-<div class="test-list" id="readingTestList"></div>
+<div class="timer" id="ieltsTimer">60:00</div>
+
+<div class="progress">
+<div class="progress-bar"
+style="width:${((end)/40)*100}%">
+</div>
+</div>
+
+</div>
+
+<div class="passage">
+
+<h2>PASSAGE ${passageNumber}</h2>
+
+<h2>${test.title}</h2>
+
+${test.passage}
+
+</div>
+
+<div id="readingQuestions"></div>
+
+<div class="module-card">
+
+<button class="btn blue"
+onclick="nextPassage()">
+
+${currentPassage<2 ? "NEXT PASSAGE →" : "FINISH TEST"}
+
+</button>
 
 </div>
 `;
 
 let html="";
 
-for(let i=1;i<=150;i++){
+qs.forEach((q,i)=>{
 
-let available=i<=readingTests.length;
-
-html+=`
-
-<div class="test-card">
-
-<h3>TEST ${i}</h3>
-
-<p class="small">
-3 Passages • 40 Questions
-</p>
-
-<button
-class="btn ${available?"blue":"dark"}"
-${available?`onclick="startIELTSReading(${i-1})`:"disabled"}
->
-
-${available?"START":"COMING SOON"}
-
-</button>
-
-</div>
-
-`;
-
-}
-
-document.getElementById("readingTestList")
-.innerHTML=html;
-
-}
-
-
-function startIELTSReading(testIndex=0){
-
-currentReadingTest=testIndex;
-currentPassage=0;
-
-readingAnswers=[];
-readingCorrect=0;
-readingTime=3600;
-
-clearInterval(readingTimer);
-
-document.getElementById("ieltsWork").innerHTML=`
-
-<div class="module-card">
-
-<h2>
-IELTS Academic Reading
-</h2>
-
-<p>
-Test ${currentReadingTest+1} • Passage <span id="passageNumber">1</span> / 3
-</p>
-
-<div class="timer" id="ieltsTimer">
-60:00
-</div>
-
-<div class="progress">
-<div id="readProgress" class="progress-bar"></div>
-</div>
-
-</div>
-
-<div id="readingArea"></div>
-
-`;
-
-renderReadingPassage();
-
-readingTimer=setInterval(()=>{
-
-readingTime--;
-
-let min=Math.floor(readingTime/60);
-let sec=readingTime%60;
-
-document.getElementById("ieltsTimer")
-.textContent=
-String(min).padStart(2,"0")+":"+
-String(sec).padStart(2,"0");
-
-if(readingTime<=0){
-
-clearInterval(readingTimer);
-finishReading();
-
-}
-
-},1000);
-
-}
-
-
-function renderReadingPassage(){
-
-let test=readingTests[currentReadingTest];
-
-let passage=test.passages[currentPassage];
-
-let startQuestion=0;
-
-for(let i=0;i<currentPassage;i++){
-
-startQuestion+=
-test.passages[i].questions.length;
-
-}
-
-let html=`
-
-<div class="passage">
-
-<h2>${passage.title}</h2>
-
-${passage.text}
-
-</div>
-
-<div class="module-card">
-
-<h3>
-Questions ${startQuestion+1}
-–
-${startQuestion+passage.questions.length}
-</h3>
-
-<p class="small">
-Only questions belonging to this passage are shown.
-</p>
-
-</div>
-`;
-
-passage.questions.forEach((q,i)=>{
-
-let globalIndex=startQuestion+i;
+let globalIndex=start+i;
 
 html+=`
 
@@ -1612,13 +1175,7 @@ ${q[1].map((option,index)=>`
 
 <button
 class="option"
-onclick="selectReadingAnswer(
-${globalIndex},
-${index},
-${q[2]},
-this
-)"
->
+onclick="answerReading(${globalIndex},${index},${q[2]},this)">
 
 ${String.fromCharCode(65+index)}. ${option}
 
@@ -1632,79 +1189,27 @@ ${String.fromCharCode(65+index)}. ${option}
 
 });
 
-html+=`
-
-<div class="exam-navigation">
-
-<button
-class="btn dark"
-onclick="openReadingTests()"
->
-← TEST CENTER
-</button>
-
-<div>
-
-${
-currentPassage>0
-?
-`<button class="btn orange"
-onclick="previousPassage()">
-← PREVIOUS
-</button>`
-:""
-}
-
-${
-currentPassage<2
-?
-`<button class="btn blue"
-onclick="nextPassage()">
-NEXT PASSAGE →
-</button>`
-:
-`<button class="btn green"
-onclick="finishReading()">
-SUBMIT TEST ✓
-</button>`
-}
-
-</div>
-
-</div>
-
-`;
-
-document.getElementById("readingArea")
-.innerHTML=html;
-
-document.getElementById("passageNumber")
-.textContent=currentPassage+1;
-
-document.getElementById("readProgress")
-.style.width=
-((currentPassage+1)/3*100)+"%";
+document.getElementById("readingQuestions").innerHTML=html;
 
 }
 
+function answerReading(index,selected,correct,button){
 
-function selectReadingAnswer(
-globalIndex,
-selected,
-correct,
-button
-){
+if(readingAnswers[index]!==undefined)return;
 
-if(readingAnswers[globalIndex]!==undefined)
-return;
+readingAnswers[index]=selected;
 
-readingAnswers[globalIndex]=selected;
+let opts=
+button.parentElement.querySelectorAll(".option");
 
-let buttons=
-button.parentElement
-.querySelectorAll(".option");
+opts.forEach((b,i)=>{
 
-buttons.forEach(b=>b.disabled=true);
+b.disabled=true;
+
+if(i===correct)
+b.classList.add("correct");
+
+});
 
 if(selected===correct){
 
@@ -1715,47 +1220,28 @@ readingCorrect++;
 
 button.classList.add("wrong");
 
-buttons[correct]
-.classList.add("correct");
-
 }
 
 }
-
 
 function nextPassage(){
 
 if(currentPassage<2){
 
 currentPassage++;
-
-renderReadingPassage();
-
-window.scrollTo(0,0);
-
-}
-
-}
-
-
-function previousPassage(){
-
-if(currentPassage>0){
-
-currentPassage--;
-
-renderReadingPassage();
+renderReading();
 
 window.scrollTo(0,0);
 
-}
+}else{
+
+finishReading();
 
 }
 
+}
 
 function finishReading(){
-
-clearInterval(readingTimer);
 
 let band=
 readingCorrect>=39?9:
@@ -1774,32 +1260,18 @@ localStorage.setItem(
 readingCorrect
 );
 
-document.getElementById("ieltsWork")
-.innerHTML=`
+document.getElementById("ieltsWork").innerHTML=`
 
 <div class="result">
 
 <h2>IELTS Reading Result</h2>
 
-<div class="big-score">
-${band.toFixed(1)}
-</div>
+<div class="big-score">${band.toFixed(1)}</div>
 
-<p>
-<strong>${readingCorrect}/40</strong> correct
-</p>
-
-<p style="margin-top:15px">
-You completed all 3 passages.
-</p>
+<p>${readingCorrect}/40 correct</p>
 
 <button class="btn blue"
-onclick="openReadingTests()">
-READING TEST CENTER
-</button>
-
-<button class="btn green"
-onclick="startIELTSReading(${currentReadingTest})">
+onclick="startIELTSReading()">
 TRY AGAIN
 </button>
 
@@ -1812,557 +1284,161 @@ TRY AGAIN
 
 /* =====================================================
 IELTS LISTENING
-4 PARTS
-AUDIO PLAYER
-MULTIPLE QUESTION TYPES
 ===================================================== */
-
-
-const listeningParts=[
-
-{
-
-title:"Part 1 — Form Completion",
-
-audio:"audio/listening-test-1-part-1.mp3",
-
-intro:
-"Listen to a conversation between a student and a university administrator.",
-
-questions:[
-
-{
-type:"input",
-question:"Complete the form. The student's surname is ______.",
-answer:"Brown"
-},
-
-{
-type:"input",
-question:"The course starts on ______ September.",
-answer:"12"
-},
-
-{
-type:"input",
-question:"The course lasts for ______ weeks.",
-answer:"8"
-},
-
-{
-type:"mcq",
-question:"Where will the orientation take place?",
-options:[
-"Main Hall",
-"Library",
-"Science Centre",
-"Student Cafe"
-],
-answer:0
-},
-
-{
-type:"mcq",
-question:"What should students bring?",
-options:[
-"A passport photograph",
-"A laptop",
-"A textbook",
-"A medical certificate"
-],
-answer:1
-}
-
-]
-
-},
-
-{
-
-title:"Part 2 — Multiple Choice & Matching",
-
-audio:"audio/listening-test-1-part-2.mp3",
-
-intro:
-"You will hear a talk about facilities at a community centre.",
-
-questions:[
-
-{
-type:"mcq",
-question:"What is the main purpose of the centre?",
-options:[
-"Sport and education",
-"Shopping",
-"Accommodation",
-"Transport"
-],
-answer:0
-},
-
-{
-type:"mcq",
-question:"Which facility was recently renovated?",
-options:[
-"Swimming pool",
-"Library",
-"Gym",
-"Car park"
-],
-answer:2
-},
-
-{
-type:"input",
-question:"The centre opens at ______ in the morning.",
-answer:"7"
-},
-
-{
-type:"mcq",
-question:"Which activity is free?",
-options:[
-"Tennis",
-"Yoga",
-"Swimming",
-"Photography"
-],
-answer:1
-}
-
-]
-
-},
-
-{
-
-title:"Part 3 — Academic Discussion",
-
-audio:"audio/listening-test-1-part-3.mp3",
-
-intro:
-"You will hear two students discussing a university research project.",
-
-questions:[
-
-{
-type:"mcq",
-question:"What is the students' main research topic?",
-options:[
-"Urban transport",
-"Climate change",
-"Online education",
-"Tourism"
-],
-answer:0
-},
-
-{
-type:"mcq",
-question:"What problem did they have with the survey?",
-options:[
-"Too few responses",
-"Wrong location",
-"Technical problems",
-"Incorrect questions"
-],
-answer:0
-},
-
-{
-type:"input",
-question:"They decided to collect data for ______ more days.",
-answer:"three"
-},
-
-{
-type:"mcq",
-question:"Who will analyse the results?",
-options:[
-"Maria",
-"David",
-"The professor",
-"The whole group"
-],
-answer:1
-}
-
-]
-
-},
-
-{
-
-title:"Part 4 — Academic Lecture",
-
-audio:"audio/listening-test-1-part-4.mp3",
-
-intro:
-"You will hear a university lecture about renewable energy.",
-
-questions:[
-
-{
-type:"mcq",
-question:"What is the lecture mainly about?",
-options:[
-"Renewable energy development",
-"Ancient architecture",
-"Population growth",
-"Ocean tourism"
-],
-answer:0
-},
-
-{
-type:"input",
-question:"Solar energy depends on the amount of ______ available.",
-answer:"sunlight"
-},
-
-{
-type:"mcq",
-question:"What is one limitation of wind power?",
-options:[
-"It depends on wind conditions",
-"It produces no electricity",
-"It requires coal",
-"It cannot be stored"
-],
-answer:0
-},
-
-{
-type:"input",
-question:"Energy storage can help balance electricity ______.",
-answer:"supply"
-}
-
-]
-
-}
-
-];
-
-
-let listeningPart=0;
-let listeningAnswers=[];
-
 
 function startListening(){
 
-listeningPart=0;
-listeningAnswers=[];
-
-renderListeningPart();
-
-}
-
-
-function renderListeningPart(){
-
-let part=listeningParts[listeningPart];
-
-let html=`
+document.getElementById("ieltsWork").innerHTML=`
 
 <div class="module-card">
 
 <h2>🎧 IELTS Listening</h2>
 
-<p>
-Part ${listeningPart+1} / 4
-</p>
-
-<div class="part-indicator">
-
-${listeningParts.map((p,i)=>`
-
-<div class="part-dot
-${i===listeningPart?"active":""}">
-Part ${i+1}
-</div>
-
-`).join("")}
+<p>4 parts • 40 questions</p>
 
 </div>
 
 <div class="audio-box">
 
-<h3>🔊 ${part.title}</h3>
+<h2>PART 1</h2>
 
-<p style="margin-top:10px">
-${part.intro}
-</p>
+<p>Listen to the recording and answer Questions 1–10.</p>
 
 <audio controls preload="metadata">
-
 <source
-src="${part.audio}"
+src="audio/listening-test-1-part-1.mp3"
 type="audio/mpeg">
-
 Your browser does not support audio.
-
 </audio>
 
-<div class="audio-warning">
+</div>
 
-<strong>Audio file:</strong>
-${part.audio}
+<div class="audio-box">
 
-<br><br>
+<h2>PART 2</h2>
 
-Place the MP3 file in the same project folder:
+<p>Listen to the recording and answer Questions 11–20.</p>
 
-<code>${part.audio}</code>
+<audio controls preload="metadata">
+<source
+src="audio/listening-test-1-part-2.mp3"
+type="audio/mpeg">
+Your browser does not support audio.
+</audio>
 
 </div>
 
-</div>
+<div class="audio-box">
+
+<h2>PART 3</h2>
+
+<p>Listen to the recording and answer Questions 21–30.</p>
+
+<audio controls preload="metadata">
+<source
+src="audio/listening-test-1-part-3.mp3"
+type="audio/mpeg">
+Your browser does not support audio.
+</audio>
 
 </div>
 
-`;
+<div class="audio-box">
 
-part.questions.forEach((q,i)=>{
+<h2>PART 4</h2>
 
-let key=
-`${listeningPart}-${i}`;
+<p>Listen to the recording and answer Questions 31–40.</p>
 
-if(q.type==="mcq"){
-
-html+=`
-
-<div class="question">
-
-<span class="badge">
-Part ${listeningPart+1} • Question ${i+1}
-</span>
-
-<h3 style="margin:15px 0">
-${q.question}
-</h3>
-
-${q.options.map((o,j)=>`
-
-<button
-class="option"
-onclick="selectListening(
-'${key}',
-${j},
-${q.answer},
-this
-)">
-
-${String.fromCharCode(65+j)}. ${o}
-
-</button>
-
-`).join("")}
+<audio controls preload="metadata">
+<source
+src="audio/listening-test-1-part-4.mp3"
+type="audio/mpeg">
+Your browser does not support audio.
+</audio>
 
 </div>
 
-`;
+<div class="module-card">
 
-}
+<h2>Question types</h2>
 
-else{
-
-html+=`
-
-<div class="question">
-
-<span class="badge">
-Part ${listeningPart+1} • Question ${i+1}
-</span>
-
-<h3>${q.question}</h3>
-
-<input
-class="input-answer"
-id="listen-${key}"
-placeholder="Write your answer"
->
-
-</div>
-
-`;
-
-}
-
-});
-
-html+=`
-
-<div class="exam-navigation">
-
-<button
-class="btn dark"
-onclick="show('ielts')">
-EXIT
-</button>
-
-<div>
-
-${
-listeningPart<3
-?
-`<button class="btn blue"
-onclick="nextListeningPart()">
-NEXT PART →
-</button>`
-:
-`<button class="btn green"
-onclick="finishListening()">
-SUBMIT LISTENING ✓
-</button>`
-}
-
-</div>
-
-</div>
-
-`;
-
-document.getElementById("ieltsWork")
-.innerHTML=html;
-
-window.scrollTo(0,0);
-
-}
-
-
-function selectListening(key,selected,correct,button){
-
-listeningAnswers[key]=selected;
-
-let options=
-button.parentElement
-.querySelectorAll(".option");
-
-options.forEach(b=>{
-
-b.classList.remove("selected");
-
-});
-
-button.classList.add("selected");
-
-}
-
-
-function nextListeningPart(){
-
-/*
-Save typed answers before leaving part.
-*/
-
-listeningParts[listeningPart]
-.questions.forEach((q,i)=>{
-
-if(q.type==="input"){
-
-let el=
-document.getElementById(
-`listen-${listeningPart}-${i}`
-);
-
-if(el)
-listeningAnswers[
-`${listeningPart}-${i}`
-]=el.value.trim();
-
-}
-
-});
-
-if(listeningPart<3){
-
-listeningPart++;
-
-renderListeningPart();
-
-}
-
-}
-
-
-function finishListening(){
-
-/* Save last part */
-
-listeningParts[listeningPart]
-.questions.forEach((q,i)=>{
-
-if(q.type==="input"){
-
-let el=
-document.getElementById(
-`listen-${listeningPart}-${i}`
-);
-
-if(el)
-listeningAnswers[
-`${listeningPart}-${i}`
-]=el.value.trim();
-
-}
-
-});
-
-
-let correct=0;
-let total=0;
-
-listeningParts.forEach((part,p)=>{
-
-part.questions.forEach((q,i)=>{
-
-total++;
-
-let user=
-(listeningAnswers[`${p}-${i}`]||"")
-.toLowerCase()
-.trim();
-
-if(q.type==="mcq"){
-
-if(listeningAnswers[`${p}-${i}`]===q.answer)
-correct++;
-
-}else{
-
-if(user===String(q.answer).toLowerCase())
-correct++;
-
-}
-
-});
-
-});
-
-localStorage.setItem(
-"peybakListening",
-correct
-);
-
-document.getElementById("ieltsWork")
-.innerHTML=`
-
-<div class="result">
-
-<h2>🎧 IELTS Listening Result</h2>
-
-<div class="big-score">
-${correct}/${total}
-</div>
+<p style="margin-top:15px">
+✓ Form Completion
+</p>
 
 <p>
-Your answers have been recorded.
+✓ Note Completion
+</p>
+
+<p>
+✓ Table Completion
+</p>
+
+<p>
+✓ Multiple Choice
+</p>
+
+<p>
+✓ Matching
+</p>
+
+<p>
+✓ Map / Plan Labelling
 </p>
 
 <button class="btn blue"
-onclick="startListening()">
-TRY AGAIN
+onclick="startListeningQuiz()">
+START QUESTIONS
+</button>
+
+</div>
+
+`;
+
+}
+
+
+function startListeningQuiz(){
+
+document.getElementById("ieltsWork").innerHTML=`
+
+<div class="module-card">
+
+<h2>🎧 Listening Practice — Part 1</h2>
+
+<p>Complete the form while listening.</p>
+
+</div>
+
+<div class="question">
+
+<span class="badge">Questions 1–5</span>
+
+<h3>University Course Registration</h3>
+
+<p>Student's surname:</p>
+
+<input placeholder="Your answer">
+
+<p>Course:</p>
+
+<input placeholder="Your answer">
+
+<p>Start date:</p>
+
+<input placeholder="Your answer">
+
+<p>Classroom:</p>
+
+<input placeholder="Your answer">
+
+<p>Fee:</p>
+
+<input placeholder="Your answer">
+
+<button class="btn green"
+onclick="alert('Answers saved!')">
+SAVE ANSWERS
 </button>
 
 </div>
@@ -2378,48 +1454,26 @@ WRITING
 
 function startWriting(){
 
-document.getElementById("ieltsWork")
-.innerHTML=`
+document.getElementById("ieltsWork").innerHTML=`
 
 <div class="module-card">
 
 <h2>✍️ IELTS Academic Writing</h2>
 
-<div class="stats">
-
-<div class="stat">
-<b>20 min</b>
-Task 1
-</div>
-
-<div class="stat">
-<b>40 min</b>
-Task 2
-</div>
-
-<div class="stat">
-<b>250+</b>
-Task 2 words
-</div>
-
-</div>
-
 <h3>Task 1</h3>
 
 <p style="margin:15px 0">
-The chart below shows changes in the number of students
-using three different forms of transport to travel to school.
+The chart below shows changes in the number
+of students using three different forms of
+transport to travel to school.
 </p>
 
 <textarea
 id="task1"
-placeholder="Write at least 150 words..."
-></textarea>
+placeholder="Write at least 150 words...">
+</textarea>
 
-<p>
-Words:
-<strong id="count1">0</strong>
-</p>
+<p>Words: <strong id="count1">0</strong></p>
 
 <hr style="margin:30px 0">
 
@@ -2427,8 +1481,8 @@ Words:
 
 <p style="margin:15px 0">
 
-Some people believe that schools should focus more on
-practical skills than academic subjects.
+Some people believe that schools should focus
+more on practical skills than academic subjects.
 
 To what extent do you agree or disagree?
 
@@ -2436,13 +1490,10 @@ To what extent do you agree or disagree?
 
 <textarea
 id="task2"
-placeholder="Write at least 250 words..."
-></textarea>
+placeholder="Write at least 250 words...">
+</textarea>
 
-<p>
-Words:
-<strong id="count2">0</strong>
-</p>
+<p>Words: <strong id="count2">0</strong></p>
 
 <button class="btn green"
 onclick="evaluateWriting()">
@@ -2452,35 +1503,29 @@ CHECK WRITING
 <div id="writingFeedback"></div>
 
 </div>
-
 `;
 
-document.getElementById("task1")
-.addEventListener("input",()=>{
-document.getElementById("count1")
-.textContent=countWords("task1");
+document.getElementById("task1").addEventListener("input",()=>{
+document.getElementById("count1").textContent=
+countWords("task1");
 });
 
-document.getElementById("task2")
-.addEventListener("input",()=>{
-document.getElementById("count2")
-.textContent=countWords("task2");
+document.getElementById("task2").addEventListener("input",()=>{
+document.getElementById("count2").textContent=
+countWords("task2");
 });
 
 }
 
-
 function countWords(id){
 
-let text=
-document.getElementById(id).value.trim();
+let text=document.getElementById(id).value.trim();
 
 if(!text)return 0;
 
 return text.split(/\s+/).length;
 
 }
-
 
 function evaluateWriting(){
 
@@ -2501,19 +1546,13 @@ feedback+="⚠️ Task 2: at least 250 words needed.<br>";
 else
 feedback+="✅ Task 2 word count is sufficient.<br>";
 
-document.getElementById("writingFeedback")
-.innerHTML=`
+document.getElementById("writingFeedback").innerHTML=`
 
 <div class="module-card">
 
 <h3>Writing Feedback</h3>
 
 <p>${feedback}</p>
-
-<p style="margin-top:15px">
-PEYBAK analysis:
-Task Response • Coherence • Vocabulary • Grammar
-</p>
 
 </div>
 
@@ -2528,8 +1567,7 @@ SPEAKING
 
 function startSpeaking(){
 
-document.getElementById("ieltsWork")
-.innerHTML=`
+document.getElementById("ieltsWork").innerHTML=`
 
 <div class="module-card">
 
@@ -2541,9 +1579,7 @@ document.getElementById("ieltsWork")
 
 <h3>Part 1</h3>
 
-<p>
-Do you enjoy studying? Why or why not?
-</p>
+<p>Do you enjoy studying? Why or why not?</p>
 
 <button class="btn blue"
 onclick="startSpeechTimer(60)">
@@ -2556,9 +1592,7 @@ START
 
 <h3>Part 2</h3>
 
-<p>
-Describe a person who has influenced you.
-</p>
+<p>Describe a person who has influenced you.</p>
 
 <button class="btn orange"
 onclick="startSpeechTimer(120)">
@@ -2571,9 +1605,7 @@ PREPARE & SPEAK
 
 <h3>Part 3</h3>
 
-<p>
-How can education influence society?
-</p>
+<p>How can education influence society?</p>
 
 <button class="btn dark"
 onclick="startSpeechTimer(120)">
@@ -2592,29 +1624,25 @@ START
 
 }
 
-
 function startSpeechTimer(seconds){
 
 let remaining=seconds;
 
-document.getElementById("speechTimer")
-.innerHTML=
+document.getElementById("speechTimer").innerHTML=
 `<div class="timer">${remaining}s</div>`;
 
 let timer=setInterval(()=>{
 
 remaining--;
 
-document.getElementById("speechTimer")
-.innerHTML=
+document.getElementById("speechTimer").innerHTML=
 `<div class="timer">${remaining}s</div>`;
 
 if(remaining<=0){
 
 clearInterval(timer);
 
-document.getElementById("speechTimer")
-.innerHTML=
+document.getElementById("speechTimer").innerHTML=
 `<h3>Time finished! 🎤</h3>`;
 
 }
@@ -2626,7 +1654,6 @@ document.getElementById("speechTimer")
 
 /* =====================================================
 SAT R&W
-UNCHANGED STRUCTURE
 ===================================================== */
 
 const satRW=[
@@ -2676,23 +1703,17 @@ const satRW=[
 let satRWIndex=0;
 let satRWCorrect=0;
 
-
 function startSATRW(){
 
-document.getElementById("satWork")
-.innerHTML=`
+document.getElementById("satWork").innerHTML=`
 
 <div class="module-card">
 
 <h2>SAT Reading & Writing</h2>
 
-<p>
-Module 1 • 27 questions • 32 minutes
-</p>
+<p>Module 1 • 27 questions • 32 minutes</p>
 
-<div class="timer">
-32:00
-</div>
+<div class="timer">32:00</div>
 
 <div id="satRWQuestion"></div>
 
@@ -2707,16 +1728,11 @@ renderSATRW();
 
 }
 
-
 function renderSATRW(){
 
-let q=
-satRW[
-satRWIndex%satRW.length
-];
+let q=satRW[satRWIndex%satRW.length];
 
-document.getElementById("satRWQuestion")
-.innerHTML=`
+document.getElementById("satRWQuestion").innerHTML=`
 
 <div class="question">
 
@@ -2730,7 +1746,9 @@ ${q[1].map((x,i)=>`
 
 <button class="option"
 onclick="answerSATRW(${i},${q[2]},this)">
+
 ${String.fromCharCode(65+i)}. ${x}
+
 </button>
 
 `).join("")}
@@ -2741,20 +1759,15 @@ ${String.fromCharCode(65+i)}. ${x}
 
 }
 
-
 function answerSATRW(selected,correct,button){
 
-let opts=
-document.querySelectorAll(
-"#satRWQuestion .option"
-);
+let opts=document.querySelectorAll("#satRWQuestion .option");
 
 opts.forEach((b,i)=>{
 
 b.disabled=true;
 
-if(i===correct)
-b.classList.add("correct");
+if(i===correct)b.classList.add("correct");
 
 });
 
@@ -2765,8 +1778,8 @@ satRWCorrect++;
 
 }
 
-document.getElementById("satCorrect")
-.textContent=satRWCorrect;
+document.getElementById("satCorrect").textContent=
+satRWCorrect;
 
 }
 
@@ -2818,23 +1831,17 @@ const satMath=[
 let satMathIndex=0;
 let satMathCorrect=0;
 
-
 function startSATMath(){
 
-document.getElementById("satWork")
-.innerHTML=`
+document.getElementById("satWork").innerHTML=`
 
 <div class="module-card">
 
 <h2>🧮 SAT Math</h2>
 
-<p>
-Module 1 • 22 questions • 35 minutes
-</p>
+<p>Module 1 • 22 questions • 35 minutes</p>
 
-<div class="timer">
-35:00
-</div>
+<div class="timer">35:00</div>
 
 <div id="satMathQuestion"></div>
 
@@ -2849,16 +1856,11 @@ renderSATMath();
 
 }
 
-
 function renderSATMath(){
 
-let q=
-satMath[
-satMathIndex%satMath.length
-];
+let q=satMath[satMathIndex%satMath.length];
 
-document.getElementById("satMathQuestion")
-.innerHTML=`
+document.getElementById("satMathQuestion").innerHTML=`
 
 <div class="question">
 
@@ -2872,7 +1874,9 @@ ${q[1].map((x,i)=>`
 
 <button class="option"
 onclick="answerSATMath(${i},${q[2]},this)">
+
 ${String.fromCharCode(65+i)}. ${x}
+
 </button>
 
 `).join("")}
@@ -2883,26 +1887,22 @@ ${String.fromCharCode(65+i)}. ${x}
 
 }
 
-
 function answerSATMath(selected,correct,button){
 
-let opts=
-document.querySelectorAll(
-"#satMathQuestion .option"
-);
+let opts=document.querySelectorAll("#satMathQuestion .option");
 
 opts.forEach((b,i)=>{
 
 b.disabled=true;
 
-if(i===correct)
-b.classList.add("correct");
+if(i===correct)b.classList.add("correct");
 
 });
 
 if(selected===correct){
 
 button.classList.add("correct");
+
 satMathCorrect++;
 
 }
@@ -2910,13 +1910,11 @@ satMathCorrect++;
 document.getElementById("satCorrect")
 .textContent=satMathCorrect;
 
-let score=
-400+satMathCorrect*100;
+let score=400+satMathCorrect*100;
 
 if(score>800)score=800;
 
-document.getElementById("satScore")
-.textContent=score;
+document.getElementById("satScore").textContent=score;
 
 }
 
@@ -2927,16 +1925,13 @@ SAT ADAPTIVE
 
 function startSATAdaptive(){
 
-document.getElementById("satWork")
-.innerHTML=`
+document.getElementById("satWork").innerHTML=`
 
 <div class="module-card">
 
 <h2>🔥 SAT Adaptive Practice</h2>
 
-<p>
-Module 1 → performance → Module 2 difficulty
-</p>
+<p>Module 1 → performance → Module 2 difficulty</p>
 
 <div class="cards">
 
@@ -2965,11 +1960,9 @@ FINISH MODULE 1
 
 }
 
-
 function simulateAdaptive(){
 
-let performance=
-Math.floor(Math.random()*100);
+let performance=Math.floor(Math.random()*100);
 
 let difficulty;
 
@@ -2997,36 +1990,24 @@ function updateDashboard(){
 let ielts=
 Number(localStorage.getItem("peybakIELTS")||0);
 
-let listening=
-Number(localStorage.getItem("peybakListening")||0);
+document.getElementById("dashIELTS").textContent=ielts;
 
-document.getElementById("dashIELTS")
-.textContent=ielts+listening;
-
-document.getElementById("dashSAT")
-.textContent=
+document.getElementById("dashSAT").textContent=
 satMathCorrect+satRWCorrect;
 
-document.getElementById("dashWords")
-.textContent=learnedWords;
+document.getElementById("dashWords").textContent=
+learnedWords;
 
-document.getElementById("ieltsProgress")
-.style.width=
+document.getElementById("ieltsProgress").style.width=
 Math.min(ielts/30*100,100)+"%";
 
-document.getElementById("satProgress")
-.style.width=
-Math.min(
-(satMathCorrect+satRWCorrect)/10*100,
-100
-)+"%";
+document.getElementById("satProgress").style.width=
+Math.min((satMathCorrect+satRWCorrect)/10*100,100)+"%";
 
 }
 
 
-/* =====================================================
-INITIALIZE
-===================================================== */
+/* ================= INITIALIZE ================= */
 
 renderWords();
 
@@ -3041,12 +2022,4 @@ renderWords();
     ├── listening-test-1-part-1.mp3
     ├── listening-test-1-part-2.mp3
     ├── listening-test-1-part-3.mp3
-    └── listening-test-1-part-4.mp3<audio controls>
-    <source src="audio/listening-test-1-part-1.mp3" type="audio/mpeg">
-</audio><audio controls>
-    <source src="audio/listening-test-1-part-2.mp3" type="audio/mpeg">
-</audio><audio controls>
-    <source src="audio/listening-test-1-part-3.mp3" type="audio/mpeg">
-</audio><audio controls>
-    <source src="audio/listening-test-1-part-4.mp3" type="audio/mpeg">
-</audio>
+    └── listening-test-1-part-4.mp3
