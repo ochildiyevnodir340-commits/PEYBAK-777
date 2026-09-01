@@ -2023,3 +2023,1190 @@ renderWords();
     ├── listening-test-1-part-2.mp3
     ├── listening-test-1-part-3.mp3
     └── listening-test-1-part-4.mp3
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>PEYBAK 777 V5</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#f4f7fb;
+color:#111827
+}
+header{
+background:#0b1220;
+color:white;
+padding:18px 5%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:10
+}
+.logo{font-size:25px;font-weight:900}
+nav button{
+background:none;
+border:0;
+color:white;
+margin:5px;
+cursor:pointer;
+font-weight:bold
+}
+.page{display:none}
+.active{display:block}
+.hero{
+background:white;
+text-align:center;
+padding:70px 20px
+}
+.hero h1{font-size:55px;margin:10px}
+.hero span{color:#2563eb}
+.container{
+max-width:1200px;
+margin:auto;
+padding:35px 20px
+}
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:20px
+}
+.card,.question,.passage{
+background:white;
+padding:25px;
+border-radius:16px;
+margin-bottom:20px;
+box-shadow:0 4px 18px #0000000d
+}
+.card h2{margin-top:8px}
+.btn{
+padding:13px 20px;
+border:0;
+border-radius:9px;
+font-weight:bold;
+cursor:pointer;
+margin:5px
+}
+.blue{background:#2563eb;color:white}
+.dark{background:#111827;color:white}
+.green{background:#16a34a;color:white}
+.orange{background:#f59e0b;color:white}
+.red{background:#dc2626;color:white}
+.option{
+display:block;
+width:100%;
+padding:14px;
+margin:8px 0;
+text-align:left;
+background:#f8fafc;
+border:2px solid #e5e7eb;
+border-radius:9px;
+cursor:pointer
+}
+.option:hover{border-color:#2563eb}
+.correct{background:#dcfce7!important;border-color:#16a34a!important}
+.wrong{background:#fee2e2!important;border-color:#dc2626!important}
+.exambar{
+background:#111827;
+color:white;
+padding:25px;
+text-align:center
+}
+.timer{
+font-size:28px;
+font-weight:bold;
+color:#ef4444;
+margin:15px
+}
+.progress{
+height:10px;
+background:#e5e7eb;
+border-radius:20px;
+overflow:hidden
+}
+.progress div{
+height:100%;
+width:0%;
+background:#2563eb
+}
+.passage{
+line-height:1.8;
+font-size:17px
+}
+.passage h2{
+color:#1d4ed8
+}
+.audio-box{
+background:#eef2ff;
+padding:25px;
+border-radius:15px;
+margin-bottom:20px
+}
+audio{width:100%}
+.badge{
+display:inline-block;
+padding:5px 10px;
+border-radius:20px;
+background:#dbeafe;
+color:#1d4ed8;
+font-weight:bold;
+font-size:13px
+}
+textarea,input,select{
+width:100%;
+padding:13px;
+border:2px solid #e5e7eb;
+border-radius:9px;
+margin:7px 0;
+font-size:16px
+}
+textarea{min-height:250px}
+.word{
+background:white;
+padding:20px;
+border-radius:12px;
+border-left:5px solid #2563eb
+}
+.wordgrid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px
+}
+footer{
+background:#0b1220;
+color:white;
+text-align:center;
+padding:35px
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">PEYBAK 777 🚀</div>
+
+<nav>
+<button onclick="showPage('home')">HOME</button>
+<button onclick="showPage('ielts')">IELTS</button>
+<button onclick="showPage('sat')">SAT</button>
+<button onclick="showPage('vocab')">VOCAB</button>
+</nav>
+</header>
+
+
+<!-- HOME -->
+
+<section id="home" class="page active">
+
+<div class="hero">
+<h1>PEYBAK <span>777</span></h1>
+<h2>IELTS + SAT MASTER PLATFORM</h2>
+<p>Target: IELTS 7.0+ | SAT 1500+</p>
+
+<button class="btn blue" onclick="showPage('ielts')">
+IELTS
+</button>
+
+<button class="btn dark" onclick="showPage('sat')">
+SAT
+</button>
+
+<button class="btn orange" onclick="showPage('vocab')">
+VOCABULARY
+</button>
+</div>
+
+<div class="container">
+
+<div class="cards">
+
+<div class="card">
+<h2>📖 IELTS Reading</h2>
+<p>Passage 1 → Passage 2 → Passage 3</p>
+<button class="btn blue" onclick="showPage('ielts')">
+START
+</button>
+</div>
+
+<div class="card">
+<h2>🎧 IELTS Listening</h2>
+<p>Part 1 → Part 2 → Part 3 → Part 4</p>
+<button class="btn blue" onclick="showPage('ielts')">
+START
+</button>
+</div>
+
+<div class="card">
+<h2>✍️ IELTS Writing</h2>
+<p>Task 1 + Task 2</p>
+<button class="btn blue" onclick="showPage('ielts')">
+START
+</button>
+</div>
+
+<div class="card">
+<h2>🗣 IELTS Speaking</h2>
+<p>Part 1 + Part 2 + Part 3</p>
+<button class="btn blue" onclick="showPage('ielts')">
+START
+</button>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- IELTS -->
+
+<section id="ielts" class="page">
+
+<div class="exambar">
+<h1>IELTS ACADEMIC</h1>
+<p>PEYBAK 777 V5</p>
+</div>
+
+<div class="container">
+
+<div class="cards">
+
+<div class="card">
+<h2>📖 Reading</h2>
+<p>3 Passages • 40 Questions • 60 Minutes</p>
+<button class="btn blue" onclick="startReading()">
+START READING
+</button>
+</div>
+
+<div class="card">
+<h2>🎧 Listening</h2>
+<p>4 Parts • 40 Questions</p>
+<button class="btn blue" onclick="startListening()">
+START LISTENING
+</button>
+</div>
+
+<div class="card">
+<h2>✍️ Writing</h2>
+<p>Task 1 + Task 2</p>
+<button class="btn blue" onclick="startWriting()">
+START WRITING
+</button>
+</div>
+
+<div class="card">
+<h2>🗣 Speaking</h2>
+<p>Part 1 + Part 2 + Part 3</p>
+<button class="btn blue" onclick="startSpeaking()">
+START SPEAKING
+</button>
+</div>
+
+</div>
+
+<div id="ieltsArea"></div>
+
+</div>
+</section>
+
+
+<!-- SAT -->
+
+<section id="sat" class="page">
+
+<div class="exambar">
+<h1>Digital SAT</h1>
+<p>Target 1500+</p>
+</div>
+
+<div class="container">
+
+<div class="cards">
+
+<div class="card">
+<h2>📚 Reading & Writing</h2>
+<p>54 Questions • 64 Minutes</p>
+<button class="btn dark" onclick="satRW()">
+START
+</button>
+</div>
+
+<div class="card">
+<h2>🧮 Math</h2>
+<p>44 Questions • 70 Minutes</p>
+<button class="btn dark" onclick="satMath()">
+START
+</button>
+</div>
+
+</div>
+
+<div id="satArea"></div>
+
+</div>
+</section>
+
+
+<!-- VOCAB -->
+
+<section id="vocab" class="page">
+
+<div class="exambar">
+<h1>📚 PEYBAK 777 VOCABULARY</h1>
+<p>IELTS + SAT Academic Vocabulary</p>
+</div>
+
+<div class="container">
+
+<input
+id="search"
+placeholder="Search vocabulary..."
+oninput="renderVocab()"
+>
+
+<div class="wordgrid" id="words"></div>
+
+</div>
+</section>
+
+
+<footer>
+<h2>PEYBAK 777 🚀</h2>
+<p>Train harder. Reach higher.</p>
+</footer>
+
+
+<script>
+
+/* =========================
+NAVIGATION
+========================= */
+
+function showPage(id){
+
+document.querySelectorAll(".page")
+.forEach(x=>x.classList.remove("active"));
+
+document.getElementById(id)
+.classList.add("active");
+
+window.scrollTo(0,0);
+}
+
+
+/* =========================
+READING PASSAGES
+========================= */
+
+const passages=[
+
+{
+title:"PASSAGE 1 — Urban Green Spaces",
+
+text:`
+<p>
+Cities around the world are increasingly creating green spaces
+within densely populated areas. These spaces include public parks,
+community gardens and small areas of vegetation between buildings.
+Although urban green spaces were once considered mainly decorative,
+researchers now associate them with several environmental and social
+benefits.
+</p>
+
+<p>
+Plants can reduce the temperature of urban areas by providing shade
+and releasing water into the atmosphere. Trees can also absorb some
+air pollutants and provide habitats for birds and insects.
+</p>
+
+<p>
+Community gardens offer another important benefit. Residents can
+grow vegetables, learn about food production and interact with
+neighbours. In some areas, these gardens have become places where
+people from different generations work together.
+</p>
+
+<p>
+However, creating green areas in cities is not always simple.
+Land may be expensive, water can be limited and existing soil may
+contain pollutants. Therefore, successful urban gardening projects
+often require careful planning and long-term maintenance.
+</p>
+`,
+questions:[
+["What was one traditional view of urban green spaces?",
+["They were mainly decorative","They were dangerous","They were industrial","They were transportation centres"],0],
+["What can trees help reduce?",
+["Air pollution","Education","Population","Rainfall"],0],
+["Community gardens can encourage residents to:",
+["Work together","Avoid neighbours","Build factories","Leave cities"],0],
+["Why may soil need to be tested?",
+["It may contain pollutants","It is always frozen","It contains no minerals","It is too new"],0],
+["Urban green spaces have only environmental benefits.",
+["TRUE","FALSE","NOT GIVEN"],1]
+]
+},
+
+{
+title:"PASSAGE 2 — The Development of Public Libraries",
+
+text:`
+<p>
+Public libraries have changed considerably over the last two
+centuries. Early libraries were often accessible only to particular
+groups, while modern public libraries aim to provide information
+and educational opportunities to a much wider population.
+</p>
+
+<p>
+The expansion of public education played an important role in this
+development. As literacy increased, more people wanted access to
+books and other sources of information. Governments and local
+communities consequently began to support institutions that could
+provide reading materials without requiring individuals to purchase
+every book themselves.
+</p>
+
+<p>
+Today, libraries provide considerably more than printed books.
+Many offer computers, internet access, educational workshops and
+spaces for collaborative work. Some libraries have also developed
+digital collections, allowing users to access materials remotely.
+</p>
+
+<p>
+Despite technological changes, libraries continue to serve an
+important social function. They can provide quiet study areas,
+support lifelong learning and create spaces where members of a
+community can meet.
+</p>
+`,
+questions:[
+["What contributed to the expansion of public libraries?",
+["Increasing literacy","Declining education","Industrial pollution","Reduced population"],0],
+["Modern libraries may provide:",
+["Internet access","Only newspapers","Only fiction","No technology"],0],
+["Digital collections allow users to:",
+["Access materials remotely","Build libraries","Avoid education","Print buildings"],0],
+["Libraries can support:",
+["Lifelong learning","Only children","Only scientists","Only governments"],0],
+["Libraries have become unnecessary because of technology.",
+["TRUE","FALSE","NOT GIVEN"],1]
+]
+},
+
+{
+title:"PASSAGE 3 — Artificial Intelligence and Education",
+
+text:`
+<p>
+Artificial intelligence is becoming increasingly visible in
+education. Educational software can analyse patterns in student
+responses and identify areas in which a learner may need additional
+practice. This has encouraged some educators to explore personalised
+learning systems.
+</p>
+
+<p>
+One potential advantage of adaptive educational technology is that
+students can receive exercises suited to their current level.
+Instead of completing exactly the same activity as every other
+student, a learner may receive additional practice in a particular
+skill.
+</p>
+
+<p>
+However, technology cannot automatically solve every educational
+problem. Effective learning also depends on motivation, interaction,
+feedback and the quality of teaching. If technology is used without
+appropriate guidance, students may become overly dependent on
+automated systems.
+</p>
+
+<p>
+For this reason, many researchers argue that artificial intelligence
+should complement teachers rather than replace them. Teachers can
+interpret complex situations, understand individual circumstances
+and provide forms of encouragement that automated systems cannot
+fully reproduce.
+</p>
+`,
+questions:[
+["What can some educational software analyse?",
+["Student response patterns","Weather patterns","Building designs","Traffic systems"],0],
+["Adaptive systems may provide:",
+["Level-appropriate exercises","Identical tasks forever","No feedback","Only printed books"],0],
+["The passage says technology:",
+["Cannot solve every educational problem","Always replaces teachers","Makes motivation unnecessary","Eliminates interaction"],0],
+["What is one possible risk?",
+["Students becoming overly dependent","Students reading too much","Teachers learning more","Libraries expanding"],0],
+["The passage suggests AI should:",
+["Complement teachers","Replace all teachers","Remove feedback","End education"],0]
+]
+}
+];
+
+let currentPassage=0;
+let readingScore=0;
+
+function startReading(){
+
+currentPassage=0;
+readingScore=0;
+
+renderPassage();
+
+}
+
+function renderPassage(){
+
+let p=passages[currentPassage];
+
+document.getElementById("ieltsArea").innerHTML=`
+
+<div class="exambar">
+<h2>IELTS READING</h2>
+<div>Passage ${currentPassage+1} / 3</div>
+<div class="timer" id="readTimer">60:00</div>
+</div>
+
+<div class="passage">
+
+<h2>${p.title}</h2>
+
+${p.text}
+
+</div>
+
+<div id="readingQuestions"></div>
+
+<button class="btn blue" onclick="nextPassage()">
+${currentPassage===2?"FINISH READING":"NEXT PASSAGE →"}
+</button>
+`;
+
+renderQuestions(p.questions);
+
+}
+
+function renderQuestions(qs){
+
+let html="";
+
+qs.forEach((q,i)=>{
+
+html+=`
+
+<div class="question">
+
+<span class="badge">
+Question ${i+1}
+</span>
+
+<h3 style="margin:15px 0">
+${q[0]}
+</h3>
+
+${q[1].map((x,j)=>`
+
+<button
+class="option"
+onclick="checkAnswer(this,${j},${q[2]})">
+
+${String.fromCharCode(65+j)}. ${x}
+
+</button>
+
+`).join("")}
+
+</div>
+
+`;
+
+});
+
+document.getElementById("readingQuestions")
+.innerHTML=html;
+
+}
+
+function checkAnswer(button,selected,correct){
+
+let parent=button.parentElement;
+
+parent.querySelectorAll(".option")
+.forEach(x=>x.disabled=true);
+
+if(selected===correct){
+
+button.classList.add("correct");
+readingScore++;
+
+}else{
+
+button.classList.add("wrong");
+
+parent.querySelectorAll(".option")
+[correct].classList.add("correct");
+
+}
+
+}
+
+function nextPassage(){
+
+if(currentPassage<2){
+
+currentPassage++;
+renderPassage();
+
+}else{
+
+document.getElementById("ieltsArea").innerHTML=`
+
+<div class="card" style="text-align:center">
+
+<h1>Reading Complete 🎉</h1>
+
+<h2>${readingScore} / 15</h2>
+
+<p>
+This V5 demo contains 15 questions.
+The full bank can be expanded to 40.
+</p>
+
+<button class="btn blue"
+onclick="startReading()">
+TRY AGAIN
+</button>
+
+</div>
+
+`;
+
+}
+
+}
+
+
+/* =========================
+LISTENING
+========================= */
+
+const listeningParts=[
+
+{
+title:"PART 1 — University Accommodation",
+audio:"audio/listening-part1.mp3",
+questions:[
+["The student wants accommodation near:",["the library","the airport","the stadium","the hospital"],0],
+["The room includes:",["a desk","a television","a private kitchen","a balcony"],0],
+["The student will move in on:",["Monday","Tuesday","Friday","Sunday"],1]
+]
+},
+
+{
+title:"PART 2 — City Museum",
+audio:"audio/listening-part2.mp3",
+questions:[
+["The museum opens at:",["8:00","9:00","10:00","11:00"],1],
+["Visitors can find the café on:",["the first floor","the second floor","the roof","outside"],1],
+["The speaker recommends visiting the museum:",["in the morning","at midnight","during lunch only","after closing"],0]
+]
+},
+
+{
+title:"PART 3 — Students Discuss a Research Project",
+audio:"audio/listening-part3.mp3",
+questions:[
+["The students are discussing:",["a research project","a holiday","a sports event","a concert"],0],
+["They decide to collect data using:",["questionnaires","newspapers","maps","photographs"],0],
+["Their teacher recommends:",["a larger sample","a shorter title","less research","no statistics"],0]
+]
+},
+
+{
+title:"PART 4 — Academic Lecture",
+audio:"audio/listening-part4.mp3",
+questions:[
+["The lecture focuses on:",["urban development","marine biology","ancient history","music"],0],
+["The lecturer mentions trees because they:",["reduce urban heat","increase traffic","remove buildings","produce electricity"],0],
+["One challenge discussed is:",["limited space","too many airports","lack of students","excessive rainfall"],0]
+]
+}
+];
+
+let listeningPart=0;
+let listeningScore=0;
+
+function startListening(){
+
+listeningPart=0;
+listeningScore=0;
+
+renderListening();
+
+}
+
+function renderListening(){
+
+let p=listeningParts[listeningPart];
+
+document.getElementById("ieltsArea").innerHTML=`
+
+<div class="exambar">
+
+<h2>IELTS LISTENING</h2>
+
+<p>Part ${listeningPart+1} / 4</p>
+
+</div>
+
+<div class="audio-box">
+
+<h2>🎧 ${p.title}</h2>
+
+<p>
+Listen carefully before answering.
+</p>
+
+<audio controls preload="none">
+<source src="${p.audio}" type="audio/mpeg">
+Your browser does not support audio.
+</audio>
+
+<p style="margin-top:12px">
+Audio file:
+<strong>${p.audio}</strong>
+</p>
+
+</div>
+
+<div id="listenQuestions"></div>
+
+<button class="btn blue" onclick="nextListening()">
+${listeningPart===3?"FINISH":"NEXT PART →"}
+</button>
+
+`;
+
+renderQuestions(p.questions);
+
+}
+
+function nextListening(){
+
+if(listeningPart<3){
+
+listeningPart++;
+renderListening();
+
+}else{
+
+document.getElementById("ieltsArea").innerHTML=`
+
+<div class="card" style="text-align:center">
+
+<h1>Listening Complete 🎧</h1>
+
+<h2>${listeningScore} / 12</h2>
+
+<p>
+V5 listening structure: Part 1 → 2 → 3 → 4.
+</p>
+
+<button class="btn blue"
+onclick="startListening()">
+TRY AGAIN
+</button>
+
+</div>
+
+`;
+
+}
+
+}
+
+
+/* =========================
+WRITING
+========================= */
+
+function startWriting(){
+
+document.getElementById("ieltsArea").innerHTML=`
+
+<div class="card">
+
+<h2>✍️ TASK 1</h2>
+
+<p>
+The chart shows changes in the percentage of
+students using different forms of transport.
+</p>
+
+<textarea
+id="task1"
+placeholder="Write at least 150 words..."
+></textarea>
+
+<p>Words: <strong id="w1">0</strong></p>
+
+</div>
+
+<div class="card">
+
+<h2>✍️ TASK 2</h2>
+
+<p>
+Some people believe that schools should focus
+more on practical skills than academic subjects.
+
+To what extent do you agree or disagree?
+</p>
+
+<textarea
+id="task2"
+placeholder="Write at least 250 words..."
+></textarea>
+
+<p>Words: <strong id="w2">0</strong></p>
+
+<button class="btn green"
+onclick="checkWriting()">
+CHECK
+</button>
+
+<div id="writingResult"></div>
+
+</div>
+`;
+
+document.getElementById("task1")
+.oninput=()=>updateWords("task1","w1");
+
+document.getElementById("task2")
+.oninput=()=>updateWords("task2","w2");
+
+}
+
+function updateWords(input,out){
+
+let text=document.getElementById(input).value.trim();
+
+document.getElementById(out).textContent=
+text?text.split(/\s+/).length:0;
+
+}
+
+function checkWriting(){
+
+let a=document.getElementById("task1")
+.value.trim().split(/\s+/).length;
+
+let b=document.getElementById("task2")
+.value.trim().split(/\s+/).length;
+
+document.getElementById("writingResult").innerHTML=`
+
+<div class="card">
+
+<h3>PEYBAK Writing Check</h3>
+
+<p>Task 1: ${a} words</p>
+<p>Task 2: ${b} words</p>
+
+<p>
+${a>=150?"✅":"⚠️"} Task 1 minimum: 150
+</p>
+
+<p>
+${b>=250?"✅":"⚠️"} Task 2 minimum: 250
+</p>
+
+</div>
+`;
+
+}
+
+
+/* =========================
+SPEAKING
+========================= */
+
+function startSpeaking(){
+
+document.getElementById("ieltsArea").innerHTML=`
+
+<div class="cards">
+
+<div class="card">
+
+<h2>PART 1</h2>
+
+<p>Do you enjoy studying English?</p>
+
+<button class="btn blue"
+onclick="speakTimer(60)">
+START
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>PART 2</h2>
+
+<p>
+Describe a person who influenced your education.
+</p>
+
+<button class="btn orange"
+onclick="speakTimer(120)">
+PREPARE
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>PART 3</h2>
+
+<p>
+How can education affect society?
+</p>
+
+<button class="btn dark"
+onclick="speakTimer(120)">
+START
+</button>
+
+</div>
+
+</div>
+
+<div id="speakTimer"></div>
+
+`;
+
+}
+
+function speakTimer(sec){
+
+let t=sec;
+
+let timer=setInterval(()=>{
+
+document.getElementById("speakTimer")
+.innerHTML=
+`<div class="card">
+<h2>🎤 ${t} seconds</h2>
+</div>`;
+
+t--;
+
+if(t<0){
+
+clearInterval(timer);
+
+document.getElementById("speakTimer")
+.innerHTML=
+`<div class="card">
+<h2>Time finished!</h2>
+</div>`;
+
+}
+
+},1000);
+
+}
+
+
+/* =========================
+SAT
+========================= */
+
+function satRW(){
+
+document.getElementById("satArea").innerHTML=`
+
+<div class="card">
+
+<h2>SAT Reading & Writing</h2>
+
+<p>
+Module 1
+</p>
+
+<div class="question">
+
+<h3>
+The scientist repeated the experiment several
+times; ______, the results remained consistent.
+</h3>
+
+<button class="option">A. however</button>
+<button class="option">B. therefore</button>
+<button class="option">C. moreover</button>
+<button class="option">D. for example</button>
+
+</div>
+
+</div>
+`;
+
+}
+
+function satMath(){
+
+document.getElementById("satArea").innerHTML=`
+
+<div class="card">
+
+<h2>SAT Math</h2>
+
+<div class="question">
+
+<h3>
+If 3x + 9 = 24, what is x?
+</h3>
+
+<button class="option">A. 3</button>
+<button class="option">B. 4</button>
+<button class="option">C. 5</button>
+<button class="option">D. 6</button>
+
+</div>
+
+</div>
+`;
+
+}
+
+
+/* =========================
+VOCAB
+========================= */
+
+const vocabulary=[
+
+["abandon","tashlab ketmoq","B2","leave"],
+["abundant","mo'l-ko'l","C1","plentiful"],
+["accurate","aniq","B1","precise"],
+["acquire","egallamoq","B2","obtain"],
+["adapt","moslashmoq","B1","adjust"],
+["adequate","yetarli","B2","sufficient"],
+["advocate","qo'llab-quvvatlamoq","C1","support"],
+["allocate","taqsimlamoq","C1","distribute"],
+["ambiguous","noaniq","C2","unclear"],
+["anticipate","oldindan kutmoq","C1","expect"],
+["assess","baholamoq","B2","evaluate"],
+["attain","erishmoq","C1","achieve"],
+["beneficial","foydali","B2","helpful"],
+["bias","tarafkashlik","C1","prejudice"],
+["coherent","mantiqan bog'langan","C1","logical"],
+["comprehensive","keng qamrovli","C1","complete"],
+["considerable","sezilarli","B2","substantial"],
+["contradict","qarama-qarshi bo'lmoq","C1","oppose"],
+["convey","yetkazmoq","B2","communicate"],
+["decline","pasaymoq","B1","decrease"],
+["demonstrate","namoyish qilmoq","B2","show"],
+["diminish","kamaytirmoq","C1","reduce"],
+["diverse","turli xil","B2","varied"],
+["eliminate","yo'q qilmoq","B2","remove"],
+["enhance","yaxshilamoq","B2","improve"],
+["explicit","aniq","C1","clear"],
+["facilitate","osonlashtirmoq","C1","enable"],
+["fluctuate","o'zgarib turmoq","C1","vary"],
+["fundamental","asosiy","B2","basic"],
+["generate","yaratmoq","B2","produce"],
+["implement","amalga oshirmoq","C1","execute"],
+["inevitable","muqarrar","B2","unavoidable"],
+["infer","xulosa chiqarmoq","C1","deduce"],
+["innovative","yangicha","B2","original"],
+["integrate","birlashtirmoq","C1","combine"],
+["interpret","talqin qilmoq","B2","explain"],
+["justify","asoslamoq","B2","defend"],
+["persistent","qat'iyatli","B2","determined"],
+["plausible","ishonarli","C1","believable"],
+["precise","aniq","B2","exact"],
+["profound","chuqur","C1","deep"],
+["substantial","katta","B2","considerable"],
+["sufficient","yetarli","B1","enough"],
+["undergo","boshdan kechirmoq","C1","experience"],
+["utilize","foydalanmoq","B2","use"],
+["valid","asosli","B2","reasonable"]
+];
+
+function renderVocab(){
+
+let search=
+document.getElementById("search")?.value
+.toLowerCase()||"";
+
+let list=vocabulary.filter(x=>
+x[0].toLowerCase().includes(search)||
+x[1].toLowerCase().includes(search)
+);
+
+document.getElementById("words").innerHTML=
+list.map(x=>`
+
+<div class="word">
+
+<h2>${x[0]}</h2>
+
+<span class="badge">${x[2]}</span>
+
+<p>
+<strong>Tarjima:</strong> ${x[1]}
+</p>
+
+<p>
+<strong>Synonym:</strong> ${x[3]}
+</p>
+
+<p>
+<strong>Example:</strong>
+This is a ${x[0]} example.
+</p>
+
+<button class="btn green"
+onclick="learn('${x[0]}')">
+LEARNED ✓
+</button>
+
+</div>
+
+`).join("");
+
+}
+
+function learn(word){
+
+let old=
+Number(localStorage.getItem("learnedWords")||0);
+
+localStorage.setItem(
+"learnedWords",
+old+1
+);
+
+alert(word+" learned! 🚀");
+
+}
+
+renderVocab();
+
+</script>
+
+</body>
+</html>
